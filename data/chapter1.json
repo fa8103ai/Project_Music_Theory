@@ -1,0 +1,315 @@
+[
+  {
+    "chapterId": "ch1",
+    "title": {
+      "zh": "第一章：節奏與速度基礎",
+      "en": "Chapter 1: The Basics of Rhythm and Tempo"
+    },
+    "concepts": [
+      {
+        "id": "1/1",
+        "name": {
+          "zh": "1/1 音符與時值 (Time values)",
+          "en": "1/1 Time values"
+        },
+        "definition": {
+          "zh": "時值(Time value)表示各音符之間的相對長度。最常用的基本拍子記號是以四分音符(crotchet, ♩)為一拍，代表軍隊行進時整齊規律的一步。音符組成部分包括符頭(note-head)、符幹(stem)及符尾/符槓(tail/beam)。",
+          "en": "Time value indicates the relative duration of notes. The crotchet (♩) is the standard sign for a single beat, representing regular marching footsteps."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：音符】",
+              "en": "[Visual Diagram 1: Parts of a Music Note]"
+            },
+            "imagePath": "./assets/note_parts.svg",
+            "altText": "Music Note Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 2：符幹與符尾的正確畫法】",
+              "en": "[Visual Diagram 2: Correct Drawing of Stems and Tails]"
+            },
+            "explanation": {
+            "zh": "符頭在第三線下方時符幹朝上居右；在第三線上方時符幹朝下居左；但單獨音符的符尾永遠在右側！",
+            "en": "Note parts include the note-head, stem, and tail/beam. Stems go up on the right when below the middle line, and down on the left when on or above the middle line. Tails are always on the right."
+          },
+            "imagePath": "./assets/stem_rules.svg",
+            "altText": "Stem Rules Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 3：音符時值比例與金字塔換算】",
+              "en": "[Visual Diagram 3: Note Value Pyramids & Equivalents]"
+            },
+            "explanation": {
+            "zh": "這個金字塔圖解顯示了不同音符之間的時值比例。你可以清楚地看到一個全音符等於多少個較小的音符。",
+            "en": "This pyramid diagram shows the relative time values between different notes. You can clearly see how many smaller notes make up a whole note."
+          },
+            "imagePath": "./assets/note_value_tree.svg",
+            "altText": "Time Values Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 時值比例：1個全音符(Semibreve) ＝ 2個二分音符(Minim) ＝ 4個四分音符(Crotchet) ＝ 8個八分音符(Quaver) ＝ 16個十六分音符(Semiquaver) ＝ 32個三十二分音符(Demisemiquaver)。\n• 八分音符有 1 條符尾/符槓；十六分音符有 2 條符尾/符槓；三十二分音符有 3 條符尾/符槓。",
+          "en": "• 1 Semibreve = 2 Minims = 4 Crotchets = 8 Quavers = 16 Semiquavers = 32 Demisemiquavers.\n• Quavers have 1 tail/beam; Semiquavers have 2 tails/beams; Demisemiquavers have 3 tails/beams."
+        },
+        "tip": {
+          "zh": "應試錦囊：符幹向上在右、向下在左，但符尾永遠在右側！計算時值時以最多出現的音符為基準。",
+          "en": "Stems go up on the right, down on the left; tails are ALWAYS on the right! Count using the smallest frequent note unit."
+        },
+        "exercises": [
+          {
+            "qId": "q1_1_1",
+            "question": {
+              "zh": "在音樂中，代表單一拍子（如軍隊行進步伐）最常用的基本音符是什麼？",
+              "en": "Which note is most commonly used to represent a single beat (like marching footsteps)?"
+            },
+            "options": [
+              { "zh": "四分音符 (Crotchet, ♩)", "en": "Crotchet (♩)" },
+              { "zh": "二分音符 (Minim)", "en": "Minim" },
+              { "zh": "全音符 (Semibreve)", "en": "Semibreve" },
+              { "zh": "八分音符 (Quaver)", "en": "Quaver" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["回想教材 1/1 開首軍隊行進『左、右、左、右』每一步的符號。"],
+              "en": ["Think of the steady marching footsteps in Chapter 1/1."]
+            },
+            "explanation": {
+              "zh": "四分音符 (Crotchet, ♩) 是最常代表一拍的基本音符。",
+              "en": "The crotchet (♩) is the standard basic symbol for a single beat."
+            }
+          },
+          {
+            "qId": "q1_1_2",
+            "question": {
+              "zh": "一個四分音符 (Crotchet) 的時值相等於多少個十六分音符 (Semiquavers)？",
+              "en": "How many semiquavers equal one crotchet?"
+            },
+             "options": [
+              { "zh": "4 個十六分音符", "en": "4 semiquavers" },
+              { "zh": "2 個十六分音符", "en": "2 semiquavers" },
+              { "zh": "8 個十六分音符", "en": "8 semiquavers" },
+              { "zh": "16 個十六分音符", "en": "16 semiquavers" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["1個四分音符等於2個八分音符，每個八分音符又分為2個十六分音符。"],
+              "en": ["1 crotchet = 2 quavers, and each quaver = 2 semiquavers."]
+            },
+            "explanation": {
+              "zh": "1個四分音符等於 4 個十六分音符（常以雙符槓連接）。",
+              "en": "One crotchet equals four semiquavers (joined by a double beam)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "1/2",
+        "name": {
+          "zh": "1/2 小節線與拍子記號 (Bar-lines & Time signatures)",
+          "en": "1/2 Bar-lines and time signatures"
+        },
+        "definition": {
+          "zh": "小節線(Bar-lines)垂直貫穿五線譜，將拍子分為相等的小節(Bars)；樂曲結尾使用一幼一粗的終止線(Double bar-line)。拍子記號(Time signature)置於開首：分子代表每小節有幾拍，分母代表以什麼音符為一拍（2=二分音符，4=四分音符，8=八分音符）。C 代表 4/4 拍，而加一豎線的 ¢ 則代表 2/2 拍 (Alla breve)。",
+          "en": "Bar-lines are vertical lines that divide music into equal measures called bars. A double bar-line marks the end of a piece or section. The time signature placed at the beginning indicates how many beats are in each bar (top figure) and the note value of each beat (bottom figure: 2 = minim, 4 = crotchet, 8 = quaver). C stands for 4/4 (common time) and ¢ stands for 2/2 (alla breve)."
+        },
+        "visualDiagram": {
+          "title": {
+            "zh": "【視覺圖解：拍子記號】",
+            "en": "[Visual Diagram: Time Signatures]"
+          },
+          "imagePath": "./assets/time_signatures.svg",
+          "altText": "Time Signatures Diagram"
+        },
+        "examples": {
+          "zh": "• 2/4 ＝ 每小節2個四分音符拍 ｜ 3/4 ＝ 每小節3個四分音符拍 ｜ 4/4 (或 C) ＝ 每小節4個四分音符拍。\n• 3/2 ＝ 每小節3個二分音符拍 ｜ 3/8 ＝ 每小節3個八分音符拍。",
+          "en": "• 2/4 = 2 crotchet beats per bar | 3/4 = 3 crotchet beats | 4/4 (or C) = 4 crotchet beats.\n• 3/2 = 3 minim beats per bar | 3/8 = 3 quaver beats per bar."
+        },
+        "tip": {
+          "zh": "應試錦囊：分子代表「每小節拍數」，分母代表「拍子音符單位」（2=二分，4=四分，8=八分）。切勿混淆 C (4/4) 與 ¢ (2/2)！",
+          "en": "Top number = HOW MANY beats per bar; Bottom number = WHAT TYPE of note gets one beat (2=minim, 4=crotchet, 8=quaver)."
+        },
+        "exercises": [
+          {
+            "qId": "q1_2_1",
+            "question": {
+              "zh": "在拍子記號中，上方的數字（分子）代表什麼？",
+              "en": "In a time signature, what does the top figure show?"
+            },
+            "options": [
+              { "zh": "每小節有多少拍", "en": "How many beats there are in a bar" },
+              { "zh": "音樂的速度", "en": "The speed of the music" },
+              { "zh": "每拍的音符時值", "en": "The note value of the beat" },
+              { "zh": "全曲的小節總數", "en": "The number of bars" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["上方的數字數算小節內的拍子數量。"],
+              "en": ["Top = quantity of beats; Bottom = quality/type of beat."]
+            },
+            "explanation": {
+              "zh": "拍號上方數字（分子）顯示每小節包含的拍數。",
+              "en": "The top number indicates the number of beats per bar."
+            }
+          },
+          {
+            "qId": "q1_2_2",
+            "question": {
+              "zh": "拍號符號 ¢ (Alla breve) 代表什麼拍子？",
+              "en": "What does the time signature symbol ¢ (alla breve) mean?"
+            },
+            "options": [
+              { "zh": "2/2 拍（每小節兩個二分音符拍）", "en": "2/2 time (two minim beats in a bar)" },
+              { "zh": "4/4 拍", "en": "4/4 time" },
+              { "zh": "2/4 拍", "en": "2/4 time" },
+              { "zh": "3/4 拍", "en": "3/4 time" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["C 是 4/4 拍，中間加一豎線的 ¢ 代表以二分音符為一拍的 2/2 拍。"],
+              "en": ["C = 4/4; C with a vertical stroke through it (¢) halves the beat count to 2/2."]
+            },
+            "explanation": {
+              "zh": "¢ (Alla breve) 等同於 2/2 拍。",
+              "en": "¢ (alla breve) means 2/2 time (two minim beats per bar)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "1/3",
+        "name": {
+          "zh": "1/3 速度 (Tempo)",
+          "en": "1/3 Tempo"
+        },
+        "definition": {
+          "zh": "拍子進行的快慢稱為「速度」(Tempo)。節拍器標記（如 M.M. ♩ = 120，M.M. 代表 Maelzel's Metronome 麥爾策節拍器）能精確指示每分鐘演奏多少拍。此外亦常使用意大利文術語標示速度（如 Largo 廣板/慢、Andante 行板、Allegro 快板）。",
+          "en": "The speed of the beats is called Tempo. A metronome mark (e.g. M.M. ♩ = 120, where M.M. stands for Maelzel's Metronome) shows precisely how many beats occur in one minute. Italian words are also commonly used to indicate speed and mood (e.g. Largo = slow, Andante = at a walking pace, Allegro = fast and lively)."
+        },
+        "visualDiagram": null,
+        "examples": {
+          "zh": "• ♩ = 60 代表每分鐘有 60 個四分音符拍（即每秒 1 拍）。\n• ♩ = 120 代表每分鐘有 120 個四分音符拍（速度加快一倍）。",
+          "en": "• ♩ = 60 means 60 crotchet beats per minute (1 beat per second).\n• ♩ = 120 means 120 crotchet beats per minute (twice as fast)."
+        },
+        "tip": {
+          "zh": "應試錦囊：M.M. 標記指「每分鐘拍數」，數字越大代表速度越快！",
+          "en": "M.M. = Maelzel's Metronome. Larger number = faster tempo!"
+        },
+        "exercises": [
+          {
+            "qId": "q1_3_1",
+            "question": {
+              "zh": "樂曲開首標示 ♩ = 100 代表什麼意思？",
+              "en": "What does the marking ♩ = 100 at the start of a piece indicate?"
+            },
+            "options": [
+              { "zh": "每分鐘奏 100 個四分音符拍", "en": "100 crotchet beats per minute" },
+              { "zh": "全曲共 100 個音", "en": "Play 100 notes in total" },
+              { "zh": "全曲長 100 小節", "en": "The piece is 100 bars long" },
+              { "zh": "非常輕柔地演奏", "en": "Play very softly" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["這是節拍器標記，用來計算一分鐘內的拍數。"],
+              "en": ["It is a metronome mark measuring beats per minute."]
+            },
+            "explanation": {
+              "zh": "♩ = 100 指示速度為每分鐘 100 個四分音符拍。",
+              "en": "♩ = 100 specifies a tempo of 100 crotchet beats per minute."
+            }
+          },
+          {
+            "qId": "q1_3_2",
+            "question": {
+              "zh": "音樂術語『Tempo』的意思是什麼？",
+              "en": "What does the term 'Tempo' mean in music?"
+            },
+            "options": [
+              { "zh": "音樂的速度（快慢）", "en": "The speed of the music" },
+              { "zh": "音符的音高", "en": "The pitch of the notes" },
+              { "zh": "音樂的強弱力度", "en": "The loudness of the music" },
+              { "zh": "樂曲的調號", "en": "The key signature" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["Tempo 指拍子進行的快慢速度。"],
+              "en": ["Tempo refers to pace/speed."]
+            },
+            "explanation": {
+              "zh": "Tempo 即音樂的速度。",
+              "en": "Tempo means the speed of the beats in music."
+            }
+          }
+        ]
+      },
+      {
+        "id": "1/4",
+        "name": {
+          "zh": "1/4 節奏 (Rhythm)",
+          "en": "1/4 Rhythm"
+        },
+        "definition": {
+          "zh": "「節奏」(Rhythm) 與「速度」(Tempo) 截然不同。即使將一首熟悉的旋律拍打得快一些或慢一些（改變了速度），其由不同長短時值與強弱重音所組成的圖案結構——即「節奏」——依然保持不變。",
+          "en": "Rhythm is not the same as tempo. Even if a familiar tune is tapped out faster or slower (changing its tempo), its rhythm — the pattern formed by sounds of varying lengths and accents — remains unchanged."
+        },
+        "visualDiagram": null,
+        "examples": {
+          "zh": "• 無論將國歌或生日歌拍打得快或慢，改變的只是「速度」(Tempo)，但其音符長短與重音組合而成的「節奏」(Rhythm) 完全不變。",
+          "en": "• Tapping 'God Save the Queen' fast or slow changes its TEMPO, but the RHYTHM pattern (♩ ♩ ♩ | ♩. ♪ ♩) stays identical."
+        },
+        "tip": {
+          "zh": "應試錦囊：Tempo 是「快慢速度」，Rhythm 是「長短與重音的組合圖案」，切勿混淆！",
+          "en": "Tempo = Speed (fast/slow); Rhythm = Pattern of note lengths and accents."
+        },
+        "exercises": [
+          {
+            "qId": "q1_4_1",
+            "question": {
+              "zh": "如果你將一首熟悉的曲調拍打得更快或更慢，什麼東西會保持不變？",
+              "en": "If you tap a familiar tune more quickly or more slowly, what stays the same?"
+            },
+            "options": [
+              { "zh": "它的節奏 (Rhythm)", "en": "Its rhythm" },
+              { "zh": "它的速度 (Tempo)", "en": "Its tempo" },
+              { "zh": "它的音高 (Pitch)", "en": "Its pitch" },
+              { "zh": "它的力度 (Dynamics)", "en": "Its dynamics" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["改變快慢只會改變速度，不會改變音符長短比例的節奏圖案。"],
+              "en": ["Changing pace changes tempo, not the duration pattern."]
+            },
+            "explanation": {
+              "zh": "旋律的節奏（音符長短與重音圖案）保持不變。",
+              "en": "The rhythm (pattern of note lengths and accents) remains the same."
+            }
+          },
+          {
+            "qId": "q1_4_2",
+            "question": {
+              "zh": "節奏 (Rhythm) 與速度 (Tempo) 有何分別？",
+              "en": "What is the difference between rhythm and tempo?"
+            },
+            "options": [
+              { "zh": "節奏是音符長短與重音的組合圖案；速度是拍子的快慢", "en": "Rhythm is the pattern of note lengths and accents; tempo is the speed of the beats" },
+              { "zh": "兩者意思完全相同", "en": "They mean the exact same thing" },
+              { "zh": "節奏是快慢；速度是音量", "en": "Rhythm is speed; tempo is loudness" },
+              { "zh": "速度只用於慢曲", "en": "Tempo is only used in slow music" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["溫習 1/4 節奏與速度的定義區別。"],
+              "en": ["Review Section 1/4 on how rhythm and tempo differ."]
+            },
+            "explanation": {
+              "zh": "節奏指長短與重音圖案；速度則指快慢。",
+              "en": "Rhythm refers to patterns of duration and accent; tempo refers to speed."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
