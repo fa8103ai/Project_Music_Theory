@@ -46,7 +46,7 @@
             "zh": "這個金字塔圖解顯示了不同音符之間的時值比例。你可以清楚地看到一個全音符等於多少個較小的音符。",
             "en": "This pyramid diagram shows the relative time values between different notes. You can clearly see how many smaller notes make up a whole note."
           },
-            "imagePath": "./assets/note_value_tree.svg",
+            "imagePath": "./assets/note_values_tree.svg",
             "altText": "Time Values Diagram"
           }
         ],
@@ -115,14 +115,32 @@
           "zh": "小節線(Bar-lines)垂直貫穿五線譜，將拍子分為相等的小節(Bars)；樂曲結尾使用一幼一粗的終止線(Double bar-line)。拍子記號(Time signature)置於開首：分子代表每小節有幾拍，分母代表以什麼音符為一拍（2=二分音符，4=四分音符，8=八分音符）。C 代表 4/4 拍，而加一豎線的 ¢ 則代表 2/2 拍 (Alla breve)。",
           "en": "Bar-lines are vertical lines that divide music into equal measures called bars. A double bar-line marks the end of a piece or section. The time signature placed at the beginning indicates how many beats are in each bar (top figure) and the note value of each beat (bottom figure: 2 = minim, 4 = crotchet, 8 = quaver). C stands for 4/4 (common time) and ¢ stands for 2/2 (alla breve)."
         },
-        "visualDiagram": {
+      "visualDiagrams": [
+          {
           "title": {
-            "zh": "【視覺圖解：拍子記號】",
-            "en": "[Visual Diagram: Time Signatures]"
+            "zh": "【視覺圖解 1：小節線】",
+            "en": "[Visual Diagram: Bar-lines]"
           },
-          "imagePath": "./assets/time_signatures.svg",
-          "altText": "Time Signatures Diagram"
+          "explanation": {
+            "zh": "拍是音樂中重複出現的律動。當聽眾隨著音樂踏腳或拍手時，便能感受到拍。音樂家將拍組成稱為「小節」（measure 或 bar）的單位。每個小節都以「小節線」（barline）結束。特殊的「複縱線」（double barline）則表示樂章或整首作品的結束。",
+            "en": "A beat is a repeating musical pulse. Listeners sense the beat when they tap their feet or clap their hands in time with the music. Musicians group beats into units called measures or bars. Every measure ends with a barline. A special double barline indicates the end of the movement or piece."
+          },
+          "imagePath": "./assets/bar_measure.svg",
+          "altText": "Bar Lines Diagram"
         },
+        {
+          "title": {
+            "zh": "【視覺圖解 2：拍子記號】",
+            "en": "[Visual Diagram 2: Time Signature]"
+          },
+          "explanation": {
+            "zh": "拍號（或稱節拍記號）用以表示每小節有幾拍，以及哪種音值代表一拍（該音值稱為「單位拍」）。在單拍子的拍號中，上方的數字代表每小節內的拍數，下方的數字則代表單位拍。拍號並非分數，因此上下兩個數字之間並沒有橫線。 4/4 = 每一小節裏面有4拍，以四分音符為一拍。",
+            "en": "A time signature (or meter signature) indicates how many beats there are in one measure and what rhythmic value gets one beat (this value is called the beat unit). For time signatures in simple meter, the top number is the number of beats in each measure, and the bottom number is the beat unit. Time signatures are not fractions, so there is no line between the numbers. 4/4 = 4 beats in each measure, a quater gets one beat"
+          },
+          "imagePath": "./assets/time_signature.svg",
+          "altText": "Time Signatures Diagram"
+        }
+      ],
         "examples": {
           "zh": "• 2/4 ＝ 每小節2個四分音符拍 ｜ 3/4 ＝ 每小節3個四分音符拍 ｜ 4/4 (或 C) ＝ 每小節4個四分音符拍。\n• 3/2 ＝ 每小節3個二分音符拍 ｜ 3/8 ＝ 每小節3個八分音符拍。",
           "en": "• 2/4 = 2 crotchet beats per bar | 3/4 = 3 crotchet beats | 4/4 (or C) = 4 crotchet beats.\n• 3/2 = 3 minim beats per bar | 3/8 = 3 quaver beats per bar."
@@ -185,8 +203,8 @@
           "en": "1/3 Tempo"
         },
         "definition": {
-          "zh": "拍子進行的快慢稱為「速度」(Tempo)。節拍器標記（如 M.M. ♩ = 120，M.M. 代表 Maelzel's Metronome 麥爾策節拍器）能精確指示每分鐘演奏多少拍。此外亦常使用意大利文術語標示速度（如 Largo 廣板/慢、Andante 行板、Allegro 快板）。",
-          "en": "The speed of the beats is called Tempo. A metronome mark (e.g. M.M. ♩ = 120, where M.M. stands for Maelzel's Metronome) shows precisely how many beats occur in one minute. Italian words are also commonly used to indicate speed and mood (e.g. Largo = slow, Andante = at a walking pace, Allegro = fast and lively)."
+          "zh": "拍子本身無法表示節拍進行的快慢。因此，為了標示拍子的速度，我們需要「速度記號」（Tempo marking）。此外，還有其他以義大利文呈現的速度表情記號（例如：Largo = 緩板／慢、Andante = 行板／如步行般的速度、Allegro = 快板／輕快活潑），但這些術語在概念上仍較籠統。若要指示更精確的速度，我們需要「節拍器記號」（Metronome marking）。節拍器是一種用來設定音樂速度的裝置。梅澤爾（Maelzel）於 1815 年為這項發明取得專利。節拍器上的數字（例如 M.M. ♩ = 120，其中 M.M. 代表梅澤爾節拍器）代表每分鐘的拍數。",
+          "en": "A beat by itself cannot indicate how fast the beat is moving. So, in order to show the speed of the beats, we need a Tempo marking. There are other Tempo expression markings such as Italian (e.g. Largo = slow, Andante = at a walking pace, Allegro = fast and lively). They are still vague in sense. To indicate a more exact speed, we need a metronome marking. Metronome is a device used to set the speed of a tempo. Maelzel is the person who patented the invention in 1815. The numbers on the metronome (e.g. M.M. ♩ = 120，M.M.) represent the number of beats in a minute."
         },
         "visualDiagram": null,
         "examples": {
