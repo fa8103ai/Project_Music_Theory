@@ -194,12 +194,19 @@ async function loadAppData() {
     // 1. Fetch links from Google Sheets first
     await fetchGoogleSheetLinks();
 
-    // 2. Fetch the main chapter data
+    // 2. Fetch Chapter 1 data
     const response = await fetch('./data/chapter1.json');
     if (!response.ok) throw new Error("Network response was not ok");
     const chapter1Data = await response.json();
+
+    // 3. Fetch Chapter 2 data
+        const response2 = await fetch('./data/chapter2.json');
+    if (!response2.ok) throw new Error("Network response 2 was not ok");
+    const chapter2Data = await response2.json();
     
-    musicTheoryDB = chapter1Data;
+    // 4. Combine both chapters into the main database
+    musicTheoryDB = [...chapter1Data, ...chapter2Data];
+    
     
     if (musicTheoryDB.length > 0 && musicTheoryDB[0].concepts.length > 0) {
       curId = musicTheoryDB[0].concepts[0].id;

@@ -1,0 +1,363 @@
+[
+  {
+    "chapterId": "ch2",
+    "title": {
+      "zh": "第二章：音高導論",
+      "en": "Chapter 2: Introduction to Pitch"
+    },
+    "concepts": [
+      {
+        "id": "2/1",
+        "name": {
+          "zh": "2/1 音名與記譜法 (Pitch names and notation)",
+          "en": "2/1 Pitch names and notation"
+        },
+        "definition": {
+          "zh": "聲音的高低稱為「音高」（pitch）。我們使用 A 至 G 的音名字母來命名音高，這些音名涵蓋鍵盤上所有的白鍵。為了記錄音高，我們需要使用「五線譜」（stave 或 staff），即由五條平行線組成的記譜系統。必要時，可在五線譜的上方或下方加上短線，稱為「加線」（ledger lines），以延伸譜表。",
+          "en": "The height or depth of sound is pitch. We name the pitches by using letter names from A to G. It covers all the white keys on the keyboard. To notate the piches, we need a stave or staff which is group of five parallel lines. The staff may be extended when needed by adding short lines call Ledger Lines above or below the regular lines."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：音名與記譜法 - 高音譜號】",
+              "en": "[Visual Diagram 1: Pitch Names and Notation - Treble Clef]"
+            },
+            "explanation": {
+              "zh": "五線譜上的每一條線與每一個間，都代表一個音符。譜號(Clef)用來標示五線譜上各條線（以及線與線之間的間）所對應的音名。譜號寫在五線譜的開端。高音譜號(Treble Clef)將由下往上數的第二條線定為 G。在高音譜號中，五條線由下至上分別代表 E、G、B、D、F；四個間則分別代表 F、A、C、E。",
+              "en": "Each line and each space represent a note. A clef indicates which note names go on which lines (and spaces between the lines) on the staff. Clefs are written at the start of the staff. Treble clef designates the second line from the bottom as G. The lines in treble clef represent the pitches E, G, B, D, and F. The spaces are F, A, C, and E."
+            },
+            "imagePath": "./assets/music_staff_guide.svg",
+            "altText": "Pitch and Staff Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 2：音名與記譜法 - 低音譜號】",
+              "en": "[Visual Diagram 2: Pitch Names and Notation - Bass Clef]"
+            },
+            "explanation": {
+              "zh": "低音譜號(Bass Clef)將由下往上數的第四條線定為 F。在低音譜號中，五條線由下至上分別代表 G、B、D、F、A；四個間則分別代表 A、C、E、G。",
+              "en": "Bass clef designates the fourth line from the bottom as F. The lines in bass clef represent the pitches G, B, D, F, and A. The spaces are A, C, E, and G."
+            },
+            "imagePath": "./assets/bass_clef.svg",
+            "altText": "Bass Clef Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 3：高音譜號與低音譜號】",
+              "en": "[Visual Diagram 3: Treble and Bass Clef]"
+            },
+            "explanation": {
+              "zh": "由於音高的數量相當多，我們需要使用不同的「譜號」（clef）來標示不同的音域。最常見的兩種譜號是「高音譜號」（Treble clef）與「低音譜號」（Bass clef）。高音譜號的中心環繞著第二線 (G)，低音譜號的兩點夾著第四線 (F)。兩者可結合成大譜表 (Grand Staff)，並共用中央 C(middle C)。",
+              "en": "Since there are quite a number of pitches, we need to use different clefs to indicate different ranges of pitches. Two of the most common clefs are Treble clef and Bass clef. The treble clef loops around the 2nd line (G), and the bass clef dots surround the 4th line (F). Together they form the grand staff sharing Middle C."
+            },
+            "imagePath": "./assets/clef_staff.svg",
+            "altText": "Clefs and Stave Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 4：八度】",
+              "en": "[Visual Diagram 4: Octave (Ottava)]"
+            },
+            "explanation": {
+              "zh": "如有需要，可使用更多「加線」（ledger lines）來記寫更高或更低的音符。為避免使用過多加線，可在音符上方或下方使用記號 8 或 8va（octave，八度），表示該音符須提高或降低一個八度演奏。",
+              "en": "If necessary, futher ledger lines may be used for higher or lower notes. To avoid many ledger lines, the sign 8 or 8va (ottava) can be used above or below notes, indicating that they are to be played an octave higher or lower."
+            },
+            "imagePath": "./assets/8va.svg",
+            "altText": "Octave Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 加線 (Ledger lines) 是用來記錄超出五線譜範圍的短橫線。\n• 8va (ottava) 記號表示將音符提高或降低一個八度演奏。\n• 兩個同名音符之間的距離稱為八度 (octave)。",
+          "en": "• Ledger lines are short additional lines used for notes above or below the stave.\n• The 8va (ottava) sign means play an octave higher or lower.\n• The distance from any note to the next one with the same letter name is an octave."
+        },
+        "tip": {
+          "zh": "應試錦囊：第三線上的音符符幹向上或向下皆可。通常較低音的符幹朝上，較高音的符幹朝下。",
+          "en": "Stems of notes on the middle line can go up or down, but normally lower notes have stems going up and higher notes have stems going down."
+        },
+        "exercises": [
+          {
+            "qId": "q2_1_1",
+            "question": {
+              "zh": "在五線譜中，高音譜號 (Treble clef) 將哪一條線定為中央 C 上方的 G 音？",
+              "en": "Which line does the treble clef establish as the G above middle C?"
+            },
+            "options": [
+              { "zh": "第二線 (2nd line)", "en": "Second line" },
+              { "zh": "第三線 (3rd line)", "en": "Third line" },
+              { "zh": "第四線 (4th line)", "en": "Fourth line" },
+              { "zh": "第一線 (1st line)", "en": "First line" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["高音譜號又稱 G 譜號，它的中心圓圈環繞著哪一條線？"],
+              "en": ["The treble clef is also known as the 'G' clef. Which line does its central loop curl around?"]
+            },
+            "explanation": {
+              "zh": "高音譜號環繞第二線，將其定為中央 C 上方的 G 音[span_14](start_span)[span_14](end_span)。",
+              "en": "The treble clef is looped around the second line, representing the G above middle C[span_15](start_span)[span_15](end_span)."
+            }
+          },
+          {
+            "qId": "q2_1_2",
+            "question": {
+              "zh": "當音符過高或過低，超出五線譜範圍時，需要使用什麼符號來輔助記譜？",
+              "en": "What is used to write notes which lie above or below the limits of the stave?"
+            },
+            "options": [
+              { "zh": "加線 (Ledger lines)", "en": "Ledger lines" },
+              { "zh": "小節線 (Bar-lines)", "en": "Bar-lines" },
+              { "zh": "連結線 (Ties)", "en": "Ties" },
+              { "zh": "附點 (Dots)", "en": "Dots" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["記起中央 C 經常使用的那條短橫線叫什麼名稱？"],
+              "en": ["Think of the short extra line used for Middle C. What is it called?"]
+            },
+            "explanation": {
+              "zh": "加線 (Ledger lines) 是短橫線，專門用來記錄超出五線譜限制的高音或低音[span_16](start_span)[span_16](end_span)。",
+              "en": "Short additional lines called ledger lines are used to provide for notes which lie above or below the limits of the stave[span_17](start_span)[span_17](end_span)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "2/2",
+        "name": {
+          "zh": "2/2 大調音階 (The major scale)",
+          "en": "2/2 The major scale"
+        },
+        "definition": {
+          "zh": "音階 (Scale) 是一組依高低次序排列的音符[span_18](start_span)[span_18](end_span)。大調音階遵循特定的音程結構：全-全-半-全-全-全-半 (T-T-S-T-T-T-S)[span_19](start_span)[span_19](end_span)。音階開始的第一個音稱為主音 (key-note)[span_20](start_span)[span_20](end_span)。",
+          "en": "A scale is a selection of notes arranged in ascending or descending order[span_21](start_span)[span_21](end_span). A major scale follows a specific pattern of intervals: Tone, Tone, Semitone, Tone, Tone, Tone, Semitone (T-T-S-T-T-T-S)[span_22](start_span)[span_22](end_span). The first degree on which the scale begins is called the key-note[span_23](start_span)[span_23](end_span)."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：大調音階結構】",
+              "en": "[Visual Diagram 1: Major Scale Structure]"
+            },
+            "explanation": {
+              "zh": "利用 T-T-S-T-T-T-S 結構推算，G 大調必須有 F#，而 F 大調必須有 Bb。",
+              "en": "Using the T-T-S-T-T-T-S pattern, G major requires an F#, and F major requires a Bb."
+            },
+            "imagePath": "./assets/major_scale_pattern.svg",
+            "altText": "Major Scale Pattern"
+          }
+        ],
+        "examples": {
+          "zh": "• G 大調需要一個 F# 以維持 全-全-半-全-全-全-半 的結構[span_24](start_span)[span_24](end_span)。\n• F 大調需要一個 Bb[span_25](start_span)[span_25](end_span)。\n• D 大調需要兩個升號：F# 和 C#[span_26](start_span)[span_26](end_span)。",
+          "en": "• G major requires an F# to preserve the T-T-S-T-T-T-S pattern[span_27](start_span)[span_27](end_span).\n• F major needs a Bb[span_28](start_span)[span_28](end_span).\n• D major needs two sharps: F# and C#[span_29](start_span)[span_29](end_span)."
+        },
+        "tip": {
+          "zh": "應試錦囊：緊記大調音階「全全半全全全半」的規律。半音 (Semitone) 永遠出現在第 3、4 音及第 7、8 音之間[span_30](start_span)[span_30](end_span)。",
+          "en": "Remember the pattern T-T-S-T-T-T-S for all major scales. The semitones (S) always occur between the 3rd/4th and 7th/8th degrees[span_31](start_span)[span_31](end_span)."
+        },
+        "exercises": [
+          {
+            "qId": "q2_2_1",
+            "question": {
+              "zh": "大調音階的音程排列結構是什麼？",
+              "en": "What is the interval pattern of a major scale?"
+            },
+            "options": [
+              { "zh": "全-全-半-全-全-全-半 (T-T-S-T-T-T-S)", "en": "Tone, Tone, Semitone, Tone, Tone, Tone, Semitone (T-T-S-T-T-T-S)" },
+              { "zh": "全-半-全-全-半-全-全 (T-S-T-T-S-T-T)", "en": "Tone, Semitone, Tone, Tone, Semitone, Tone, Tone (T-S-T-T-S-T-T)" },
+              { "zh": "半-全-全-半-全-全-全 (S-T-T-S-T-T-T)", "en": "Semitone, Tone, Tone, Semitone, Tone, Tone, Tone (S-T-T-S-T-T-T)" },
+              { "zh": "全-全-全-半-全-全-半 (T-T-T-S-T-T-S)", "en": "Tone, Tone, Tone, Semitone, Tone, Tone, Semitone (T-T-T-S-T-T-S)" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["想想鋼琴上的 C 大調音階，哪兩個地方沒有黑鍵（即半音）？"],
+              "en": ["Think of the C major scale on the piano. Between which notes are there no black keys (forming semitones)?"]
+            },
+            "explanation": {
+              "zh": "大調音階必須維持 全-全-半-全-全-全-半 (T-T-S-T-T-T-S) 的特定排列[span_32](start_span)[span_32](end_span)。",
+              "en": "A major scale is formed by preserving the series Tone, Tone, Semitone, Tone, Tone, Tone, Semitone (T-T-S-T-T-T-S)[span_33](start_span)[span_33](end_span)."
+            }
+          },
+          {
+            "qId": "q2_2_2",
+            "question": {
+              "zh": "在 G 大調 (G major) 音階中，為了維持正確的結構，哪一個音必須加上升號 (#)？",
+              "en": "In the scale of G major, which note must be sharped (#) to preserve the major scale pattern?"
+            },
+            "options": [
+              { "zh": "F", "en": "F" },
+              { "zh": "C", "en": "C" },
+              { "zh": "G", "en": "G" },
+              { "zh": "D", "en": "D" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["從 G 數到 F 是第七個音，第七音與第八音之間必須是半音。"],
+              "en": ["The 7th and 8th degrees must be a semitone apart. What note is just below G?"]
+            },
+            "explanation": {
+              "zh": "為了維持大調音階結構，G 大調必須有一個 F#[span_34](start_span)[span_34](end_span)。",
+              "en": "If a major scale starts on G, an F sharp will be needed to preserve the T-T-S-T-T-T-S pattern[span_35](start_span)[span_35](end_span)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "2/3",
+        "name": {
+          "zh": "2/3 調號 (Key signatures)",
+          "en": "2/3 Key signatures"
+        },
+        "definition": {
+          "zh": "為了避免每次用到升降號都要標記，音樂會將它們寫在樂曲開首作為調號 (Key signature)[span_36](start_span)[span_36](end_span)。調號置於譜號之後、拍子記號之前，並且在每一行的開首都要重複標寫[span_37](start_span)[span_37](end_span)。",
+          "en": "Instead of writing sharps or flats every time they are needed, they are shown at the beginning of the piece as a key signature[span_38](start_span)[span_38](end_span). It is placed immediately after the clef and before the time signature, and is repeated at the beginning of every line[span_39](start_span)[span_39](end_span)."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：譜號、調號與拍子記號的正確順序】",
+              "en": "[Visual Diagram 1: Order of Clef, Key Signature, and Time Signature]"
+            },
+            "explanation": {
+              "zh": "緊記順序：先寫譜號，其次調號，最後拍子記號。新一行只需寫譜號與調號。",
+              "en": "Remember the order: Clef first, then Key Signature, then Time Signature. Only the Clef and Key Signature are repeated on new lines."
+            },
+            "imagePath": "./assets/key_signatures.svg",
+            "altText": "Key Signatures Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• G 大調的調號在 F 線上有一個升號，代表所有 F 音都要彈成 F#，不受八度限制[span_40](start_span)[span_40](end_span)。\n• 樂曲中途改變調號時，新的調號會寫在雙縱線之後[span_41](start_span)[span_41](end_span)。",
+          "en": "• The key signature of G major has one sharp on the F line, meaning all Fs are played as F#s regardless of octave[span_42](start_span)[span_42](end_span).\n• Changes of key signature are written after a double bar-line[span_43](start_span)[span_43](end_span)."
+        },
+        "tip": {
+          "zh": "應試錦囊：調號在每一行開首都必須重新寫上，但拍子記號只需寫在全曲開首，除非中途有改變[span_44](start_span)[span_44](end_span)！",
+          "en": "Unlike the time signature, the key signature is repeated at the beginning of every line[span_45](start_span)[span_45](end_span)!"
+        },
+        "exercises": [
+          {
+            "qId": "q2_3_1",
+            "question": {
+              "zh": "在一首樂曲的開首，記號的正確排列次序是什麼？",
+              "en": "What is the correct order of signs at the beginning of a piece of music?"
+            },
+            "options": [
+              { "zh": "譜號 ➔ 調號 ➔ 拍子記號", "en": "Clef ➔ Key signature ➔ Time signature" },
+              { "zh": "調號 ➔ 譜號 ➔ 拍子記號", "en": "Key signature ➔ Clef ➔ Time signature" },
+              { "zh": "譜號 ➔ 拍子記號 ➔ 調號", "en": "Clef ➔ Time signature ➔ Key signature" },
+              { "zh": "拍子記號 ➔ 譜號 ➔ 調號", "en": "Time signature ➔ Clef ➔ Key signature" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["調號會出現在譜號與拍號的中間。"],
+              "en": ["The key signature sits in the middle of the clef and time signature."]
+            },
+            "explanation": {
+              "zh": "調號必須寫在譜號之後、拍子記號之前[span_46](start_span)[span_46](end_span)。",
+              "en": "The key signature is shown immediately after the clef and before the time signature[span_47](start_span)[span_47](end_span)."
+            }
+          },
+          {
+            "qId": "q2_3_2",
+            "question": {
+              "zh": "當樂譜換到新的一行 (new line) 時，以下哪一個記號通常不需要重複標寫？",
+              "en": "When starting a new line of music, which sign is normally NOT repeated?"
+            },
+            "options": [
+              { "zh": "拍子記號 (Time signature)", "en": "Time signature" },
+              { "zh": "譜號 (Clef)", "en": "Clef" },
+              { "zh": "調號 (Key signature)", "en": "Key signature" },
+              { "zh": "全都需要重複", "en": "All of them must be repeated" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["想一想，調號為了提醒我們音準，每行都會寫；但每小節幾拍通常全曲固定，不需要每行提醒。"],
+              "en": ["Key signatures remind us of notes for the line, but the meter stays constant, so it doesn't need repeating."]
+            },
+            "explanation": {
+              "zh": "與拍子記號不同，調號和譜號在每一行的開首都會重複[span_48](start_span)[span_48](end_span)。拍子記號不需重複。",
+              "en": "Unlike the time signature, the key signature is repeated at the beginning of every line[span_49](start_span)[span_49](end_span)."
+            }
+          }
+        ]
+      },
+      {
+        "id": "2/4",
+        "name": {
+          "zh": "2/4 臨時記號 (Accidentals)",
+          "en": "2/4 Accidentals"
+        },
+        "definition": {
+          "zh": "臨時記號 (Accidentals) 是指在樂曲中加在個別音符上的升號 (#)、降號 (b) 或還原號，這些記號並不包含在調號內[span_50](start_span)[span_50](end_span)。當臨時記號出現在一個小節中，其效力會維持到該小節結束[span_51](start_span)[span_51](end_span)。",
+          "en": "Accidentals are sharps (#), flats (b), and naturals added to individual notes during a piece that are not included in the key signature[span_52](start_span)[span_52](end_span). Once an accidental appears in a bar, it remains in force until the end of the bar[span_53](start_span)[span_53](end_span)."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：臨時記號的效力範圍】",
+              "en": "[Visual Diagram 1: Rule of Accidentals]"
+            },
+            "explanation": {
+              "zh": "臨時記號只在同一個小節內、同一個音高位置上有效。",
+              "en": "An accidental is valid only within the same bar and only for the specific line or space."
+            },
+            "imagePath": "./assets/accidentals_rule.svg",
+            "altText": "Accidentals Rules Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 與調號不同，臨時記號只對它所在的特定線或間上的音符有效[span_54](start_span)[span_54](end_span)。\n• 如果帶有臨時記號的音符被延音線 (Tie) 連接到下一個小節，則不需重新標記該記號[span_55](start_span)[span_55](end_span)。",
+          "en": "• Unlike key signatures, an accidental applies only to the line or space on which it is written[span_56](start_span)[span_56](end_span).\n• If a note with an accidental is tied over a bar-line, the accidental is not written again[span_57](start_span)[span_57](end_span)."
+        },
+        "tip": {
+          "zh": "應試錦囊：臨時記號的效力只限於同一小節內的「同一高度」！若有跨小節的延音線，臨時記號的效力僅延續至該被延音的音符[span_58](start_span)[span_58](end_span)。",
+          "en": "An accidental only lasts for one bar and applies only to its exact pitch line/space. If tied to the next bar, it carries over only for that tied note[span_59](start_span)[span_59](end_span)."
+        },
+        "exercises": [
+          {
+            "qId": "q2_4_1",
+            "question": {
+              "zh": "一個臨時記號 (Accidental) 的效力通常會維持多久？",
+              "en": "How long does an accidental typically remain in force?"
+            },
+            "options": [
+              { "zh": "直到該小節結束", "en": "Until the end of the bar" },
+              { "zh": "只對該單獨的音符有效", "en": "Only for that single note" },
+              { "zh": "直到樂曲結束", "en": "Until the end of the piece" },
+              { "zh": "直到新的一行開始", "en": "Until the start of a new line" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["小節線會取消臨時記號的效力。"],
+              "en": ["A bar-line cancels the effect of an accidental."]
+            },
+            "explanation": {
+              "zh": "當臨時記號出現在一個小節中，其效力會維持到該小節結束[span_60](start_span)[span_60](end_span)。",
+              "en": "Once an accidental has appeared in a bar, it remains in force until the end of the bar[span_61](start_span)[span_61](end_span)."
+            }
+          },
+          {
+            "qId": "q2_4_2",
+            "question": {
+              "zh": "臨時記號對其他八度的同名音符有效嗎？",
+              "en": "Does an accidental apply to notes with the same letter name in different octaves?"
+            },
+            "options": [
+              { "zh": "無效，它只適用於標記所在的特定線或間", "en": "No, it applies only to the line or space on which it is written" },
+              { "zh": "有效，所有同名音符都會受到影響", "en": "Yes, all notes with the same letter name are affected" },
+              { "zh": "視乎調號而定", "en": "It depends on the key signature" },
+              { "zh": "只對較高的八度有效", "en": "Only for higher octaves" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["調號會影響所有八度，但臨時記號非常嚴格，只針對確切的音高位置。"],
+              "en": ["Key signatures affect all octaves, but an accidental is strictly limited to its specific pitch position."]
+            },
+            "explanation": {
+              "zh": "與調號不同，臨時記號只對它所在的特定線或間有效[span_62](start_span)[span_62](end_span)。",
+              "en": "Unlike the sharps and flats in a key signature, an accidental applies only to the line or space on which it is written[span_63](start_span)[span_63](end_span)."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

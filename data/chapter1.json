@@ -112,8 +112,8 @@
           "en": "1/2 Bar-lines and time signatures"
         },
         "definition": {
-          "zh": "小節線(Bar-lines)垂直貫穿五線譜，將拍子分為相等的小節(Bars)；樂曲結尾使用一幼一粗的終止線(Double bar-line)。拍子記號(Time signature)置於開首：分子代表每小節有幾拍，分母代表以什麼音符為一拍（2=二分音符，4=四分音符，8=八分音符）。C 代表 4/4 拍，而加一豎線的 ¢ 則代表 2/2 拍 (Alla breve)。",
-          "en": "Bar-lines are vertical lines that divide music into equal measures called bars. A double bar-line marks the end of a piece or section. The time signature placed at the beginning indicates how many beats are in each bar (top figure) and the note value of each beat (bottom figure: 2 = minim, 4 = crotchet, 8 = quaver). C stands for 4/4 (common time) and ¢ stands for 2/2 (alla breve)."
+          "zh": "小節線(Bar-lines)垂直貫穿五線譜，將拍子分為相等的小節(Bars)；樂曲結尾使用一幼一粗的終止線(Final bar-line)。拍子記號(Time signature)置於開首：分子代表每小節有幾拍，分母代表以什麼音符為一拍（2=二分音符，4=四分音符，8=八分音符）。C 代表 4/4 拍，而加一豎線的 ¢ 則代表 2/2 拍 (Alla breve)。",
+          "en": "Bar-lines are vertical lines that divide music into equal measures called bars. A Final bar-line marks the end of a piece or section. The time signature placed at the beginning indicates how many beats are in each bar (top figure) and the note value of each beat (bottom figure: 2 = minim, 4 = crotchet, 8 = quaver). C stands for 4/4 (common time) and ¢ stands for 2/2 (alla breve)."
         },
       "visualDiagrams": [
           {
@@ -125,7 +125,7 @@
             "zh": "拍是音樂中重複出現的律動。當聽眾隨著音樂踏腳或拍手時，便能感受到拍。音樂家將拍組成稱為「小節」（measure 或 bar）的單位。每個小節都以「小節線」（barline）結束。特殊的「複縱線」（double barline）則表示樂章或整首作品的結束。",
             "en": "A beat is a repeating musical pulse. Listeners sense the beat when they tap their feet or clap their hands in time with the music. Musicians group beats into units called measures or bars. Every measure ends with a barline. A special double barline indicates the end of the movement or piece."
           },
-          "imagePath": "./assets/bar_measure.svg",
+          "imagePath": "./assets/bar_measure_final.svg",
           "altText": "Bar Lines Diagram"
         },
         {
@@ -142,11 +142,11 @@
         }
       ],
         "examples": {
-          "zh": "• 2/4 ＝ 每小節2個四分音符拍 ｜ 3/4 ＝ 每小節3個四分音符拍 ｜ 4/4 (或 C) ＝ 每小節4個四分音符拍。\n• 3/2 ＝ 每小節3個二分音符拍 ｜ 3/8 ＝ 每小節3個八分音符拍。",
-          "en": "• 2/4 = 2 crotchet beats per bar | 3/4 = 3 crotchet beats | 4/4 (or C) = 4 crotchet beats.\n• 3/2 = 3 minim beats per bar | 3/8 = 3 quaver beats per bar."
+          "zh": "2/4 ＝ 每小節2個四分音符拍 ｜ 3/4 ＝ 每小節3個四分音符拍 ｜ 4/4 (或 C) ＝ 每小節4個四分音符拍。\n3/2 ＝ 每小節3個二分音符拍 ｜ 3/8 ＝ 每小節3個八分音符拍。\n\n單小節線 = 將樂譜分為各個小節 ｜ 複縱線 = 表示一個部分的結束 ｜ 終止線 = 一部作品的結尾。",
+          "en": "2/4 = 2 crotchet beats per bar | 3/4 = 3 crotchet beats | 4/4 (or C) = 4 crotchet beats.\n3/2 = 3 minim beats per bar | 3/8 = 3 quaver beats per bar.\n\nSingle barline = Divides the music into individual measures (or bars) ｜ Double barline = Indicates the end of a section ｜ Final barline = Indicates the end of a piece."
         },
         "tip": {
-          "zh": "應試錦囊：分子代表「每小節拍數」，分母代表「拍子音符單位」（2=二分，4=四分，8=八分）。切勿混淆 C (4/4) 與 ¢ (2/2)！",
+          "zh": "應試錦囊：分子代表「每小節拍數」，分母代表「拍子音符單位」（2=二分，4=四分，8=八分)。切勿混淆 C (4/4) 與 ¢ (2/2)！",
           "en": "Top number = HOW MANY beats per bar; Bottom number = WHAT TYPE of note gets one beat (2=minim, 4=crotchet, 8=quaver)."
         },
         "exercises": [

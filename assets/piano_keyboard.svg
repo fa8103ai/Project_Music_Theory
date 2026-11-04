@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1562 462" role="img" aria-labelledby="title desc">
+  <title id="title">Two-octave piano keyboard diagram</title>
+  <desc id="desc">A two-octave piano keyboard with white keys labeled C through B and black keys labeled with enharmonic sharp and flat names.</desc>
+
+  <defs>
+    <style>
+      .key-line { fill: none; stroke: #111111; stroke-width: 2; }
+      .white-label {
+        fill: #000000;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 46px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .black-label {
+        fill: #ffffff;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 40px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect x="0" y="0" width="1562" height="462" fill="#ffffff"/>
+  </g>
+
+  <!-- White-key field and keyboard outline -->
+  <g id="white-keys">
+    <rect x="81" y="43" width="1434" height="379" fill="#ffffff"/>
+    <path class="key-line" d="
+      M81 43 H1515 V422 H81 Z
+      M184.5 43 V422
+      M285.5 43 V422
+      M389 43 V422
+      M493 43 V422
+      M592.5 43 V422
+      M693.5 43 V422
+      M797.5 43 V422
+      M902 43 V422
+      M1003 43 V422
+      M1107.5 43 V422
+      M1210.5 43 V422
+      M1311 43 V422
+      M1411.5 43 V422
+    "/>
+  </g>
+
+  <!-- Black keys -->
+  <g id="black-keys" fill="#000000">
+    <rect x="153.5" y="43" width="63" height="210"/>
+    <rect x="254.5" y="43" width="63" height="210"/>
+    <rect x="462.5" y="43" width="62" height="210"/>
+    <rect x="562" y="43" width="62" height="210"/>
+    <rect x="662" y="43" width="63" height="210"/>
+    <rect x="870.5" y="43" width="63" height="210"/>
+    <rect x="970.5" y="43" width="63" height="210"/>
+    <rect x="1180" y="43" width="62" height="210"/>
+    <rect x="1280" y="43" width="63" height="210"/>
+    <rect x="1380" y="43" width="63" height="210"/>
+  </g>
+
+  <!-- White-key labels -->
+  <g id="white-key-labels" class="white-label">
+    <text x="132.5" y="357">C</text>
+    <text x="235" y="357">D</text>
+    <text x="337" y="357">E</text>
+    <text x="441" y="357">F</text>
+    <text x="543" y="357">G</text>
+    <text x="643" y="357">A</text>
+    <text x="745" y="357">B</text>
+    <text x="850" y="357">C</text>
+    <text x="952.5" y="357">D</text>
+    <text x="1055" y="357">E</text>
+    <text x="1159" y="357">F</text>
+    <text x="1261" y="357">G</text>
+    <text x="1361" y="357">A</text>
+    <text x="1463" y="357">B</text>
+  </g>
+
+  <!-- Black-key enharmonic labels -->
+  <g id="black-key-labels" class="black-label">
+    <g transform="translate(185 0)">
+      <text y="135">C#</text><text y="187">or</text><text y="239">D♭</text>
+    </g>
+    <g transform="translate(286 0)">
+      <text y="135">D#</text><text y="187">or</text><text y="239">E♭</text>
+    </g>
+    <g transform="translate(493.5 0)">
+      <text y="135">F#</text><text y="187">or</text><text y="239">G♭</text>
+    </g>
+    <g transform="translate(593 0)">
+      <text y="135">G#</text><text y="187">or</text><text y="239">A♭</text>
+    </g>
+    <g transform="translate(693.5 0)">
+      <text y="135">A#</text><text y="187">or</text><text y="239">B♭</text>
+    </g>
+    <g transform="translate(902 0)">
+      <text y="135">C#</text><text y="187">or</text><text y="239">D♭</text>
+    </g>
+    <g transform="translate(1002 0)">
+      <text y="135">D#</text><text y="187">or</text><text y="239">E♭</text>
+    </g>
+    <g transform="translate(1211 0)">
+      <text y="135">F#</text><text y="187">or</text><text y="239">G♭</text>
+    </g>
+    <g transform="translate(1311.5 0)">
+      <text y="135">G#</text><text y="187">or</text><text y="239">A♭</text>
+    </g>
+    <g transform="translate(1411.5 0)">
+      <text y="135">A#</text><text y="187">or</text><text y="239">B♭</text>
+    </g>
+  </g>
+</svg>

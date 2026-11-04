@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1052 446" role="img" aria-labelledby="title desc">
+  <title id="title">Bass clef note names and mnemonics</title>
+  <desc id="desc">An educational bass-clef diagram showing note names, staff lines, and mnemonics for lines and spaces.</desc>
+  <defs>
+    <style>
+      .staff { fill: none; stroke: #111; stroke-width: 1.45; }
+      .note { fill: #fff; stroke: #111; stroke-width: 1.35; }
+      .ink { fill: #111; }
+      .serif { font-family: "Times New Roman", Times, serif; fill: #111; }
+      .label { font-size: 34px; }
+      .small { font-size: 31px; }
+      .notes-text { font-size: 34px; }
+      .mnemonic { font-size: 31px; }
+    </style>
+    <path id="bass-clef-glyph" d="M50 123Q216 231 288 301Q336 348 373.0 408.5Q410 469 431.5 536.0Q453 603 453 669Q453 728 435.0 773.5Q417 819 383.0 845.0Q349 871 302 871Q284 871 264.5 867.0Q245 863 224 855Q181 839 158.0 813.5Q135 788 135 765Q135 756 143.0 752.0Q151 748 158 748Q168 748 183 752Q190 754 196.5 755.0Q203 756 210 756Q248 756 272.0 733.5Q296 711 296 674Q296 638 266.0 612.0Q236 586 195 586Q146 586 111.0 617.0Q76 648 76 697Q76 756 109.0 802.0Q142 848 198.5 874.0Q255 900 324 900Q400 900 460.0 867.0Q520 834 555.5 776.5Q591 719 591 646Q591 551 538 464Q511 419 476.5 379.0Q442 339 389.0 297.5Q336 256 256.0 208.0Q176 160 57 101ZM687 809Q710 809 726.0 793.0Q742 777 742 754Q742 731 726.0 715.5Q710 700 687 700Q664 700 648.0 715.5Q632 731 632 754Q632 777 648.0 793.0Q664 809 687 809ZM687 589Q710 589 726.0 573.0Q742 557 742 534Q742 511 726.0 495.5Q710 480 687 480Q664 480 648.0 495.5Q632 511 632 534Q632 557 648.0 573.0Q664 589 687 589Z"/>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect x="0" y="0" width="1052" height="446" fill="#fff"/>
+  </g>
+
+  <!-- Main staff and bass-clef note sequence -->
+  <g id="main-staff" class="staff">
+    <path d="M119 80 H977 M119 93.5 H977 M119 107 H977 M119 120.5 H977 M119 134 H977"/>
+    <path d="M977 80 V134"/>
+  </g>
+  <g id="main-notes">
+    <!-- Correct bass F-clef glyph: curved body and paired dots -->
+    <use href="#bass-clef-glyph" fill="#111"
+         transform="translate(115.55 142.1) scale(0.069 -0.069)"/>
+    <!-- Notes from F through B -->
+    <g class="note">
+      <ellipse cx="244" cy="95" rx="12" ry="6.2"/>
+      <ellipse cx="372" cy="140.5" rx="12" ry="6.2"/>
+      <ellipse cx="427" cy="134" rx="12" ry="6.2"/>
+      <ellipse cx="483" cy="127.5" rx="12" ry="6.2"/>
+      <ellipse cx="539" cy="120.5" rx="12" ry="6.2"/>
+      <ellipse cx="595" cy="113.5" rx="12" ry="6.2"/>
+      <ellipse cx="651" cy="107" rx="12" ry="6.2"/>
+      <ellipse cx="707" cy="100.5" rx="12" ry="6.2"/>
+      <ellipse cx="763" cy="94" rx="12" ry="6.2"/>
+      <ellipse cx="819" cy="87.5" rx="12" ry="6.2"/>
+      <ellipse cx="875" cy="80.5" rx="12" ry="6.2"/>
+      <ellipse cx="931" cy="74" rx="12" ry="6.2"/>
+    </g>
+    <!-- Callout arrows and labels -->
+    <g class="ink" stroke="#111" stroke-width="2" fill="none">
+      <path d="M185 57 L155 69"/>
+      <path d="M155 69 L165 68 M155 69 L160 59"/>
+      <path d="M116 101 L95 101"/>
+      <path d="M95 101 L104 96 M95 101 L104 106"/>
+      <path d="M763 35 V75"/>
+      <path d="M763 75 L757 65 M763 75 L769 65"/>
+      <path d="M206 95 H228"/>
+      <path d="M228 95 L218 89 M228 95 L218 101"/>
+    </g>
+    <g class="serif small">
+      <text x="193" y="52">bass clef</text>
+      <text x="27" y="96">staff</text>
+    </g>
+  </g>
+
+  <!-- Main sequence labels -->
+  <g id="main-labels" class="serif notes-text" text-anchor="middle">
+    <text x="282" y="181">F, so...</text>
+    <text x="372" y="181">F</text>
+    <text x="427" y="181">G</text>
+    <text x="483" y="181">A</text>
+    <text x="539" y="181">B</text>
+    <text x="595" y="181">C</text>
+    <text x="651" y="181">D</text>
+    <text x="707" y="181">E</text>
+    <text x="763" y="181">F</text>
+    <text x="819" y="181">G</text>
+    <text x="875" y="181">A</text>
+    <text x="931" y="181">B</text>
+  </g>
+
+  <!-- Lower left: line mnemonic -->
+  <g id="line-mnemonic">
+    <g class="serif mnemonic" text-anchor="middle">
+      <text x="300" y="274">Good Boys Do Fine Always</text>
+    </g>
+    <g class="staff">
+      <path d="M119 292 H486 M119 305.5 H486 M119 319 H486 M119 332.5 H486 M119 346 H486"/>
+      <path d="M486 292 V346"/>
+    </g>
+    <use href="#bass-clef-glyph" fill="#111"
+         transform="translate(115.55 354.1) scale(0.069 -0.069)"/>
+    <g class="note">
+      <ellipse cx="210" cy="346" rx="12" ry="6.2"/>
+      <ellipse cx="267" cy="332.5" rx="12" ry="6.2"/>
+      <ellipse cx="324" cy="319" rx="12" ry="6.2"/>
+      <ellipse cx="381" cy="305.5" rx="12" ry="6.2"/>
+      <ellipse cx="439" cy="292" rx="12" ry="6.2"/>
+    </g>
+    <g class="serif notes-text" text-anchor="middle">
+      <text x="210" y="394">G</text>
+      <text x="267" y="394">B</text>
+      <text x="324" y="394">D</text>
+      <text x="381" y="394">F</text>
+      <text x="439" y="394">A</text>
+    </g>
+    <text class="serif notes-text" x="102" y="394">lines:</text>
+  </g>
+
+  <!-- Lower right: space mnemonic -->
+  <g id="space-mnemonic">
+    <g class="serif mnemonic" text-anchor="middle">
+      <text x="785" y="229">All Cars Eat Gas</text>
+      <text x="785" y="261">All Cows Eat Grass</text>
+    </g>
+    <g class="staff">
+      <path d="M555 292 H977 M555 305.5 H977 M555 319 H977 M555 332.5 H977 M555 346 H977"/>
+      <path d="M977 292 V346"/>
+    </g>
+    <use href="#bass-clef-glyph" fill="#111"
+         transform="translate(551.55 354.1) scale(0.069 -0.069)"/>
+    <g class="note">
+      <ellipse cx="646" cy="353" rx="12" ry="6.2"/>
+      <ellipse cx="702" cy="339.5" rx="12" ry="6.2"/>
+      <ellipse cx="758" cy="326" rx="12" ry="6.2"/>
+      <ellipse cx="815" cy="312.5" rx="12" ry="6.2"/>
+      <ellipse cx="873" cy="299" rx="12" ry="6.2"/>
+      <ellipse cx="930" cy="285.5" rx="12" ry="6.2"/>
+    </g>
+    <g class="serif notes-text" text-anchor="middle">
+      <text x="646" y="394">F</text>
+      <text x="702" y="394">A</text>
+      <text x="758" y="394">C</text>
+      <text x="815" y="394">E</text>
+      <text x="873" y="394">G</text>
+      <text x="930" y="394">B</text>
+    </g>
+    <text class="serif notes-text" x="521" y="394">spaces:</text>
+    <!-- Bracket above the mnemonic sequence -->
+    <path d="M692 280 V271 H886 V280" fill="none" stroke="#111" stroke-width="1.4"/>
+  </g>
+
+  <!-- Staff-line pass: redraw staff rules above noteheads so lines remain
+       visible where a note is placed directly on a staff line. -->
+  <g id="staff-lines-over-notes" fill="none" stroke="#111" stroke-width="1.45">
+    <path d="M190 80 H977 M190 93.5 H977 M190 107 H977 M190 120.5 H977 M190 134 H977"/>
+    <path d="M190 292 H486 M190 305.5 H486 M190 319 H486 M190 332.5 H486 M190 346 H486"/>
+    <path d="M625 292 H977 M625 305.5 H977 M625 319 H977 M625 332.5 H977 M625 346 H977"/>
+  </g>
+</svg>

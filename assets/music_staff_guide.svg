@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 734" role="img" aria-labelledby="title desc">
+  <title id="title">Treble clef staff note-reading guide</title>
+  <desc id="desc">A music theory diagram showing treble clef staff lines and spaces, note names, Every Good Boy Does Fine, and F-A-C-E.</desc>
+  <defs>
+    <style>
+      .ink { fill: #080808; stroke: #080808; }
+      .staff-line { stroke: #111; stroke-width: 2.1; fill: none; }
+      .note { fill: #080808; stroke: #080808; stroke-width: 1.2; }
+      .label { font-family: "Times New Roman", Georgia, serif; fill: #080808; }
+      .small { font-size: 47px; }
+      .medium { font-size: 54px; }
+      .large { font-size: 57px; }
+      .note-name { font-size: 54px; }
+      .arrow { stroke: #080808; stroke-width: 3.2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#080808"/>
+    </marker>
+    <g id="treble-clef" class="label">
+      <text x="0" y="0" font-size="176" font-family="Noto Music, Bravura, serif">𝄞</text>
+    </g>
+    <g id="whole-note">
+      <ellipse class="note" cx="0" cy="0" rx="21" ry="11.5" transform="rotate(-13)"/>
+      <ellipse cx="0" cy="0" rx="12.5" ry="5.1" fill="#fff" transform="rotate(-13)"/>
+    </g>
+  </defs>
+
+  <!-- Background -->
+  <g id="background"><rect width="2048" height="734" fill="#fff"/></g>
+
+  <!-- Main upper staff and notes -->
+  <g id="main-staff">
+    <path class="staff-line" d="M310 119 H1798 M310 142.5 H1798 M310 166 H1798 M310 189.5 H1798 M310 213 H1798"/>
+    <use href="#treble-clef" x="327" y="214"/>
+    <use href="#whole-note" x="519" y="190.5"/>
+    <use href="#whole-note" x="769" y="225"/>
+    <use href="#whole-note" x="864" y="213"/>
+    <use href="#whole-note" x="959" y="201"/>
+    <use href="#whole-note" x="1053" y="190.5"/>
+    <use href="#whole-note" x="1147" y="178"/>
+    <use href="#whole-note" x="1242" y="166"/>
+    <use href="#whole-note" x="1337" y="154"/>
+    <use href="#whole-note" x="1430" y="142"/>
+    <use href="#whole-note" x="1525" y="130.5"/>
+    <use href="#whole-note" x="1618" y="119.5"/>
+    <use href="#whole-note" x="1698" y="108"/>
+  </g>
+
+  <!-- Upper annotations -->
+  <g id="upper-annotations" class="label">
+    <text x="139" y="145" class="medium">staff</text>
+    <path class="arrow" d="M250 142 L299 157"/>
+    <text x="466" y="95" class="medium">treble clef</text>
+    <path class="arrow" d="M462 69 L398 84"/>
+    <path class="arrow" d="M1053 66 L1053 153"/>
+    <text x="1808" y="96" class="medium">line 5</text>
+    <path class="arrow" d="M1798 75 L1745 108"/>
+    <text x="1766" y="290" class="medium">line 1</text>
+    <path class="arrow" d="M1766 270 L1737 223"/>
+    <path class="arrow" d="M438 191 L493 191"/>
+    <text x="495" y="295" class="large">G, so...</text>
+    <text x="755" y="274" class="note-name">D</text>
+    <text x="849" y="274" class="note-name">E</text>
+    <text x="946" y="274" class="note-name">F</text>
+    <text x="1040" y="274" class="note-name">G</text>
+    <text x="1135" y="274" class="note-name">A</text>
+    <text x="1230" y="274" class="note-name">B</text>
+    <text x="1324" y="274" class="note-name">C</text>
+    <text x="1417" y="274" class="note-name">D</text>
+    <text x="1513" y="274" class="note-name">E</text>
+    <text x="1606" y="274" class="note-name">F</text>
+    <text x="1690" y="274" class="note-name">G</text>
+  </g>
+
+  <!-- Lower-left: line mnemonic -->
+  <g id="line-mnemonic">
+    <path class="staff-line" d="M315 443 H946 M315 466.5 H946 M315 490 H946 M315 513.5 H946 M315 537 H946"/>
+    <use href="#treble-clef" x="328" y="538"/>
+    <use href="#whole-note" x="470" y="539"/>
+    <use href="#whole-note" x="574" y="514"/>
+    <use href="#whole-note" x="670" y="490"/>
+    <use href="#whole-note" x="767" y="466"/>
+    <use href="#whole-note" x="864" y="443"/>
+    <g class="label">
+      <text x="401" y="410" class="large">Every Good Boy Does Fine</text>
+      <text x="290" y="621" class="large">lines:</text>
+      <text x="433" y="621" class="note-name">E</text>
+      <text x="542" y="621" class="note-name">G</text>
+      <text x="645" y="621" class="note-name">B</text>
+      <text x="746" y="621" class="note-name">D</text>
+      <text x="842" y="621" class="note-name">F</text>
+    </g>
+  </g>
+
+  <!-- Lower-right: space mnemonic -->
+  <g id="space-mnemonic">
+    <path class="staff-line" d="M1064 443 H1798 M1064 466.5 H1798 M1064 490 H1798 M1064 513.5 H1798 M1064 537 H1798"/>
+    <use href="#treble-clef" x="1077" y="538"/>
+    <use href="#whole-note" x="1220" y="550"/>
+    <use href="#whole-note" x="1325" y="526"/>
+    <use href="#whole-note" x="1420" y="502"/>
+    <use href="#whole-note" x="1517" y="479"/>
+    <use href="#whole-note" x="1617" y="455"/>
+    <use href="#whole-note" x="1715" y="432"/>
+    <g class="label">
+      <text x="1233" y="385" class="large">F-A-C-E spells face</text>
+      <path d="M1287 406 V421 H1638 V406" stroke="#080808" stroke-width="2.5" fill="none"/>
+      <text x="1004" y="621" class="large">spaces:</text>
+      <text x="1198" y="621" class="note-name">D</text>
+      <text x="1303" y="621" class="note-name">F</text>
+      <text x="1401" y="621" class="note-name">A</text>
+      <text x="1498" y="621" class="note-name">C</text>
+      <text x="1597" y="621" class="note-name">E</text>
+      <text x="1698" y="621" class="note-name">G</text>
+    </g>
+  </g>
+</svg>
