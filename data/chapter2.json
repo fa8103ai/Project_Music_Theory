@@ -55,8 +55,8 @@
           },
           {
             "title": {
-              "zh": "【視覺圖解 4：八度】",
-              "en": "[Visual Diagram 4: Octave (Ottava)]"
+              "zh": "【視覺圖解 4：加線、八度】",
+              "en": "[Visual Diagram 4: Ledger Lines and Octave (Ottava)]"
             },
             "explanation": {
               "zh": "如有需要，可使用更多「加線」（ledger lines）來記寫更高或更低的音符。為避免使用過多加線，可在音符上方或下方使用記號 8 或 8va（octave，八度），表示該音符須提高或降低一個八度演奏。",
@@ -79,8 +79,8 @@
           },
                     {
             "title": {
-              "zh": "【視覺圖解 5：臨時記號】",
-              "en": "[Visual Diagram 5: Accidentals]"
+              "zh": "【視覺圖解 6：臨時記號 (Accidentals)】",
+              "en": "[Visual Diagram 6: Accidentals]"
             },
             "explanation": {
               "zh": "在五線譜上，這些記號寫在音符之前；但在一般文字寫法中，則寫在音名之後，例如 C# 表示「升 C」（C sharp），Db 表示「降 D」（D flat）。若要取消升記號或降記號，則使用「本位記號」（natural sign）。",
@@ -88,6 +88,18 @@
             },
             "imagePath": "./assets/Accidentals.svg",
             "altText": "Accidentals Diagram"
+           },
+                    {
+            "title": {
+              "zh": "【視覺圖解 7：半音與全音】",
+              "en": "[Visual Diagram 7: Semitones and Tones]"
+            },
+            "explanation": {
+              "zh": "音高之間的距離稱為「音程」（interval）。最小的音程稱為「半音」（semitone，也稱 half step 或 half tone），例如 C 與 C♯、C♯ 與 D，以及 E 與 F 之間的音程。\n由兩個半音構成的音程稱為「全音」（tone，也稱 whole step 或 whole tone），例如 A 至 B、E 至 F♯，以及 D♭ 至 E♭ 之間的音程。",
+              "en": "The distance between pitches is called an interval. The nearest interval is called semitone (half step or half tone). For example, C and C#, C# and D, E and F. \nAn interval of two semitones, e.g. A to B, E to F#, Db to Eb, is called a tone (whole step or whole tone)."
+            },
+            "imagePath": "./assets/Semitones.svg",
+            "altText": "Semitones and Tones Diagram"
           }
         ],
         "examples": {
