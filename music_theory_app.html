@@ -304,8 +304,8 @@ function loadTopic(id) {
       concept.visualDiagrams.forEach((diagram, index) => {
           let explanationHTML = "";
           if (diagram.explanation) {
-             let explanationText = isZh ? diagram.explanation.zh : diagram.explanation.en;
-             explanationHTML = '<p style="margin-bottom: 10px; font-style: italic;">' + explanationText + '</p>';
+             let explanationText = (isZh ? diagram.explanation.zh : diagram.explanation.en).replace(/\n/g, '<br>');
+             explanationHTML = '<p style="margin-bottom: 10px; font-style: italic; text-align: left; line-height: 1.6; color: var(--acc);">' + explanationText + '</p>';
           }
 
           diagramHTML +=
@@ -318,9 +318,10 @@ function loadTopic(id) {
   } else if (concept.visualDiagram) {
       let explanationHTML = "";
       if (concept.visualDiagram.explanation) {
-             let explanationText = isZh ? concept.visualDiagram.explanation.zh : concept.visualDiagram.explanation.en;
-             explanationHTML = '<p style="margin-bottom: 10px; font-style: italic;">' + explanationText + '</p>';
-      }
+             let explanationText = (isZh ? concept.visualDiagram.explanation.zh : concept.visualDiagram.explanation.en).replace(/\n/g, '<br>');
+             explanationHTML = '<p style="margin-bottom: 10px; font-style: italic; text-align: left; line-height: 1.6; color: var(--acc);">' + explanationText + '</p>';
+            }
+
       diagramHTML =
           '<div class="svg-box">' +
             '<div class="card-title" style="margin-bottom:6px"><span>' + concept.visualDiagram.title[lang] + '</span><button class="tts-btn" onclick="speakCurrentDiagram(this)">🔊</button></div>' +

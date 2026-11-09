@@ -23,8 +23,8 @@
               "en": "[Visual Diagram 1: Pitch Names and Notation - Treble Clef]"
             },
             "explanation": {
-              "zh": "五線譜上的每一條線與每一個間，都代表一個音符。譜號(Clef)用來標示五線譜上各條線（以及線與線之間的間）所對應的音名。譜號寫在五線譜的開端。高音譜號(Treble Clef)將由下往上數的第二條線定為 G。在高音譜號中，五條線由下至上分別代表 E、G、B、D、F；四個間則分別代表 F、A、C、E。",
-              "en": "Each line and each space represent a note. A clef indicates which note names go on which lines (and spaces between the lines) on the staff. Clefs are written at the start of the staff. Treble clef designates the second line from the bottom as G. The lines in treble clef represent the pitches E, G, B, D, and F. The spaces are F, A, C, and E."
+              "zh": "五線譜上的每一條線與每一個間，都代表一個音符。\n譜號(Clef)用來標示五線譜上各條線（以及線與線之間的間）所對應的音名。譜號寫在五線譜的開端。\n高音譜號(Treble Clef)將由下往上數的第二條線定為 G。在高音譜號中，五條線由下至上分別代表 E、G、B、D、F；四個間則分別代表 F、A、C、E。",
+              "en": "Each line and each space represent a note. \nA clef indicates which note names go on which lines (and spaces between the lines) on the staff. Clefs are written at the start of the staff. \nTreble clef designates the second line from the bottom as G. The lines in treble clef represent the pitches E, G, B, D, and F. The spaces are F, A, C, and E."
             },
             "imagePath": "./assets/music_staff_guide.svg",
             "altText": "Pitch and Staff Diagram"
@@ -64,6 +64,30 @@
             },
             "imagePath": "./assets/8va.svg",
             "altText": "Octave Diagram"
+          },
+                    {
+            "title": {
+              "zh": "【視覺圖解 5：鋼琴鍵盤上的黑鍵】",
+              "en": "[Visual Diagram 5: Black keys on the piano keyboard]"
+            },
+            "explanation": {
+              "zh": "圖中顯示鍵盤上的白鍵與黑鍵。黑鍵的名稱是根據相鄰的白鍵音名而定的：若位於白鍵右方，稱為「升記號」（sharp）；若位於白鍵左方，則稱為「降記號」（flat）。",
+              "en": "The picture shows white and black keys on the keyboard. The naming of the black keys is taken from the white notes. If they are to the right, they are called sharp; if they are to the left they are called flat. "
+            },
+            "imagePath": "./assets/piano_keyboard.svg",
+            "altText": "Black Keys"
+          },
+                    {
+            "title": {
+              "zh": "【視覺圖解 5：臨時記號】",
+              "en": "[Visual Diagram 5: Accidentals]"
+            },
+            "explanation": {
+              "zh": "在五線譜上，這些記號寫在音符之前；但在一般文字寫法中，則寫在音名之後，例如 C# 表示「升 C」（C sharp），Db 表示「降 D」（D flat）。若要取消升記號或降記號，則使用「本位記號」（natural sign）。",
+              "en": "On the stave, these signs are placed before notes, but in orinary writing they come afterwards, e.g. C# means ‘C sharp’, Db means ‘D flat’. To cancel the sharp or flat, we use a natural sign."
+            },
+            "imagePath": "./assets/Accidentals.svg",
+            "altText": "Accidentals Diagram"
           }
         ],
         "examples": {

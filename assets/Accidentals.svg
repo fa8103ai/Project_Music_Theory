@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 900" role="img" aria-labelledby="title desc">
+  <title id="title">Musical accidentals reference chart</title>
+  <desc id="desc">An educational chart explaining sharp, flat, and natural symbols with staff notation and piano-key illustrations.</desc>
+  <defs>
+    <linearGradient id="pink" x2="0" y2="1"><stop stop-color="#f9dce2"/><stop offset="1" stop-color="#fff0f1"/></linearGradient>
+    <linearGradient id="orange" x2="0" y2="1"><stop stop-color="#ffedcf"/><stop offset="1" stop-color="#fff5e5"/></linearGradient>
+    <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#d8edfb"/><stop offset="1" stop-color="#eef7ff"/></linearGradient>
+    <linearGradient id="green" x2="0" y2="1"><stop stop-color="#d9f5d8"/><stop offset="1" stop-color="#efffee"/></linearGradient>
+    <linearGradient id="purple" x2="0" y2="1"><stop stop-color="#eadcf8"/><stop offset="1" stop-color="#f8f0ff"/></linearGradient>
+    <style>
+      .heading{font:900 58px Arial,Helvetica,sans-serif;fill:#102333;letter-spacing:.5px}
+      .name{font:700 40px Arial,Helvetica,sans-serif}
+      .body{font:28px Arial,Helvetica,sans-serif;fill:#171717}
+      .staff{stroke:#252525;stroke-width:1.7;opacity:.8}
+      .music{font-family:"DejaVu Sans", "Noto Music", serif;fill:#090909}
+      .keyline{stroke:#151515;stroke-width:3}
+      .greenx{font:700 54px Arial,sans-serif;fill:#72d64b;stroke:#278c24;stroke-width:1.2;paint-order:stroke}
+    </style>
+    <g id="staff">
+      <path class="staff" d="M0 0H185 M0 18H185 M0 36H185 M0 54H185 M0 72H185"/>
+    </g>
+    <g id="keyboard">
+      <rect x="0" y="0" width="111" height="145" rx="3" fill="#fff" stroke="#111" stroke-width="3"/>
+      <path d="M0 129H111V145H0Z" fill="#d5d7d9" stroke="#111" stroke-width="2"/>
+      <path d="M35 0V129 M75 0V129" class="keyline" fill="none"/>
+      <path d="M20 0H45V74H20Z M60 0H85V74H60Z" fill="#090b0c" stroke="#111" stroke-width="2"/>
+    </g>
+  </defs>
+
+  <!-- Background and title -->
+  <g id="background"><rect width="1024" height="1238" fill="#fffdfd"/></g>
+  <g id="typography">
+    <text class="heading" x="516" y="156" text-anchor="middle">ACCIDENTALS</text>
+    <path d="M289 174H744" stroke="#102333" stroke-width="3"/>
+  </g>
+
+  <!-- Sharp -->
+  <g id="sharp-card">
+    <rect x="66" y="216" width="901" height="171" rx="18" fill="url(#pink)" stroke="#d78b9b" stroke-width="2"/>
+    <g transform="translate(112 237)" fill="none" stroke="#080808" stroke-width="8" stroke-linecap="square">
+      <path d="M20 12V132 M55 0V119 M0 57L65 28 M0 103L65 74"/>
+    </g>
+    <text class="name" x="224" y="290" fill="#c83c50">Sharp</text>
+    <path d="M216 301H555" stroke="#aaa" stroke-width="1"/>
+    <text class="body" x="224" y="337">Raises a note <tspan font-weight="700">1 semitone</tspan></text>
+    <path d="M571 244V363" stroke="#555" stroke-width="1.5"/>
+    <use href="#staff" x="585" y="255"/>
+    <text class="music" x="588" y="345" font-size="180">𝄞</text>
+    <text class="music" x="674" y="360" font-size="61">♯</text><ellipse cx="727" cy="337" rx="18" ry="10" fill="none" stroke="#090909" stroke-width="4.5" transform="rotate(-18 727 337)"/>
+    <use href="#keyboard" x="798" y="229"/>
+    <text class="greenx" x="855" y="292">×</text>
+  </g>
+
+  <!-- Flat -->
+  <g id="flat-card">
+    <rect x="66" y="410" width="901" height="166" rx="18" fill="url(#blue)" stroke="#78b6d8" stroke-width="2"/>
+    <text x="90" y="545" font-family="DejaVu Sans,Arial" font-size="130" fill="#080808">♭</text>
+    <text class="name" x="224" y="477" fill="#398fc8">Flat</text>
+    <path d="M216 488H555" stroke="#aaa" stroke-width="1"/>
+    <text class="body" x="224" y="524">Lowers a note <tspan font-weight="700">1 semitone</tspan></text>
+    <path d="M571 436V551" stroke="#555" stroke-width="1.5"/>
+    <use href="#staff" x="585" y="449"/>
+    <text class="music" x="588" y="543" font-size="180">𝄞</text>
+    <text class="music" x="665" y="545" font-size="54">♭</text><ellipse cx="780" cy="540" rx="18" ry="10" fill="none" stroke="#090909" stroke-width="4.5" transform="rotate(-18 727 714)"/>
+    <use href="#keyboard" x="798" y="417"/>
+    <rect x="840" y="417" width="24" height="125" fill="#36a8df" opacity=".8"/>
+    <text class="greenx" x="815" y="495">×</text>
+  </g>
+
+  <!-- Natural -->
+  <g id="natural-card">
+    <rect x="66" y="594" width="909" height="172" rx="18" fill="url(#purple)" stroke="#b28acb" stroke-width="2"/>
+    <text x="90" y="733" font-family="DejaVu Sans,Arial" font-size="145" fill="#080808">♮</text>
+    <text class="name" x="224" y="669" fill="#7840a7">Natural</text>
+    <path d="M216 681H555" stroke="#aaa" stroke-width="1"/>
+    <text class="body" x="224" y="717">Cancels <tspan font-weight="700">any accidental</tspan></text>
+    <path d="M571 623V738" stroke="#555" stroke-width="1.5"/>
+    <use href="#staff" x="585" y="637"/>
+    <text class="music" x="588" y="731" font-size="180">𝄞</text>
+    <text class="music" x="662" y="740" font-size="57">♮</text><ellipse cx="720" cy="720" rx="18" ry="10" fill="none" stroke="#090909" stroke-width="4.5" transform="rotate(-18 727 714)"/>
+    <use href="#keyboard" x="798" y="605"/>
+    <text class="greenx" x="835" y="730">×</text>
+  </g>
+</svg>
