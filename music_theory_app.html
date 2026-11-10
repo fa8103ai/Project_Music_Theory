@@ -8,30 +8,46 @@
 :root{--bg:#f4f6f9;--panel:#fff;--pri:#1a5276;--sec:#2980b9;--acc:#e67e22;--txt:#2c3e50;--bdr:#dcdde1;--fs:16px}
 *{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
 body{background:var(--bg);color:var(--txt);font-size:var(--fs);height:100vh;display:flex;flex-direction:column;overflow:hidden}
-header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;padding:10px 18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 5px rgba(0,0,0,.1)}
+header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;padding:10px 18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 5px rgba(0,0,0,.1);gap:12px;flex-wrap:wrap}
 .header-title h1{font-size:1.3em;margin-bottom:2px}.header-title p{font-size:.82em;opacity:.92}
-.header-controls{display:flex;gap:10px;align-items:center}
-.ctrl-grp{display:flex;background:rgba(255,255,255,.2);border-radius:6px;overflow:hidden}
-.ctrl-grp button{background:transparent;border:none;color:#fff;padding:6px 11px;cursor:pointer;font-weight:700;font-size:.88em}
+/*.header-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap} */
+.header-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;flex:1;justify-content:flex-end}
+
+/* Study Progress Bar in Header (pushed to the left) */
+.progress-grp{margin-right:auto;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:6px;font-weight:700;font-size:.88em;line-height:1.2;white-space:nowrap}
+
+
+/* Unified Control Group Styling (Buttons, Speed Label & Select Box) */
+.ctrl-grp{display:flex;align-items:center;background:rgba(255,255,255,.2);border-radius:6px;overflow:hidden}
+.ctrl-grp button{background:transparent;border:none;color:#fff;padding:6px 11px;cursor:pointer;font-weight:700;font-size:.88em;line-height:1.2}
 .ctrl-grp button:hover,.ctrl-grp button.active{background:rgba(255,255,255,.4)}
-.main-container{display:flex;flex:1;overflow:hidden; position: relative;}
+.ctrl-label{color:#fff;padding:6px 6px 6px 11px;font-weight:700;font-size:.88em;line-height:1.2;white-space:nowrap}
+.ctrl-select{background:transparent;color:#fff;border:none;padding:6px 11px 6px 4px;font-weight:700;font-size:.88em;line-height:1.2;cursor:pointer;outline:none}
+.ctrl-select option{color:var(--txt);background:#fff;font-weight:700}
+
+/* Study Progress Bar in Header */
+.progress-grp{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:6px;font-weight:700;font-size:.88em;line-height:1.2;white-space:nowrap}
+.progress-bar-bg{width:85px;height:10px;background:rgba(255,255,255,.3);border-radius:5px;overflow:hidden}
+.progress-bar-fill{height:100%;background:#2ecc71;width:0%;transition:width .3s ease}
+
+.main-container{display:flex;flex:1;overflow:hidden;position:relative}
 .col{background:var(--panel);border-right:1px solid var(--bdr);display:flex;flex-direction:column;transition:width .25s}
 .col-hdr{background:#f8f9fa;padding:9px 14px;font-weight:700;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;font-size:.92em}
 .collapse-btn{background:none;border:none;cursor:pointer;font-size:1.1em;color:var(--pri)}
 #left-col{
-    /* Use flex-basis to allow dynamic resizing while keeping layout stable */
     flex-basis: 290px; 
     min-width: 200px;
     max-width: 50%;
     font-size:.82em;
     flex-shrink:0;
-    /* Remove transition on width to prevent lag during active dragging */
     transition: none; 
 }
 .toc-list{overflow-y:auto;flex:1;padding:8px}
 .ch-title{font-weight:700;color:var(--pri);margin:12px 0 4px;padding-bottom:3px;border-bottom:2px solid var(--sec);font-size:1.02em}
-.topic-item{padding:7px 9px;margin:2px 0;border-radius:4px;cursor:pointer;border-left:3px solid transparent}
+.topic-item{padding:7px 9px;margin:2px 0;border-radius:4px;cursor:pointer;border-left:3px solid transparent;display:flex;justify-content:space-between;align-items:center}
 .topic-item:hover{background:#ebf5fb}.topic-item.active{background:#d4e6f1;border-left-color:var(--pri);font-weight:700}
+.topic-check{color:#27ae60;font-weight:bold;font-size:.95em;margin-left:6px;padding:0 4px;border-radius:3px;cursor:pointer}
+.topic-check:hover{background:#fadbd8;color:#c0392b}
 #middle-col{flex:1.35;overflow-y:auto;padding:18px}
 #right-col{flex:1.15;overflow-y:auto;padding:18px;background:#fafafa}
 .card{background:#fdfefe;border:1px solid var(--bdr);border-radius:8px;padding:14px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
@@ -39,7 +55,7 @@ header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;paddi
 .svg-box{background:#fff;border:2px solid #bdc3c7;border-radius:8px;padding:12px;text-align:center;margin:14px 0;overflow-x:auto;}
 /* Rule to specifically resize the Clef_staff.svg image */
 img[src*="clef_staff.svg"] {
-    max-width: 300px !important; /* Adjust this number to make it smaller or larger */
+    max-width: 300px !important;
     height: auto;
 }
 
@@ -54,9 +70,9 @@ img[src*="clef_staff.svg"] {
 .hint-btn{background:none;border:none;color:var(--acc);cursor:pointer;font-weight:700;margin-top:6px;font-size:.88em}
 .hint-box{background:#fef9e7;border-left:4px solid var(--acc);padding:9px;margin-top:8px;font-size:.88em;display:none}
 .exp-box{margin-top:8px;padding:8px;background:#eaf2f8;border-radius:4px;font-size:.88em;display:none}
-.col.collapsed{flex-basis:42px!important;min-width:42px!important;max-width: 42px!important;overflow:hidden; transition: flex-basis 0.25s;}
+.col.collapsed{flex-basis:42px!important;min-width:42px!important;max-width: 42px!important;padding:0!important;overflow:hidden; transition: flex-basis 0.25s;}
 .col.collapsed>*:not(.col-hdr){display:none}
-.col.collapsed .col-hdr{writing-mode:vertical-lr;padding:15px 5px;height:100%;justify-content:center;cursor:pointer}
+.col.collapsed .col-hdr{writing-mode:vertical-lr;padding:15px 5px;height:100%;justify-content:center;gap:10px;cursor:pointer;border-bottom:none}
 .btn-stop-tts { background-color: #be123c !important; }
 .btn-stop-tts:hover { background-color: #9f1239 !important; }
 
@@ -72,7 +88,7 @@ img[src*="clef_staff.svg"] {
 .video-link { background-color: #ef4444; }
 .video-link:hover { background-color: #dc2626; }
 
-/* NEW: Resizer Bar Style */
+/* Resizer Bar Style */
 .resizer {
   width: 6px;
   background: var(--bdr);
@@ -84,7 +100,6 @@ img[src*="clef_staff.svg"] {
 .resizer:hover, .resizer:active {
   background: var(--sec);
 }
-
 </style>
 </head>
 <body>
@@ -94,17 +109,27 @@ img[src*="clef_staff.svg"] {
     <p id="app-subtitle">根據 ABRSM 五級樂理教材編製‧配備粵英雙語朗讀 Based on ABRSM Curriculum with Voice Read-Aloud</p>
   </div>
   <div class="header-controls">
-    <div style="font-size:.85em;display:flex;align-items:center;gap:4px">
-      <span>語速:</span>
-      <select id="tts-speed" style="padding:4px;border-radius:4px;border:none">
+    <!-- Study Progress Tracker on the left -->
+    <div class="progress-grp" title="學習進度 / Study Progress">
+      <span id="lbl-progress">學習進度: 0/0 (0%)</span>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- All buttons moved to the right -->
+    <div class="ctrl-grp">
+      <label for="tts-speed" id="lbl-speed" class="ctrl-label">語速:</label>
+      <select id="tts-speed" class="ctrl-select">
         <option value="0.75">0.75x</option>
         <option value="0.9" selected>0.9x</option>
         <option value="1.0">1.0x</option>
         <option value="1.25">1.25x</option>
       </select>
     </div>
+
     <div class="ctrl-grp">
-      <button type="button" class="btn-stop-tts" onclick="stopSpeech()" id="btn-stop-tts">&#9209; 停止朗讀 / Stop</button>
+      <button type="button" class="btn-stop-tts" onclick="stopSpeech()" id="btn-stop-tts">&#9209; 停止朗讀</button>
     </div>
     <div class="ctrl-grp">
       <button onclick="adjFont(-1)">A-</button>
@@ -115,23 +140,35 @@ img[src*="clef_staff.svg"] {
       <button id="btn-en" onclick="setLang('en')">English</button>
     </div>
   </div>
+
 </header>
 
 <div class="main-container">
   <div class="col" id="left-col">
-    <div class="col-hdr"><span id="hdr-c1">課程目錄 Chapters</span><button class="collapse-btn" onclick="togCol('left-col')">◀</button></div>
+    <div class="col-hdr" onclick="if(this.parentElement.classList.contains('collapsed')) togCol('left-col')">
+      <span id="hdr-c1">課程目錄 Chapters</span>
+      <button class="collapse-btn" onclick="event.stopPropagation(); togCol('left-col')">◀</button>
+    </div>
     <div class="toc-list" id="toc-list"></div>
   </div>
   
-  <!-- NEW: The Resizer Bar -->
+  <!-- The Resizer Bar -->
   <div class="resizer" id="dragMe"></div>
 
   <div class="col" id="middle-col">
-    <div class="col-hdr"><span id="hdr-c2">詳細教材內容與圖解 Content & Diagrams</span><button class="collapse-btn" onclick="togCol('middle-col')">◀</button></div>
+    <div class="col-hdr" onclick="if(this.parentElement.classList.contains('collapsed')) togCol('middle-col')">
+      <span id="hdr-c2">詳細教材內容與圖解 Content & Diagrams</span>
+      <button class="collapse-btn" onclick="event.stopPropagation(); togCol('middle-col')">◀</button>
+    </div>
     <div id="content-area"></div>
   </div>
-  <div class="col" id="right-col">
-    <div class="col-hdr"><span id="hdr-c3">互動練習與引導思考 Exercises & Hints</span><button class="collapse-btn" onclick="togCol('right-col')">▶</button></div>
+
+  <!-- UPDATED: Column 3 (right-col) defaults to collapsed -->
+  <div class="col collapsed" id="right-col">
+    <div class="col-hdr" onclick="if(this.parentElement.classList.contains('collapsed')) togCol('right-col')">
+      <span id="hdr-c3">互動練習與引導思考 Exercises & Hints</span>
+      <button class="collapse-btn" onclick="event.stopPropagation(); togCol('right-col')">◀</button>
+    </div>
     <div id="quiz-area"></div>
   </div>
 </div>
@@ -145,23 +182,27 @@ img[src*="clef_staff.svg"] {
 <script>
 let lang = 'zh', curId = null, fSize = 16;
 let musicTheoryDB = [];
+let visitedTopics = new Set();
+
+// Load saved study progress from localStorage if available
+try {
+    const savedProgress = localStorage.getItem('musicTheory_visitedTopics');
+    if (savedProgress) {
+        visitedTopics = new Set(JSON.parse(savedProgress));
+    }
+} catch(e) { console.warn("Could not access localStorage", e); }
 
 // --- GOOGLE SHEETS CSV LINKS ---
-// REPLACE THESE STRINGS WITH YOUR PUBLISHED CSV LINKS
 const PPT_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSSwGdF67wohQQ-No0CVNzEaaJx4Q7ioxJf-Q99uMxRK06Gjvl3bbI5WnnVdC2--2mZ7yZmWZuA0rY2/pub?gid=0&single=true&output=csv"; 
 const MP4_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSSwGdF67wohQQ-No0CVNzEaaJx4Q7ioxJf-Q99uMxRK06Gjvl3bbI5WnnVdC2--2mZ7yZmWZuA0rY2/pub?gid=944104139&single=true&output=csv";
 
-// Dictionaries to store the loaded links. Key = Topic ID, Value = URL
 let pptLinksMap = {};
 let mp4LinksMap = {};
 
-// Helper function to parse CSV text
 function parseCSV(text) {
     const lines = text.split('\n');
     const result = {};
-    // Start from i=1 to skip the header row (Topic, Link)
     for (let i = 1; i < lines.length; i++) {
-        // Split by comma. Handle potential quotes if URLs contain commas
         const match = lines[i].match(/(?:"([^"]*)")|([^,]+)/g);
         if (match && match.length >= 2) {
             let topicId = match[0].replace(/"/g, '').trim();
@@ -207,18 +248,18 @@ async function loadAppData() {
     const chapter1Data = await response.json();
 
     // 3. Fetch Chapter 2 data
-        const response2 = await fetch('./data/chapter2.json');
+    const response2 = await fetch('./data/chapter2.json');
     if (!response2.ok) throw new Error("Network response 2 was not ok");
     const chapter2Data = await response2.json();
     
     // 4. Combine both chapters into the main database
     musicTheoryDB = [...chapter1Data, ...chapter2Data];
     
-    
     if (musicTheoryDB.length > 0 && musicTheoryDB[0].concepts.length > 0) {
       curId = musicTheoryDB[0].concepts[0].id;
     }
     
+    updateHeaderUI();
     renderTOC();
     if(curId) {
         loadTopic(curId);
@@ -246,6 +287,77 @@ const CH_META = [
   ["ch13","Chapter 13: Reiterations and Repeats","第十三章：反覆與重覆",4,"13"]
 ];
 
+function updateStudyProgress() {
+  let totalLoaded = 0;
+  musicTheoryDB.forEach(ch => {
+    totalLoaded += ch.concepts.length;
+  });
+  
+  let completed = visitedTopics.size;
+  let pct = totalLoaded > 0 ? Math.min(100, Math.round((completed / totalLoaded) * 100)) : 0;
+  
+  const lbl = document.getElementById('lbl-progress');
+  const fill = document.getElementById('progress-fill');
+  if (lbl) {
+    lbl.textContent = lang === 'zh' 
+      ? `學習進度: ${completed}/${totalLoaded} (${pct}%)` 
+      : `Progress: ${completed}/${totalLoaded} (${pct}%)`;
+  }
+  if (fill) {
+    fill.style.width = `${pct}%`;
+  }
+}
+
+function updateHeaderUI() {
+  const isZh = lang === 'zh';
+  document.getElementById('lbl-speed').textContent = isZh ? '語速:' : 'Speed:';
+  document.getElementById('btn-stop-tts').innerHTML = isZh ? '&#9209; 停止朗讀' : '&#9209; Stop';
+  document.getElementById('hdr-c1').textContent = isZh ? '課程目錄 Chapters' : 'Chapters';
+  document.getElementById('hdr-c2').textContent = isZh ? '詳細教材內容與圖解 Content & Diagrams' : 'Content & Diagrams';
+  document.getElementById('hdr-c3').textContent = isZh ? '互動練習與引導思考 Exercises & Hints' : 'Exercises & Hints';
+  updateStudyProgress();
+}
+
+function toggleTopicStatus(id) {
+  if (visitedTopics.has(id)) {
+    visitedTopics.delete(id);
+  } else {
+    visitedTopics.add(id);
+  }
+  try {
+    localStorage.setItem('musicTheory_visitedTopics', JSON.stringify([...visitedTopics]));
+  } catch(e) {}
+  updateStudyProgress();
+  renderTOC();
+}
+
+function toggleTopicStatus(id) {
+  if (visitedTopics.has(id)) {
+    visitedTopics.delete(id);
+  } else {
+    visitedTopics.add(id);
+  }
+  try {
+    localStorage.setItem('musicTheory_visitedTopics', JSON.stringify([...visitedTopics]));
+  } catch(e) {}
+  updateStudyProgress();
+  renderTOC();
+}
+
+
+function toggleTopicStatus(id) {
+  if (visitedTopics.has(id)) {
+    visitedTopics.delete(id);
+  } else {
+    visitedTopics.add(id);
+  }
+  try {
+    localStorage.setItem('musicTheory_visitedTopics', JSON.stringify([...visitedTopics]));
+  } catch(e) {}
+  updateStudyProgress();
+  renderTOC();
+}
+
 function renderTOC() {
   const toc = document.getElementById('toc-list');
   toc.innerHTML = '';
@@ -259,8 +371,25 @@ function renderTOC() {
     chapter.concepts.forEach(concept => {
       const item = document.createElement('div');
       item.className = 'topic-item' + (concept.id === curId ? ' active' : '');
-      item.textContent = lang === 'zh' ? concept.name.zh : concept.name.en;
-      item.onclick = () => loadTopic(concept.id);
+      item.title = lang === 'zh' ? '再次點擊可切換完成狀態 (✓)' : 'Click again to toggle completion (✓)';
+      
+      const nameSpan = document.createElement('span');
+      nameSpan.textContent = lang === 'zh' ? concept.name.zh : concept.name.en;
+      item.appendChild(nameSpan);
+
+      if (visitedTopics.has(concept.id)) {
+        const checkSpan = document.createElement('span');
+        checkSpan.className = 'topic-check';
+        checkSpan.textContent = '✓';
+        checkSpan.title = lang === 'zh' ? '點擊以重置完成狀態' : 'Click to reset completion status';
+        checkSpan.onclick = (e) => {
+          e.stopPropagation();
+          toggleTopicStatus(concept.id);
+        };
+        item.appendChild(checkSpan);
+      }
+
+      item.onclick = () => loadTopic(concept.id, true);
       toc.appendChild(item);
     });
   });
@@ -291,10 +420,23 @@ function findConceptById(id) {
   return null;
 }
 
-function loadTopic(id) {
+function loadTopic(id, isUserClick = false) {
   stopSpeech();
   
+  // If user clicks the currently active topic again, toggle its green tick status
+  if (isUserClick && curId === id) {
+    toggleTopicStatus(id);
+    return;
+  }
+
   curId = id;
+  visitedTopics.add(id);
+
+  try {
+    localStorage.setItem('musicTheory_visitedTopics', JSON.stringify([...visitedTopics]));
+  } catch(e) {}
+
+  updateStudyProgress();
   renderTOC();
   const data = findConceptById(id);
   if (!data) return;
@@ -341,7 +483,6 @@ function loadTopic(id) {
   let resourceLinksHTML = "";
   let linksArray = [];
 
-  // Check the loaded mapping for the current topic ID
   if (pptLinksMap[concept.id]) {
       let pptText = isZh ? "📄 開啟本節投影片" : "📄 Open Presentation Slide";
       linksArray.push(`
@@ -480,8 +621,10 @@ function setLang(l) {
   lang = l;
   document.getElementById('btn-zh').classList.toggle('active', l === 'zh');
   document.getElementById('btn-en').classList.toggle('active', l === 'en');
-  if(curId) loadTopic(curId);
+  updateHeaderUI();
+  if(curId) loadTopic(curId, false);
 }
+
 
 function adjFont(d) {
   fSize = Math.max(13, Math.min(22, fSize + d));
@@ -490,16 +633,24 @@ function adjFont(d) {
 
 function togCol(id) {
   const panel = document.getElementById(id);
-  panel.classList.toggle('collapsed');
+  const isCollapsed = panel.classList.toggle('collapsed');
+  const btn = panel.querySelector('.collapse-btn');
   
-  // If we're toggling the left column, we need to handle the resizer styling
+  // Update arrow icon direction dynamically
+  if (btn) {
+      if (id === 'right-col') {
+          btn.textContent = isCollapsed ? '◀' : '▶';
+      } else {
+          btn.textContent = isCollapsed ? '▶' : '◀';
+      }
+  }
+
   if(id === 'left-col') {
       const resizer = document.getElementById('dragMe');
-      if (panel.classList.contains('collapsed')) {
-          // When collapsed, let CSS max-width take over, reset flex-basis
+      if (isCollapsed) {
           panel.style.flexBasis = ''; 
           resizer.style.cursor = 'default';
-          resizer.style.pointerEvents = 'none'; // Disable dragging while collapsed
+          resizer.style.pointerEvents = 'none';
       } else {
           resizer.style.cursor = 'col-resize';
           resizer.style.pointerEvents = 'auto';
@@ -524,7 +675,7 @@ window.onclick = function(event) {
   }
 }
 
-// --- NEW: Resizer Drag Logic ---
+// --- Resizer Drag Logic ---
 const resizer = document.getElementById('dragMe');
 const leftSide = document.getElementById('left-col');
 
@@ -532,7 +683,6 @@ let x = 0;
 let leftWidth = 0;
 
 const mouseDownHandler = function(e) {
-    // Prevent dragging if the column is currently collapsed
     if(leftSide.classList.contains('collapsed')) return;
     
     x = e.clientX;
@@ -540,8 +690,6 @@ const mouseDownHandler = function(e) {
 
     document.addEventListener('mousemove', mouseMoveHandler);
     document.addEventListener('mouseup', mouseUpHandler);
-    
-    // Prevent text selection while dragging
     document.body.style.userSelect = 'none';
 };
 
@@ -549,14 +697,13 @@ const mouseMoveHandler = function(e) {
     const dx = e.clientX - x;
     const newWidth = leftWidth + dx;
     
-    // Set boundaries: min 200px, max 50% of the window
     if(newWidth > 200 && newWidth < window.innerWidth * 0.5) {
          leftSide.style.flexBasis = `${newWidth}px`;
     }
 };
 
 const mouseUpHandler = function() {
-    document.body.style.userSelect = ''; // Re-enable text selection
+    document.body.style.userSelect = '';
     document.removeEventListener('mousemove', mouseMoveHandler);
     document.removeEventListener('mouseup', mouseUpHandler);
 };
