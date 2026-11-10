@@ -54,8 +54,8 @@
   <rect width="100%" height="100%" class="bg" />
 
   <!-- 頂部標題 -->
-  <text x="640" y="65" class="title">MUSIC NOTE</text>
-  <text x="640" y="98" class="subtitle">Anatomy of musical notes and their connections</text>
+  <text x="640" y="65" class="title">音樂符號 MUSIC NOTE</text>
+  <text x="640" y="98" class="subtitle">音樂符號的組成與連接 Anatomy of musical notes and their connections</text>
 
   <!-- ========================================== -->
   <!-- 左區塊：單一音符 (Note Head + Stem + Tail/Flag) -->

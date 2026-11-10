@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792 112" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792 130" role="img" aria-labelledby="title desc">
   <title id="title">Four-four time signature and three measures</title>
   <desc id="desc">A treble-clef staff in four-four time, with three measures, beat numbers above the notes, and note stems on the right side of every notehead.</desc>
   <defs>
@@ -13,7 +13,7 @@
   </defs>
 
   <!-- White background -->
-  <g id="background"><rect width="792" height="112" fill="#fff"/></g>
+  <g id="background"><rect width="792" height="140" fill="#fff"/></g>
 
   <!-- Five-line staff and measure bars -->
   <g id="staff" class="staff">
@@ -25,9 +25,9 @@
 
   <!-- Treble clef and stacked 4/4 time signature, without a fraction bar -->
   <g id="clef-and-time" fill="#111">
-    <text x="43" y="104" font-family="serif" font-size="76">𝄞</text>
-    <text x="88" y="79" font-family="serif" font-size="25" font-weight="bold">4</text>
-    <text x="88" y="103" font-family="serif" font-size="25" font-weight="bold">4</text>
+    <text x="43" y="110" font-family="serif" font-size="95">𝄞</text>
+    <text x="88" y="79" font-family="serif" font-size="30" font-weight="bold">4</text>
+    <text x="88" y="103" font-family="serif" font-size="30" font-weight="bold">4</text>
   </g>
 
   <!-- Beat numbers -->

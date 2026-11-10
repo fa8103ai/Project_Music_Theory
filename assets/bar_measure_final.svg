@@ -192,8 +192,8 @@
 <!-- Replace outlined word "Double" with editable text "Final". -->
 <g id="label-correction">
   <rect x="895" y="197" width="126" height="34" fill="#FFFFFF"/>
-  <text x="900" y="226" font-family="Times New Roman, Times, serif"
-        font-size="31" fill="#000000">Final</text>
+  <text x="950" y="226" font-family="Times New Roman, Times, serif"
+        font-size="33" fill="#000000">Final</text>
 </g>
 
 </svg>
