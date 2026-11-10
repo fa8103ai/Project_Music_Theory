@@ -342,8 +342,8 @@
           "en": "2/4 Accidentals"
         },
         "definition": {
-          "zh": "臨時記號 (Accidentals) 是指在樂曲中加在個別音符上的升號 (#)、降號 (b) 或還原號，這些記號並不包含在調號內[span_50](start_span)[span_50](end_span)。當臨時記號出現在一個小節中，其效力會維持到該小節結束[span_51](start_span)[span_51](end_span)。",
-          "en": "Accidentals are sharps (#), flats (b), and naturals added to individual notes during a piece that are not included in the key signature[span_52](start_span)[span_52](end_span). Once an accidental appears in a bar, it remains in force until the end of the bar[span_53](start_span)[span_53](end_span)."
+          "zh": "臨時記號 (Accidentals) 是指在樂曲中加在個別音符上的升號 (#)、降號 (b) 或還原號，這些記號並不包含在調號內。當臨時記號出現在一個小節中，其效力會維持到該小節結束。",
+          "en": "Accidentals are sharps (#), flats (b), and naturals added to individual notes during a piece that are not included in the key signature. Once an accidental appears in a bar, it remains in force until the end of the bar."
         },
         "visualDiagrams": [
           {
@@ -352,20 +352,20 @@
               "en": "[Visual Diagram 1: Rule of Accidentals]"
             },
             "explanation": {
-              "zh": "臨時記號只在同一個小節內、同一個音高位置上有效。",
-              "en": "An accidental is valid only within the same bar and only for the specific line or space."
+              "zh": "臨時記號只在同一個小節內、同一個音高位置上有效。臨時記號的有效時間只維持一個小節，如同一音高的音想繼續在下一個小節維持臨時記號，則需要在下一個小節再次標記。如果在同一個小節內想為同一音名但不同音高的音加上臨時記號，臨時記號則需要分開標記。",
+              "en": "An accidental is valid only within the same bar and only for the specific line or space.The effect of an accidental lasts only for one measure. If a note of the same pitch is to remain altered in the following measure, the accidental must be written again in that measure. If, within the same measure, an accidental is needed for a note of the same letter name but in a different octave, the accidental must be written separately for that note."
             },
-            "imagePath": "./assets/accidentals_rule.svg",
+            "imagePath": "./assets/accidental.svg",
             "altText": "Accidentals Rules Diagram"
           }
         ],
         "examples": {
-          "zh": "• 與調號不同，臨時記號只對它所在的特定線或間上的音符有效[span_54](start_span)[span_54](end_span)。\n• 如果帶有臨時記號的音符被延音線 (Tie) 連接到下一個小節，則不需重新標記該記號[span_55](start_span)[span_55](end_span)。",
-          "en": "• Unlike key signatures, an accidental applies only to the line or space on which it is written[span_56](start_span)[span_56](end_span).\n• If a note with an accidental is tied over a bar-line, the accidental is not written again[span_57](start_span)[span_57](end_span)."
+          "zh": "• 與調號不同，臨時記號只對它所在的特定線或間上的音符有效。\n• 如果帶有臨時記號的音符被延音線 (Tie) 連接到下一個小節，則不需重新標記該記號。",
+          "en": "• Unlike key signatures, an accidental applies only to the line or space on which it is written.\n• If a note with an accidental is tied over a bar-line, the accidental is not written again."
         },
         "tip": {
-          "zh": "應試錦囊：臨時記號的效力只限於同一小節內的「同一高度」！若有跨小節的延音線，臨時記號的效力僅延續至該被延音的音符[span_58](start_span)[span_58](end_span)。",
-          "en": "An accidental only lasts for one bar and applies only to its exact pitch line/space. If tied to the next bar, it carries over only for that tied note[span_59](start_span)[span_59](end_span)."
+          "zh": "應試錦囊：臨時記號的效力只限於同一小節內的「同一高度」！若有跨小節的延音線，臨時記號的效力僅延續至該被延音的音符。",
+          "en": "An accidental only lasts for one bar and applies only to its exact pitch line/space. If tied to the next bar, it carries over only for that tied note."
         },
         "exercises": [
           {
@@ -386,8 +386,8 @@
               "en": ["A bar-line cancels the effect of an accidental."]
             },
             "explanation": {
-              "zh": "當臨時記號出現在一個小節中，其效力會維持到該小節結束[span_60](start_span)[span_60](end_span)。",
-              "en": "Once an accidental has appeared in a bar, it remains in force until the end of the bar[span_61](start_span)[span_61](end_span)."
+              "zh": "當臨時記號出現在一個小節中，其效力會維持到該小節結束。",
+              "en": "Once an accidental has appeared in a bar, it remains in force until the end of the bar."
             }
           },
           {
@@ -408,8 +408,8 @@
               "en": ["Key signatures affect all octaves, but an accidental is strictly limited to its specific pitch position."]
             },
             "explanation": {
-              "zh": "與調號不同，臨時記號只對它所在的特定線或間有效[span_62](start_span)[span_62](end_span)。",
-              "en": "Unlike the sharps and flats in a key signature, an accidental applies only to the line or space on which it is written[span_63](start_span)[span_63](end_span)."
+              "zh": "與調號不同，臨時記號只對它所在的特定線或間有效。",
+              "en": "Unlike the sharps and flats in a key signature, an accidental applies only to the line or space on which it is written."
             }
           }
         ]

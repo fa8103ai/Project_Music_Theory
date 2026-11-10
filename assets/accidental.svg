@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 2048 681" role="img" aria-labelledby="title desc">
+  <title id="title">Musical notation comparison: accidental placement</title>
+  <desc id="desc">Two treble-clef examples in three-four time, with a NOT label between them.</desc>
+
+  <defs>
+    <style>
+      .ink { fill: #242321; stroke: #242321; }
+      .staff { fill: none; stroke: #292825; stroke-width: 3.2; stroke-linecap: round; }
+      .barline { fill: none; stroke: #242321; stroke-width: 5; }
+      .stem { fill: none; stroke: #242321; stroke-width: 7; stroke-linecap: square; }
+      .beam { fill: #242321; stroke: #242321; stroke-width: 1; }
+      .notehead { fill: #242321; }
+      .music-text { fill: #242321; font-family: "Noto Music", "Bravura", "Segoe UI Symbol", serif; }
+      .label { fill: #242321; font-family: Georgia, "Times New Roman", serif; }
+    </style>
+    <ellipse id="notehead" class="notehead" cx="0" cy="0" rx="23" ry="13" transform="rotate(-20)"/>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect x="0" y="0" width="2048" height="681" fill="#f3f2ec"/>
+  </g>
+
+  <!-- Upper example -->
+  <g id="upper-example">
+    <g id="upper-staff" class="staff">
+      <path d="M66 74 H1965 M66 109 H1965 M66 144 H1965 M66 179 H1965 M66 214 H1965"/>
+    </g>
+
+    <!-- Treble clef, one-sharp key signature, and 3/4 time -->
+    <g id="upper-signature">
+      <text class="music-text" x="88" y="250" font-size="350" transform="translate(28 0) scale(0.68 1)">𝄞</text>
+      <text class="music-text" x="190" y="120" font-size="83">♯</text>
+      <text class="label" x="250" y="125" font-size="95">3</text>
+      <text class="label" x="250" y="200" font-size="95">4</text>
+    </g>
+
+    <!-- First bar -->
+    <g id="upper-first-bar">
+      <use xlink:href="#notehead" transform="translate(470 64)"/>
+      <path class="stem" d="M448 65 V177"/>
+
+      <use xlink:href="#notehead" transform="translate(598 179)"/>
+      <use xlink:href="#notehead" transform="translate(700 161)"/>
+      <path class="stem" d="M622 70 V170 M719 56 V153"/>
+      <path class="beam" d="M622 69 L719 54 L719 66 L622 81 Z"/>
+
+      <use xlink:href="#notehead" transform="translate(806 145)"/>
+      <use xlink:href="#notehead" transform="translate(900 128)"/>
+      <path class="stem" d="M783 146 V244 M879 129 V226"/>
+      <path class="beam" d="M783 233 L879 216 L879 228 L783 245 Z"/>
+    </g>
+
+    <path class="barline" d="M980 75 V212"/>
+
+    <!-- Second bar: four sixteenth notes, then a quarter note and two eighth notes -->
+    <g id="upper-second-bar">
+      <use xlink:href="#notehead" transform="translate(1054 112)"/>
+      <use xlink:href="#notehead" transform="translate(1152 129)"/>
+      <use xlink:href="#notehead" transform="translate(1218 112)"/>
+      <use xlink:href="#notehead" transform="translate(1290 129)"/>
+      <path class="stem" d="M1031 113 V239 M1129 130 V239 M1195 113 V239 M1267 130 V239"/>
+      <path class="beam" d="M1031 228 H1267 V220 H1031 Z"/>
+      <path class="beam" d="M1031 241 H1267 V252 H1031 Z"/>
+
+      <!-- Sharp on the second note -->
+      <text class="music-text" x="1091" y="159" font-size="73">♯</text>
+
+      <use xlink:href="#notehead" transform="translate(1365 112)"/>
+      <path class="stem" d="M1342 113 V214"/>
+
+      <use xlink:href="#notehead" transform="translate(1507 98)"/>
+      <use xlink:href="#notehead" transform="translate(1600 129)"/>
+      <path class="stem" d="M1484 99 V214 M1577 130 V232"/>
+      <path class="beam" d="M1484 203 L1577 218 L1577 230 L1484 215 Z"/>
+    </g>
+
+    <path class="barline" d="M1684 75 V212"/>
+    <g id="upper-continuation">
+      <use xlink:href="#notehead" transform="translate(1753 112)"/>
+      <path class="stem" d="M1730 113 V214"/>
+      <text class="label" x="1868" y="164" font-size="53">etc.</text>
+    </g>
+
+    <text class="label" x="947" y="344" font-size="62" font-weight="700">NOT</text>
+  </g>
+
+  <!-- Lower example -->
+  <g id="lower-example">
+    <g id="lower-staff" class="staff">
+      <path d="M56 432 H1976 M56 467 H1976 M56 502 H1976 M56 537 H1976 M56 572 H1976"/>
+    </g>
+
+    <g id="lower-signature">
+      <text class="music-text" x="88" y="600" font-size="350" transform="translate(28 0) scale(0.68 1)">𝄞</text>
+      <text class="music-text" x="190" y="478" font-size="83">♯</text>
+      <text class="label" x="250" y="485" font-size="95">3</text>
+      <text class="label" x="250" y="555" font-size="95">4</text>
+    </g>
+
+
+
+
+
+    <!-- First bar -->
+    <g id="lower-first-bar">
+      <use xlink:href="#notehead" transform="translate(470 422)"/>
+      <path class="stem" d="M448 428 V535"/>
+
+      <use xlink:href="#notehead" transform="translate(598 537)"/>
+      <use xlink:href="#notehead" transform="translate(700 519)"/>
+      <path class="stem" d="M622 429 V535 M719 414 V520"/>
+      <path class="beam" d="M622 427 L719 412 L719 424 L622 439 Z"/>
+
+      <use xlink:href="#notehead" transform="translate(806 502)"/>
+      <use xlink:href="#notehead" transform="translate(900 484)"/>
+      <path class="stem" d="M783 503 V601 M879 485 V583"/>
+      <path class="beam" d="M783 590 L879 573 L879 585 L783 602 Z"/>
+    </g>
+
+    <path class="barline" d="M960 433 V571"/>
+
+    <!-- Second bar: lower example shows the additional repeated sharps -->
+    <g id="lower-second-bar">
+      <use xlink:href="#notehead" transform="translate(1025 467)"/>
+      <use xlink:href="#notehead" transform="translate(1123 484)"/>
+      <use xlink:href="#notehead" transform="translate(1190 467)"/>
+      <use xlink:href="#notehead" transform="translate(1262 484)"/>
+      <path class="stem" d="M1002 469 V600 M1100 485 V594 M1167 468 V594 M1239 485 V594"/>
+      <path class="beam" d="M1002 573 H1239 V584 H1002 Z"/>
+      <path class="beam" d="M1002 596 H1239 V607 H1002 Z"/>
+
+      <text class="music-text" x="1062" y="516" font-size="73">♯</text>
+      <text class="music-text" x="1200" y="516" font-size="73">♯</text>
+
+      <use xlink:href="#notehead" transform="translate(1337 467)"/>
+      <path class="stem" d="M1314 468 V572"/>
+
+      <use xlink:href="#notehead" transform="translate(1507 450)"/>
+      <use xlink:href="#notehead" transform="translate(1600 484)"/>
+      <path class="stem" d="M1484 451 V572 M1577 485 V590"/>
+      <path class="beam" d="M1484 561 L1577 576 L1577 588 L1484 573 Z"/>
+      <text class="music-text" x="1540" y="516" font-size="73" >♯</text>
+    </g>
+
+    <path class="barline" d="M1697 433 V571"/>
+    <g id="lower-continuation">
+      <use xlink:href="#notehead" transform="translate(1765 467)"/>
+      <path class="stem" d="M1742 468 V572"/>
+      <text class="label" x="1868" y="519" font-size="53">etc.</text>
+    </g>
+  </g>
+</svg>
