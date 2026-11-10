@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- 定義五線譜 -->
+    <g id="staff">
+      <line x1="0" y1="0" x2="240" y2="0" stroke="black" stroke-width="1.5"/>
+      <line x1="0" y1="10" x2="240" y2="10" stroke="black" stroke-width="1.5"/>
+      <line x1="0" y1="20" x2="240" y2="20" stroke="black" stroke-width="1.5"/>
+      <line x1="0" y1="30" x2="240" y2="30" stroke="black" stroke-width="1.5"/>
+      <line x1="0" y1="40" x2="240" y2="40" stroke="black" stroke-width="1.5"/>
+    </g>
+
+    <!-- 定義升記號 (Sharp) -->
+    <g id="sharp">
+      <line x1="-3" y1="-14" x2="-3" y2="12" stroke="black" stroke-width="1.5"/>
+      <line x1="3" y1="-16" x2="3" y2="10" stroke="black" stroke-width="1.5"/>
+      <polygon points="-6,-3, 6,-7, 6,-2, -6,2" fill="black"/>
+      <polygon points="-6,5, 6,1, 6,6, -6,10" fill="black"/>
+    </g>
+
+    <style>
+      .header-text {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        text-anchor: middle;
+        fill: black;
+      }
+      .key-text {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 44px;
+        text-anchor: middle;
+        fill: black;
+      }
+      .time-sig {
+        font-family: serif;
+        font-weight: bold;
+        font-size: 30px;
+        fill: black;
+      }
+      .music {
+        font-family: "Bravura", "Maestro", "Times New Roman", serif;
+        font-size: 100px;
+        fill: black;
+      }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- 表格框線 -->
+  <g id="table-borders">
+    <rect x="10" y="10" width="780" height="580" fill="none" stroke="black" stroke-width="5"/>
+    <line x1="400" y1="10" x2="400" y2="590" stroke="black" stroke-width="5"/>
+    <line x1="10" y1="120" x2="790" y2="120" stroke="black" stroke-width="5"/>
+    <line x1="10" y1="280" x2="790" y2="280" stroke="black" stroke-width="5"/>
+    <line x1="10" y1="440" x2="790" y2="440" stroke="black" stroke-width="5"/>
+  </g>
+
+  <!-- 排版文字 -->
+  <g id="typography">
+    <!-- 標題 -->
+    <text x="205" y="77" class="header-text">Key Signature</text>
+    <text x="595" y="77" class="header-text">Major Key</text>
+    
+    <!-- 大調名稱 -->
+    <text x="595" y="215" class="key-text">C</text>
+    <text x="595" y="375" class="key-text">G</text>
+    <text x="595" y="535" class="key-text">D</text>
+  </g>
+
+  <!-- 樂理符號 -->
+  <g id="music-notation">
+    <!-- 第一列：C 大調 -->
+    <g id="row-c-major">
+      <use href="#staff" x="80" y="180"/>
+      <text x="100" y="230" class="music">𝄞</text>
+      <text x="140" y="200" class="time-sig">4</text>
+      <text x="140" y="220" class="time-sig">4</text>
+    </g>
+
+    <!-- 第二列：G 大調 -->
+    <g id="row-g-major">
+      <use href="#staff" x="80" y="340"/>
+      <text x="100" y="390" class="music">𝄞</text>
+      <use href="#sharp" x="145" y="338"/>
+      <text x="160" y="360" class="time-sig">4</text>
+      <text x="160" y="380" class="time-sig">4</text>
+    </g>
+
+    <!-- 第三列：D 大調 -->
+    <g id="row-d-major">
+      <use href="#staff" x="80" y="500"/>
+      <text x="100" y="550" class="music">𝄞</text>
+      <use href="#sharp" x="145" y="498"/>
+      <use href="#sharp" x="160" y="514"/>
+      <text x="175" y="520" class="time-sig">4</text>
+      <text x="175" y="540" class="time-sig">4</text>
+    </g>
+  </g>
+</svg>

@@ -164,8 +164,8 @@
           "en": "2/2 The major scale"
         },
         "definition": {
-          "zh": "音階 (Scale) 是一組依高低次序排列的音符[span_18](start_span)[span_18](end_span)。大調音階遵循特定的音程結構：全-全-半-全-全-全-半 (T-T-S-T-T-T-S)[span_19](start_span)[span_19](end_span)。音階開始的第一個音稱為主音 (key-note)[span_20](start_span)[span_20](end_span)。",
-          "en": "A scale is a selection of notes arranged in ascending or descending order[span_21](start_span)[span_21](end_span). A major scale follows a specific pattern of intervals: Tone, Tone, Semitone, Tone, Tone, Tone, Semitone (T-T-S-T-T-T-S)[span_22](start_span)[span_22](end_span). The first degree on which the scale begins is called the key-note[span_23](start_span)[span_23](end_span)."
+          "zh": "「音階」（scale）是將一組音依音高由低至高（上行），或由高至低（下行）依序排列而成的。西方音樂中最常見的音階是「大音階」（major scale）。從 C 音開始，依序彈奏鍵盤上的白鍵，直到高八度的 C 音，便可奏出大音階。音階中的每一個音都稱為一個「音級」（degree）。連同高八度的主音在內，共有八個音級；第八級音是第一級音在高八度的重複，兩者之間的音程稱為「八度」（octave）。\n大調音階遵循特定的音程結構：全-全-半-全-全-全-半 (T-T-S-T-T-T-S)。音階開始的第一個音稱為主音(Key-note)。",
+          "en": "A scale is a collection of pitches arranged in order from lowest to highest pitch (ascending), or from highest to lowest pitch (descending). The most common scale in Western music is the major scale. It can be found by playing, from C, the white notes on the keyboard. Each note on the scale is described as a degree of the scale, and there are eight degrees, with the eighth repeating the first, called an octave. \nA major scale follows a specific pattern of intervals: Tone, Tone, Semitone, Tone, Tone, Tone, Semitone (T-T-S-T-T-T-S). The first degree on which the scale begins is called the key-note."
         },
         "visualDiagrams": [
           {
@@ -174,20 +174,32 @@
               "en": "[Visual Diagram 1: Major Scale Structure]"
             },
             "explanation": {
+              "zh": " ",
+              "en": " "
+            },
+            "imagePath": "./assets/Semitones_2.svg",
+            "altText": "Major Scale Pattern"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 2：G大調】",
+              "en": "[Visual Diagram 1: G Major Scale]"
+            },
+            "explanation": {
               "zh": "利用 T-T-S-T-T-T-S 結構推算，G 大調必須有 F#，而 F 大調必須有 Bb。",
               "en": "Using the T-T-S-T-T-T-S pattern, G major requires an F#, and F major requires a Bb."
             },
-            "imagePath": "./assets/major_scale_pattern.svg",
+            "imagePath": "./assets/G_Major_Scale.svg",
             "altText": "Major Scale Pattern"
           }
         ],
         "examples": {
-          "zh": "• G 大調需要一個 F# 以維持 全-全-半-全-全-全-半 的結構[span_24](start_span)[span_24](end_span)。\n• F 大調需要一個 Bb[span_25](start_span)[span_25](end_span)。\n• D 大調需要兩個升號：F# 和 C#[span_26](start_span)[span_26](end_span)。",
-          "en": "• G major requires an F# to preserve the T-T-S-T-T-T-S pattern[span_27](start_span)[span_27](end_span).\n• F major needs a Bb[span_28](start_span)[span_28](end_span).\n• D major needs two sharps: F# and C#[span_29](start_span)[span_29](end_span)."
+          "zh": "• G 大調需要一個 F# 以維持 全-全-半-全-全-全-半 的結構。\n• F 大調需要一個 Bb。\n• D 大調需要兩個升號：F# 和 C#。",
+          "en": "• G major requires an F# to preserve the T-T-S-T-T-T-S pattern.\n• F major needs a Bb.\n• D major needs two sharps: F# and C#."
         },
         "tip": {
-          "zh": "應試錦囊：緊記大調音階「全全半全全全半」的規律。半音 (Semitone) 永遠出現在第 3、4 音及第 7、8 音之間[span_30](start_span)[span_30](end_span)。",
-          "en": "Remember the pattern T-T-S-T-T-T-S for all major scales. The semitones (S) always occur between the 3rd/4th and 7th/8th degrees[span_31](start_span)[span_31](end_span)."
+          "zh": "應試錦囊：緊記大調音階「全全半全全全半」的規律。半音 (Semitone) 永遠出現在第 3、4 音及第 7、8 音之間。",
+          "en": "Remember the pattern T-T-S-T-T-T-S for all major scales. The semitones (S) always occur between the 3rd/4th and 7th/8th degrees."
         },
         "exercises": [
           {
@@ -208,8 +220,8 @@
               "en": ["Think of the C major scale on the piano. Between which notes are there no black keys (forming semitones)?"]
             },
             "explanation": {
-              "zh": "大調音階必須維持 全-全-半-全-全-全-半 (T-T-S-T-T-T-S) 的特定排列[span_32](start_span)[span_32](end_span)。",
-              "en": "A major scale is formed by preserving the series Tone, Tone, Semitone, Tone, Tone, Tone, Semitone (T-T-S-T-T-T-S)[span_33](start_span)[span_33](end_span)."
+              "zh": "大調音階必須維持 全-全-半-全-全-全-半 (T-T-S-T-T-T-S) 的特定排列。",
+              "en": "A major scale is formed by preserving the series Tone, Tone, Semitone, Tone, Tone, Tone, Semitone (T-T-S-T-T-T-S)."
             }
           },
           {
@@ -230,8 +242,8 @@
               "en": ["The 7th and 8th degrees must be a semitone apart. What note is just below G?"]
             },
             "explanation": {
-              "zh": "為了維持大調音階結構，G 大調必須有一個 F#[span_34](start_span)[span_34](end_span)。",
-              "en": "If a major scale starts on G, an F sharp will be needed to preserve the T-T-S-T-T-T-S pattern[span_35](start_span)[span_35](end_span)."
+              "zh": "為了維持大調音階結構，G 大調必須有一個 F#。",
+              "en": "If a major scale starts on G, an F sharp will be needed to preserve the T-T-S-T-T-T-S pattern."
             }
           }
         ]
@@ -243,8 +255,8 @@
           "en": "2/3 Key signatures"
         },
         "definition": {
-          "zh": "為了避免每次用到升降號都要標記，音樂會將它們寫在樂曲開首作為調號 (Key signature)[span_36](start_span)[span_36](end_span)。調號置於譜號之後、拍子記號之前，並且在每一行的開首都要重複標寫[span_37](start_span)[span_37](end_span)。",
-          "en": "Instead of writing sharps or flats every time they are needed, they are shown at the beginning of the piece as a key signature[span_38](start_span)[span_38](end_span). It is placed immediately after the clef and before the time signature, and is repeated at the beginning of every line[span_39](start_span)[span_39](end_span)."
+          "zh": "為了避免每次用到升降號都要標記，音樂會將它們寫在樂曲開首作為調號。調號置於譜號之後、拍子記號之前，並且在每一行的開首都要重複標寫。",
+          "en": "Instead of writing sharps or flats every time they are needed, they are shown at the beginning of the piece as a key signature. It is placed immediately after the clef and before the time signature, and is repeated at the beginning of every line."
         },
         "visualDiagrams": [
           {
@@ -256,13 +268,21 @@
               "zh": "緊記順序：先寫譜號，其次調號，最後拍子記號。新一行只需寫譜號與調號。",
               "en": "Remember the order: Clef first, then Key Signature, then Time Signature. Only the Clef and Key Signature are repeated on new lines."
             },
-            "imagePath": "./assets/key_signatures.svg",
+            "imagePath": "./assets/key_signature.svg",
+            "altText": "Key Signatures Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 2：大調與小調調號】",
+              "en": "[Visual Diagram 2: Major and Minor Key Signatures]"
+            },
+            "imagePath": "./assets/Key_signatures.svg",
             "altText": "Key Signatures Diagram"
           }
         ],
         "examples": {
-          "zh": "• G 大調的調號在 F 線上有一個升號，代表所有 F 音都要彈成 F#，不受八度限制[span_40](start_span)[span_40](end_span)。\n• 樂曲中途改變調號時，新的調號會寫在雙縱線之後[span_41](start_span)[span_41](end_span)。",
-          "en": "• The key signature of G major has one sharp on the F line, meaning all Fs are played as F#s regardless of octave[span_42](start_span)[span_42](end_span).\n• Changes of key signature are written after a double bar-line[span_43](start_span)[span_43](end_span)."
+          "zh": "• G 大調的調號在 F 線上有一個升號，代表所有 F 音都要彈成 F#，不受八度限制。\n• 樂曲中途改變調號時，新的調號會寫在雙縱線之後。",
+          "en": "• The key signature of G major has one sharp on the F line, meaning all Fs are played as F#s regardless of octave.\n• Changes of key signature are written after a double bar-line."
         },
         "tip": {
           "zh": "應試錦囊：調號在每一行開首都必須重新寫上，但拍子記號只需寫在全曲開首，除非中途有改變[span_44](start_span)[span_44](end_span)！",

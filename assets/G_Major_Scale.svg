@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1106 786" role="img" aria-labelledby="title desc">
+  <title id="title">G major scale</title>
+  <desc id="desc">A piano keyboard labeled with the notes G, A, B, C, D, E, F sharp and G, above a treble staff showing the ascending G major scale.</desc>
+  <defs>
+    <style>
+      .ink { fill: #303030; }
+      .outline { fill: #fff; stroke: #303030; stroke-width: 3; stroke-linejoin: round; }
+      .staff { fill: none; stroke: #303030; stroke-width: 3; }
+      .key-label { font-family: Arial, Helvetica, sans-serif; font-size: 43px; font-weight: 700; fill: #303030; text-anchor: middle; dominant-baseline: central; }
+      .heading { font-family: "Trebuchet MS", Arial, sans-serif; font-size: 66px; font-weight: 700; fill: #303030; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect width="1106" height="786" fill="#ffffff"/>
+  </g>
+
+  <!-- Heading -->
+  <g id="typography">
+    <text class="heading" x="586" y="115">G Major Scale</text>
+  </g>
+
+  <!-- Piano keyboard: white keys and top rail -->
+  <g id="keyboard">
+    <rect x="155" y="188" width="857" height="23" class="ink"/>
+    <g id="white-keys">
+      <path class="outline" d="M156 210 H234 V463 Q234 480 218 480 H172 Q156 480 156 463 Z"/>
+      <path class="outline" d="M234 210 H311 V463 Q311 480 295 480 H250 Q234 480 234 463 Z"/>
+      <path class="outline" d="M311 210 H389 V463 Q389 480 373 480 H327 Q311 480 311 463 Z"/>
+      <path class="outline" d="M389 210 H467 V463 Q467 480 451 480 H405 Q389 480 389 463 Z"/>
+      <path class="outline" d="M467 210 H545 V463 Q545 480 529 480 H483 Q467 480 467 463 Z"/>
+      <path class="outline" d="M545 210 H622 V463 Q622 480 606 480 H561 Q545 480 545 463 Z"/>
+      <path class="outline" d="M622 210 H700 V463 Q700 480 684 480 H638 Q622 480 622 463 Z"/>
+      <path class="outline" d="M700 210 H778 V463 Q778 480 762 480 H716 Q700 480 700 463 Z"/>
+      <path class="outline" d="M778 210 H856 V463 Q856 480 840 480 H794 Q778 480 778 463 Z"/>
+      <path class="outline" d="M856 210 H934 V463 Q934 480 918 480 H872 Q856 480 856 463 Z"/>
+      <path class="outline" d="M934 210 H1011 V463 Q1011 480 995 480 H950 Q934 480 934 463 Z"/>
+    </g>
+
+    <!-- Raised black keys -->
+    <g id="black-keys" class="ink">
+      <path d="M200 210 H255 V365 Q255 377 243 377 H212 Q200 377 200 365 Z"/>
+      <path d="M284 210 H339 V365 Q339 377 327 377 H296 Q284 377 284 365 Z"/>
+      <path d="M367 210 H422 V365 Q422 377 410 377 H379 Q367 377 367 365 Z"/>
+      <path d="M511 210 H566 V365 Q566 377 554 377 H523 Q511 377 511 365 Z"/>
+      <path d="M595 210 H650 V365 Q650 377 638 377 H607 Q595 377 595 365 Z"/>
+      <path d="M739 210 H794 V365 Q794 377 782 377 H751 Q739 377 739 365 Z"/>
+      <path d="M827 210 H882 V365 Q882 377 870 377 H839 Q827 377 827 365 Z"/>
+      <path d="M905 210 H960 V365 Q960 377 948 377 H917 Q905 377 905 365 Z"/>
+    </g>
+
+    <!-- Note-name circles -->
+    <g id="keyboard-labels">
+      <g class="key-label">
+        <text x="272" y="439">G</text>
+        <text x="350" y="439">A</text>
+        <text x="428" y="439">B</text>
+        <text x="506" y="439">C</text>
+        <text x="584" y="439">D</text>
+        <text x="662" y="439">E</text>
+        <text x="817" y="439">G</text>
+      </g>
+      <circle cx="773" cy="322" r="33" fill="#fff" stroke="#303030" stroke-width="3"/>
+      <text x="773" y="323" class="key-label" font-size="38">F♯</text>
+    </g>
+  </g>
+
+  <!-- Treble staff and ascending scale -->
+  <g id="music-notation">
+    <g id="staff-lines" class="staff">
+      <path d="M92 540 H1051"/>
+      <path d="M92 576 H1051"/>
+      <path d="M92 612 H1051"/>
+      <path d="M92 646 H1051"/>
+      <path d="M92 681 H1051"/>
+    </g>
+
+    <!-- Treble clef -->
+    <text class="music" x="100" y="720" font-size="360">𝄞</text>
+
+    <!-- Notes: G A B C D E F-sharp G -->
+    <g id="scale-notes" class="ink">
+      <ellipse cx="290" cy="650" rx="22" ry="15" transform="rotate(-22 290 660)"/>
+      <ellipse cx="360" cy="630" rx="22" ry="15" transform="rotate(-22 360 630)"/>
+      <ellipse cx="435" cy="615" rx="22" ry="15" transform="rotate(-22 435 615)"/>
+      <ellipse cx="515" cy="593" rx="22" ry="15" transform="rotate(-22 515 593)"/>
+      <ellipse cx="600" cy="578" rx="22" ry="15" transform="rotate(-22 600 578)"/>
+      <ellipse cx="665" cy="558" rx="22" ry="15" transform="rotate(-22 665 558)"/>
+      <ellipse cx="770" cy="540" rx="22" ry="15" transform="rotate(-22 770 540)"/>
+      <ellipse cx="830" cy="525" rx="22" ry="15" transform="rotate(-22 830 525)"/>
+    </g>
+
+    <!-- F-sharp accidental -->
+    <g id="sharp-sign" class="ink">
+      <path d="M720 501 L710 590" fill="none" stroke="#303030" stroke-width="6"/>
+      <path d="M742 495 L736 580" fill="none" stroke="#303030" stroke-width="6"/>
+      <path d="M700 533 L750 522" fill="none" stroke="#303030" stroke-width="6"/>
+      <path d="M700 563 L750 552" fill="none" stroke="#303030" stroke-width="6"/>
+    </g>
+
+    <!-- Step names -->
+    <g id="typography-step-labels">
+    <text class="note-label" x="280" y="750" font-size="45">1</text>
+    <text class="note-label" x="350" y="750" font-size="45">2</text>
+    <text class="note-label" x="425" y="750" font-size="45">3</text>
+    <text class="note-label" x="505" y="750" font-size="45">4</text>
+    <text class="note-label" x="590" y="750" font-size="45">5</text>
+    <text class="note-label" x="665" y="750" font-size="45">6</text>
+    <text class="note-label" x="760" y="750" font-size="45">7</text>
+    <text class="note-label" x="820" y="750" font-size="45">8</text>
+  </g>
+  </g>
+</svg>
