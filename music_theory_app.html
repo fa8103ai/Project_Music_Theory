@@ -43,7 +43,33 @@ header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;paddi
     transition: none; 
 }
 .toc-list{overflow-y:auto;flex:1;padding:8px}
-.ch-title{font-weight:700;color:var(--pri);margin:12px 0 4px;padding-bottom:3px;border-bottom:2px solid var(--sec);font-size:1.02em}
+.ch-title {
+  font-weight: 700;
+  color: var(--pri);
+  margin: 12px 0 4px;
+  padding: 5px 8px;
+  border-bottom: 2px solid var(--sec);
+  font-size: 1.02em;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.ch-title:hover {
+  background-color: #ebf5fb;
+}
+.ch-toggle-icon {
+  font-size: 0.75em;
+  color: var(--sec);
+  pointer-events: none;
+}
+.ch-topics-group.collapsed {
+  display: none;
+}
+
 .topic-item{padding:7px 9px;margin:2px 0;border-radius:4px;cursor:pointer;border-left:3px solid transparent;display:flex;justify-content:space-between;align-items:center}
 .topic-item:hover{background:#ebf5fb}.topic-item.active{background:#d4e6f1;border-left-color:var(--pri);font-weight:700}
 .topic-check{color:#27ae60;font-weight:bold;font-size:.95em;margin-left:6px;padding:0 4px;border-radius:3px;cursor:pointer}
@@ -184,6 +210,18 @@ let lang = 'zh', curId = null, fSize = 16;
 let musicTheoryDB = [];
 let visitedTopics = new Set();
 
+// Track which chapters are collapsed
+const collapsedChapters = new Set();
+
+function toggleChapterCollapse(chapterId) {
+  if (collapsedChapters.has(chapterId)) {
+    collapsedChapters.delete(chapterId);
+  } else {
+    collapsedChapters.add(chapterId);
+  }
+  renderTOC();
+}
+
 // Load saved study progress from localStorage if available
 try {
     const savedProgress = localStorage.getItem('musicTheory_visitedTopics');
@@ -251,9 +289,15 @@ async function loadAppData() {
     const response2 = await fetch('./data/chapter2.json');
     if (!response2.ok) throw new Error("Network response 2 was not ok");
     const chapter2Data = await response2.json();
+
+    // 4. Fetch Chapter 3 data
+    const response3 = await fetch('./data/chapter3.json');
+    if (!response3.ok) throw new Error("Network response 3 was not ok");
+    const chapter3Data = await response3.json();
     
-    // 4. Combine both chapters into the main database
-    musicTheoryDB = [...chapter1Data, ...chapter2Data];
+    // 5. Combine chapters into the main database
+    musicTheoryDB = [...chapter1Data, ...chapter2Data, ...chapter3Data];
+
     
     if (musicTheoryDB.length > 0 && musicTheoryDB[0].concepts.length > 0) {
       curId = musicTheoryDB[0].concepts[0].id;
@@ -274,7 +318,7 @@ async function loadAppData() {
 const CH_META = [
   ["ch1","Chapter 1: The Basics of Rhythm and Tempo","第一章：節奏與速度基礎",4,"1"],
   ["ch2","Chapter 2: Introduction to Pitch","第二章：音高導論",4,"2"],
-  ["ch3","Chapter 3: Continuing with Rhythm","第三章：節奏續論",4,"3"],
+  ["ch3","Chapter 3: Continuing with Rhythm","第三章：節奏進階",4,"3"],
   ["ch4","Chapter 4: More Scales, Keys and Clefs","第四章：更多音階、調性與譜號",7,"4"],
   ["ch5","Chapter 5: The Grouping of Notes and Rests","第五章：音符與休止符的組合",5,"5"],
   ["ch6","Chapter 6: Rhythm: Words, Syncopation","第六章：節奏：字詞與切分音",3,"6"],
@@ -360,14 +404,29 @@ function toggleTopicStatus(id) {
 
 function renderTOC() {
   const toc = document.getElementById('toc-list');
+  if (!toc) return;
   toc.innerHTML = '';
   
+  // 1. Render loaded chapters (musicTheoryDB)
   musicTheoryDB.forEach(chapter => {
+    const chId = chapter.chapterId;
+    const isCollapsed = collapsedChapters.has(chId);
+
+    // Clickable Chapter Title with Arrow (▼ / ▶)
     const chDiv = document.createElement('div');
     chDiv.className = 'ch-title';
-    chDiv.textContent = lang === 'zh' ? chapter.title.zh : chapter.title.en;
+    chDiv.title = lang === 'zh' ? '點擊摺疊 / 展開章節' : 'Click to collapse / expand chapter';
+    chDiv.innerHTML = `
+      <span>${lang === 'zh' ? chapter.title.zh : chapter.title.en}</span>
+      <span class="ch-toggle-icon">${isCollapsed ? '▶' : '▼'}</span>
+    `;
+    chDiv.onclick = () => toggleChapterCollapse(chId);
     toc.appendChild(chDiv);
-    
+
+    // Group container for this chapter's topics
+    const topicsGroup = document.createElement('div');
+    topicsGroup.className = 'ch-topics-group' + (isCollapsed ? ' collapsed' : '');
+
     chapter.concepts.forEach(concept => {
       const item = document.createElement('div');
       item.className = 'topic-item' + (concept.id === curId ? ' active' : '');
@@ -377,7 +436,7 @@ function renderTOC() {
       nameSpan.textContent = lang === 'zh' ? concept.name.zh : concept.name.en;
       item.appendChild(nameSpan);
 
-      if (visitedTopics.has(concept.id)) {
+      if (visitedTopics && visitedTopics.has(concept.id)) {
         const checkSpan = document.createElement('span');
         checkSpan.className = 'topic-check';
         checkSpan.textContent = '✓';
@@ -390,27 +449,47 @@ function renderTOC() {
       }
 
       item.onclick = () => loadTopic(concept.id, true);
-      toc.appendChild(item);
+      topicsGroup.appendChild(item);
     });
+
+    toc.appendChild(topicsGroup);
   });
 
+  // 2. Render pending placeholder chapters (CH_META)
   let loadedChapters = musicTheoryDB.map(ch => ch.chapterId);
-  CH_META.forEach(([cid, en, zh, cnt, pfx]) => {
-     if(!loadedChapters.includes(cid)){
+  if (typeof CH_META !== 'undefined') {
+    CH_META.forEach(([cid, en, zh, cnt, pfx]) => {
+      if (!loadedChapters.includes(cid)) {
+        const isCollapsed = collapsedChapters.has(cid);
+
         const chDiv = document.createElement('div');
         chDiv.className = 'ch-title';
-        chDiv.textContent = lang === 'zh' ? zh : en;
+        chDiv.title = lang === 'zh' ? '點擊摺疊 / 展開章節' : 'Click to collapse / expand chapter';
+        chDiv.innerHTML = `
+          <span>${lang === 'zh' ? zh : en}</span>
+          <span class="ch-toggle-icon">${isCollapsed ? '▶' : '▼'}</span>
+        `;
+        chDiv.onclick = () => toggleChapterCollapse(cid);
         toc.appendChild(chDiv);
+
+        const topicsGroup = document.createElement('div');
+        topicsGroup.className = 'ch-topics-group' + (isCollapsed ? ' collapsed' : '');
+
         for (let i = 1; i <= cnt; i++) {
-           const id = `${pfx}/${i}`;
-           const item = document.createElement('div');
-           item.className = 'topic-item';
-           item.textContent = lang === 'zh' ? `${id} 待載入單元` : `${id} Topic (Pending)`;
-           toc.appendChild(item);
+          const id = `${pfx}/${i}`;
+          const item = document.createElement('div');
+          item.className = 'topic-item';
+          item.style.opacity = '0.7';
+          item.textContent = lang === 'zh' ? `${id} 待載入單元` : `${id} Topic (Pending)`;
+          topicsGroup.appendChild(item);
         }
-     }
-  });
+
+        toc.appendChild(topicsGroup);
+      }
+    });
+  }
 }
+
 
 function findConceptById(id) {
   for (let chapter of musicTheoryDB) {

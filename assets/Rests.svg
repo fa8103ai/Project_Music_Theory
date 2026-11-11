@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 604 340" role="img" aria-labelledby="title desc">
+  <title id="title">Musical rests and note values reference table</title>
+  <desc id="desc">A four-column table listing six musical rest names, rest symbols, rest lengths, and corresponding note symbols.</desc>
+  <defs>
+    <style>
+      .grid { fill:none; stroke:#222; stroke-width:0.85; }
+      .head { fill:#fff; font-family:Georgia,serif; font-weight:bold; font-variant:small-caps; letter-spacing:3px; text-anchor:middle; }
+      .body { fill:#080808; font-family:Georgia,serif; text-anchor:middle; }
+      .italic { font-style:italic; }
+      .staff { stroke:#555; stroke-width:0.75; }
+      .note { fill:#080808; stroke:#080808; stroke-width:1; stroke-linejoin:round; stroke-linecap:round; }
+    </style>
+  </defs>
+
+  <!-- Background and cell fills -->
+  <g id="background">
+    <rect width="604" height="340" fill="#fff"/>
+    <rect x="1" y="1" width="150" height="51" fill="#0092BC"/>
+    <rect x="152" y="1" width="149" height="51" fill="#0092BC"/>
+    <rect x="302" y="1" width="149" height="51" fill="#0092BC"/>
+    <rect x="452" y="1" width="150" height="51" fill="#0092BC"/>
+    <g fill="#B8DCEA">
+      <rect x="1" y="53" width="150" height="47"/>
+      <rect x="302" y="53" width="149" height="47"/>
+      <rect x="1" y="101" width="150" height="47"/>
+      <rect x="302" y="101" width="149" height="47"/>
+      <rect x="1" y="149" width="150" height="47"/>
+      <rect x="302" y="149" width="149" height="47"/>
+      <rect x="1" y="197" width="150" height="46"/>
+      <rect x="302" y="197" width="149" height="46"/>
+      <rect x="1" y="244" width="150" height="95"/>
+      <rect x="302" y="244" width="149" height="95"/>
+    </g>
+  </g>
+
+  <!-- Table rules -->
+  <g id="main-shapes" class="grid">
+    <rect x="0.5" y="0.5" width="603" height="339"/>
+    <path d="M151.5 1 V339 M301.5 1 V339 M451.5 1 V339"/>
+    <path d="M1 52.5 H603 M1 100.5 H603 M1 148.5 H603 M1 196.5 H603 M1 243.5 H603 M1 291.5 H603"/>
+  </g>
+
+  <!-- Column headings -->
+  <g id="typography">
+    <g class="head" font-size="18">
+      <text x="76" y="22">Rest</text><text x="76" y="44">Name</text>
+      <text x="226" y="22">Rest</text><text x="226" y="44">Symbol</text>
+      <text x="376" y="22">Rest</text><text x="376" y="44">Length</text>
+      <text x="527" y="22">Note</text><text x="527" y="44">Symbol</text>
+    </g>
+
+    <!-- Rest names -->
+    <g class="body" font-size="15.5">
+      <text x="76" y="70">Whole Note (<tspan class="italic">Semi-</tspan></text>
+      <text x="76" y="87" class="italic">breve)</text>
+      <text x="76" y="123">Half Note (<tspan class="italic">Minim</tspan>)</text>
+      <text x="76" y="171">Quarter Note</text>
+      <text x="76" y="187" class="italic" font-size="14.5">(Crotchet)</text>
+      <text x="76" y="219">8th Note (<tspan class="italic">Quaver</tspan>)</text>
+      <text x="76" y="267">16th Note (<tspan class="italic">Semiqua-</tspan></text>
+      <text x="76" y="284" class="italic" font-size="14.5">ver)</text>
+      <text x="76" y="315" font-size="14.5">32nd Note (<tspan class="italic">Demis-</tspan></text>
+      <text x="76" y="332" class="italic" font-size="13.5">emiquaver)</text>
+    </g>
+
+    <!-- Rest lengths -->
+    <g class="body" font-size="15.5">
+      <text x="376" y="74">4 beats</text>
+      <text x="376" y="122">2 beats</text>
+      <text x="376" y="170">1 beat</text>
+      <text x="376" y="218">½ beat</text>
+      <text x="376" y="266">¼ beat</text>
+      <text x="376" y="315">⅛ beat</text>
+    </g>
+  </g>
+
+  <!-- Musical rest symbols -->
+  <g id="rest-symbols" fill="#080808">
+    <!-- Whole rest: block hanging beneath a staff line -->
+    <g transform="translate(182 62)">
+      <path d="M0 0 H89 M0 7 H89 M0 14 H89 M0 21 H89 M0 28 H89" class="staff" fill="none"/>
+      <rect x="40" y="7" width="9" height="4"/>
+    </g>
+
+    <!-- Half rest: block resting above a staff line -->
+    <g transform="translate(182 110)">
+      <path d="M0 0 H89 M0 7 H89 M0 14 H89 M0 21 H89 M0 28 H89" class="staff" fill="none"/>
+      <rect x="40" y="11" width="9" height="4"/>
+    </g>
+
+
+<!-- Quarter rest (crotchet rest) -->
+<path d="M225 158 
+         C228 159 231 162.5 229.5 165 
+         C228 167 224 169 223 171 
+         L227 171.5 
+         C229.5 172 231 173.5 229.5 175.5 
+         L223.5 181 
+         C221.5 183 223 184.5 225 184 
+         C226.5 183.5 227 181.5 225 181 
+         L227.5 178 
+         C229 176.5 227.5 174.5 225 174 
+         L221 173.5 
+         C220 172.5 221 170 223.5 167.5 
+         C226 165 227 162.5 223.5 160 
+         Z" 
+      fill="#080808"/>
+
+    <!-- Eighth rest: one rounded flag/dot and a slanted stem -->
+    <g id="eighth-rest">
+      <path d="M229 207.5 L220.5 229.5" fill="none" stroke="#080808" stroke-width="3.2" stroke-linecap="round"/>
+      <ellipse cx="218.5" cy="207.5" rx="3.9" ry="2.8" transform="rotate(-18 223.5 208.5)"/>
+      <path d="M219 211 Q231.5 209 229 207" fill="none" stroke="#080808" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+
+
+    <!-- Sixteenth rest: two rounded flags/dots and a slanted stem -->
+    <g id="sixteenth-rest">
+      <path d="M231 254 L220 279" fill="none" stroke="#080808" stroke-width="3.2" stroke-linecap="round"/>
+      <ellipse cx="220" cy="253" rx="3.8" ry="2.8" transform="rotate(-18 225 254.5)"/>
+      <ellipse cx="216" cy="260.5" rx="3.8" ry="2.8" transform="rotate(-18 221.5 262.5)"/>
+      <path d="M220 256.5 Q233 255.5 231 254" fill="none" stroke="#080808" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M216 264.5 Q230 263 229 260" fill="none" stroke="#080808" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Thirty-second rest: three rounded flags/dots and a slanted stem -->
+    <g id="thirty-second-rest">
+      <path d="M232 301 L220 329" fill="none" stroke="#080808" stroke-width="3.2" stroke-linecap="round"/>
+      <ellipse cx="220" cy="300" rx="3.8" ry="2.8" transform="rotate(-18 226 301.5)"/>
+      <ellipse cx="216" cy="306.8" rx="3.8" ry="2.8" transform="rotate(-18 222.5 309.5)"/>
+      <ellipse cx="212.5" cy="314" rx="3.8" ry="2.8" transform="rotate(-18 219 317.5)"/>
+      <path d="M220 304 Q233 303 232 301" fill="none" stroke="#080808" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M216 311 Q231 309 230 307" fill="none" stroke="#080808" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M212 318 Q229 315 227 313" fill="none" stroke="#080808" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Note symbols -->
+  <g id="note-symbols" class="note">
+    <!-- Whole note -->
+    <ellipse cx="525" cy="76" rx="5.7" ry="3.1" fill="none" stroke-width="2.2"/>
+    <!-- Half note -->
+    <ellipse cx="525" cy="131" rx="4.6" ry="2.5" transform="rotate(-25 525 131)" fill="none" stroke-width="1.1"/>
+    <path d="M530 129 V108" fill="none" stroke-width="1"/>
+    <!-- Quarter note -->
+    <ellipse cx="525" cy="180" rx="5.1" ry="3.1" transform="rotate(-25 525 180)"/>
+    <path d="M529.5 179 V156" fill="none" stroke-width="1.2"/>
+    <!-- Eighth note -->
+    <ellipse cx="523" cy="227" rx="5.1" ry="3.1" transform="rotate(-25 523 227)"/>
+    <path d="M527.5 226 V202 Q535 207 533 216" fill="none" stroke-width="1.25"/>
+
+    <!-- Sixteenth note -->
+    <ellipse cx="523" cy="275" rx="5.1" ry="3.1" transform="rotate(-25 523 275)"/>
+    <path d="M527.5 274 V250 Q535 255 533 264 Q531 259 527.5 257" fill="none" stroke-width="1.2"/>
+    <path d="M527.5 256 Q534 261 532 269" fill="none" stroke-width="1.2"/>
+    <!-- Thirty-second note -->
+    <ellipse cx="523" cy="324" rx="5.1" ry="3.1" transform="rotate(-25 523 324)"/>
+    <path d="M527.5 323 V297 Q535 302 533 311 Q531 306 527.5 304" fill="none" stroke-width="1.2"/>
+    <path d="M527.5 304 Q534 309 532 317" fill="none" stroke-width="1.2"/>
+    <path d="M527.5 312 Q534 317 532 325" fill="none" stroke-width="1.2"/>
+  </g>
+</svg>

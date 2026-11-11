@@ -1,0 +1,363 @@
+[
+  {
+    "chapterId": "ch3",
+    "title": {
+      "zh": "第三章：節奏進階",
+      "en": "Chapter 3: Continuing with Rhythm"
+    },
+    "concepts": [
+      {
+        "id": "3/1",
+        "name": {
+          "zh": "3/1 休止符 (Rests)",
+          "en": "3/1 Rests"
+        },
+        "definition": {
+          "zh": "音樂不僅由聲音組成，還包含無聲的停頓，標示停頓時間長短的符號稱為「休止符」（rests）。每種時值的音符都有其相對應時值的休止符：二全休止符（breve rest）填滿第三與第四線之間的間；全休止符（semibreve rest）懸掛在第四線下方；二分休止符（minim rest）端坐在第三線上方；此外還有四分休止符（crotchet rest）、八分休止符（quaver rest，1個鉤）、十六分休止符（semiquaver rest，2個鉤）及三十二分休止符（demisemiquaver rest，3個鉤）。在單一五線譜上記寫兩個聲部時，休止符的位置可適度移高或移低；樂曲亦可從小節內的任何一拍開始（弱起小節 anacrusis）。",
+          "en": "Music consists not only of sounds, but also of silences. The signs used to show how long each silence lasts are called 'rests'. Every note value has a corresponding rest: the breve rest completely fills the space between the third and fourth lines; the semibreve rest hangs below the fourth line; the minim rest sits on top of the third line; followed by the crotchet rest, quaver rest (1 hook), semiquaver rest (2 hooks), and demisemiquaver rest (3 hooks). When two melodies are written on one stave, rests may be placed higher or lower than usual. A piece may also start on any beat of the bar (anacrusis/pickup) with or without preliminary rests."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：各類休止符時值與五線譜標準位置】",
+              "en": "[Visual Diagram 1: Rest Values and Standard Stave Positions]"
+            },
+            "explanation": {
+              "zh": "全休止符懸掛在第四線下方（像地洞 hole in the ground）；二分休止符坐在第三線上方（像帽子 hat）。八分、十六分與三十二分休止符的橫鉤數量與其音符符尾數量完全相同（1、2、3條）。",
+              "en": "The semibreve (whole) rest hangs below the 4th line (like a 'hole' in the ground); the minim (half) rest sits on the 3rd line (like a hat). Quaver, semiquaver, and demisemiquaver rests have 1, 2, and 3 hooks respectively, matching the flags on their corresponding notes."
+            },
+            "imagePath": "./assets/Rests.svg",
+            "altText": "Rests Chart and Stave Positions Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 2：全小節休止與雙聲部記譜規則】",
+              "en": "[Visual Diagram 2: Whole-Bar Rests and Two Melodies on One Stave]"
+            },
+            "explanation": {
+              "zh": "除 4/2 拍的全小節休止必須使用二全休止符（breve rest）外，所有其他拍子（如 3/4、4/4、6/8 等）的全小節休止一律使用全休止符（semibreve rest）。雙聲部共用五線譜時，上聲部符幹朝上、下聲部符幹朝下。",
+              "en": "An entirely silent bar in 4/2 time is shown by a breve rest, but in 3/4, 4/4, and every other time signature, a completely silent bar is always shown by a semibreve rest. When two melodies share a stave, upper melody stems go up and lower melody stems go down."
+            },
+            "imagePath": "./assets/whole_bar_rests.svg",
+            "altText": "Whole Bar Rests and Two Voices Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 全小節休止通則：在 4/2 拍中，全小節無聲使用「二全休止符」；但在 3/4、4/4、2/4、6/8 等所有其他拍子記號中，全小節無聲一律使用「全休止符」（semibreve rest）表示。\n• 雙聲部合寫規則：兩個旋律寫在同一五線譜時，高音聲部符幹一律朝上，低音聲部符幹一律朝下；若兩聲部共用同一個音，則同時畫上一上一下兩條符幹；若是兩個全音符同音，則將符頭交錯重疊或緊挨並排（𝅝𝅝）。",
+          "en": "• Silent bar rule: An entirely silent bar in 4/2 time uses a breve rest, whereas in 3/4, 4/4, and every other time signature, it is always shown by a semibreve rest.\n• Two melodies on one stave: Stems in the upper melody always go up, and those in the lower melody go down. If both share the same note, it is written with two stems (one up, one down); two semibreves on the same pitch overlap or touch side by side."
+        },
+        "tip": {
+          "zh": "應試錦囊：記憶全休止符與二分休止符位置口訣：「全休四線吊下來，二休三線坐上台」！另外切記：3/4 拍或 6/8 拍整個小節休息時，千萬不可畫附點二分休止符，必須畫「全休止符」！",
+          "en": "Exam Tip: A whole (semibreve) rest hangs heavy below the 4th line; a half (minim) rest sits light on top of the 3rd line! Also remember: a completely silent bar in 3/4 or 6/8 time ALWAYS uses a semibreve rest, never a dotted minim rest!"
+        },
+        "exercises": [
+          {
+            "qId": "q3_1_1",
+            "question": {
+              "zh": "在五線譜上，標準的「全休止符」(Semibreve rest) 與「二分休止符」(Minim rest) 分別位於哪裡？",
+              "en": "Where are the standard semibreve rest and minim rest positioned on the stave?"
+            },
+            "options": [
+              { "zh": "全休止符懸掛在第四線下方；二分休止符坐在第三線上方", "en": "The semibreve rest hangs below the 4th line; the minim rest sits on top of the 3rd line" },
+              { "zh": "全休止符坐在第三線上方；二分休止符懸掛在第四線下方", "en": "The semibreve rest sits on the 3rd line; the minim rest hangs below the 4th line" },
+              { "zh": "兩者都懸掛在第三線下方", "en": "Both hang below the 3rd line" },
+              { "zh": "全休止符填滿第三與第四線之間；二分休止符坐在第二線上", "en": "The semibreve rest fills the 3rd space; the minim rest sits on the 2nd line" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["回想口訣：哪一個休止符較「重」會從第4線吊下來？哪一個像帽子坐在第3線上？"],
+              "en": ["Which rest hangs down from the 4th line like a 'hole', and which sits on top of the 3rd line like a 'hat'?"]
+            },
+            "explanation": {
+              "zh": "全休止符（semibreve rest）懸掛在第四線下方；二分休止符（minim rest）則端坐在第三線上方；二全休止符（breve rest）則填滿兩線之間的間。",
+              "en": "The semibreve rest hangs below the fourth line, while the minim rest sits on top of the third line."
+            }
+          },
+          {
+            "qId": "q3_1_2",
+            "question": {
+              "zh": "在 3/4 拍的樂曲中，如果整個小節完全沒有聲音（全小節休止），應該使用哪一個休止符來表示？",
+              "en": "In 3/4 time, how is an entirely silent bar indicated?"
+            },
+            "options": [
+              { "zh": "全休止符 (Semibreve rest)", "en": "By a semibreve rest" },
+              { "zh": "附點二分休止符 (Dotted minim rest)", "en": "By a dotted minim rest" },
+              { "zh": "三個四分休止符 (Three crotchet rests)", "en": "By three crotchet rests" },
+              { "zh": "二全休止符 (Breve rest)", "en": "By a breve rest" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["除了 4/2 拍使用二全休止符外，所有其他拍子的「全小節休止」有什麼統一規定？"],
+              "en": ["Except for 4/2 time (which uses a breve rest), what rest is universally used for a completely silent bar in all other time signatures?"]
+            },
+            "explanation": {
+              "zh": "除 4/2 拍使用二全休止符外，在 3/4、4/4 及所有其他拍子記號中，全小節無聲一律使用全休止符（semibreve rest）表示。",
+              "en": "An entirely silent bar in 4/2 time is shown by a breve rest, but in 3/4 and every other time signature, it is shown by a semibreve rest."
+            }
+          }
+        ]
+      },
+      {
+        "id": "3/2",
+        "name": {
+          "zh": "3/2 連結線與附點音符 (Ties and dots)",
+          "en": "3/2 Ties and dots"
+        },
+        "definition": {
+          "zh": "因為小節線絕不能直接穿過音符，當一個音需要跨過小節線持續發聲，或在小節內合併特別時值時，會使用一條彎曲的「連結線／延音線」（tie）將兩個相同音高的音符連起來。連結線永遠連接在符頭（note-head）而非符幹，演奏時只彈第一個音並維持兩音加總的時值。另一種延長音符或休止符的方法是在符頭右側加上「附點」（dot），使原本時值增加一半（×1.5）；若加上兩個附點則稱為「複附點」（double-dotted），第二個附點再增加第一個附點時值的一半（總時值為原本的 1.75 倍，即 1 + 1/2 + 1/4）。",
+          "en": "Because bar-lines are never drawn through notes, a curved line called a 'tie' is used to join two notes of the same pitch across a bar-line or within a bar. Ties always start and finish at the note-head (not the stem) and combine the notes into one continuous sound. Another way to lengthen a note or rest is by placing an augmentation 'dot' after it, making it half as long again (+50%). A second dot ('double-dotted') adds half the length of the first dot (making the total duration 1.75 times the original)."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：連結線 (Tie) 的正確畫法與圓滑線 (Slur) 的分別】",
+              "en": "[Visual Diagram 1: Correct Drawing of Ties vs. Slurs]"
+            },
+            "explanation": {
+              "zh": "連結線（Tie）必須連接相同音高的「符頭」，方向通常與符幹相反（若符幹朝上，連結線在符頭下方）；後方被連結的音符不需再彈。圓滑線（Slur）則連接不同音高的音符，表示流暢圓滑地演奏（legato）。",
+              "en": "Ties always connect note-heads of the EXACT same pitch, curving opposite the stem direction, and are held as one sound. Slurs connect different pitches to indicate smooth, legato phrasing."
+            },
+            "imagePath": "./assets/ties_rules.svg",
+            "altText": "Ties and Slurs Comparison Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 2：附點與複附點音符時值換算】",
+              "en": "[Visual Diagram 2: Single-Dotted and Double-Dotted Equivalents]"
+            },
+            "explanation": {
+              "zh": "單附點增加原本時值的 1/2（如 ♩. = ♩ + ♪ = 3個 ♪）；複附點再增加第一個附點的 1/2（如 ♩.. = ♩ + ♪ +  sixteenth = 7個十六分音符）。附點永遠畫在五線譜的「間」內，若符頭在線上，附點需畫在該線緊鄰的上方間內。",
+              "en": "A single dot adds half the note's value (♩. = ♩ + ♪); a double dot adds half of the first dot's value (♩.. = ♩ + ♪ +  sixteenth). Dots are never placed on a staff line—if the note-head is on a line, the dot goes in the space just above it."
+            },
+            "imagePath": "./assets/dotted_notes.svg",
+            "altText": "Dotted and Double-Dotted Notes Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 單附點換算：附點二分音符 (𝅗𝅥.) ＝ 𝅗𝅥 + ♩ ＝ 3 個四分音符 ＝ 6 個八分音符；附點四分音符 (♩.) ＝ ♩ + ♪ ＝ 3 個八分音符 ＝ 6 個十六分音符。\n• 複附點換算：複附點四分音符 (♩..) ＝ ♩ + ♪ +  sixteenth ＝ 7 個十六分音符 ＝ 14 個三十二分音符。\n• 兩大重要鐵則：1) 休止符可以加附點，但「絕對不能」使用連結線（因為把無聲連起來毫無意義）！2) 附點不能跨越小節線生效，跨小節延長音符必須用連結線！",
+          "en": "• Single dot: Dotted minim (𝅗𝅥.) = 𝅗𝅥 + ♩ = 3 crotchets = 6 quavers; Dotted crotchet (♩.) = ♩ + ♪ = 3 quavers = 6 semiquavers.\n• Double dot: Double-dotted crotchet (♩..) = ♩ + ♪ + 16th = 7 semiquavers = 14 demisemiquavers.\n• Two Golden Rules: 1) Rests can be dotted, but are NEVER tied! 2) Dots are never used to lengthen notes or rests across bar-lines!"
+        },
+        "tip": {
+          "zh": "應試錦囊：計算單附點時值口訣：「1個單附點音符 ＝ 3個小一級音符 ＝ 6個小兩級音符」；計算複附點口訣：「1個複附點音符 ＝ 7個小兩級音符 ＝ 14個小三級音符」！",
+          "en": "Exam Tip: 1 single-dotted note = 3 of the next smaller note (or 6 of two levels smaller); 1 double-dotted note = 7 of two levels smaller (or 14 of three levels smaller)!"
+        },
+        "exercises": [
+          {
+            "qId": "q3_2_1",
+            "question": {
+              "zh": "一個「複附點二分音符」(Double-dotted minim) 的時值相等於多少個八分音符 (Quavers)？",
+              "en": "A double-dotted minim is equal to how many quavers?"
+            },
+            "options": [
+              { "zh": "7 個八分音符", "en": "7 quavers" },
+              { "zh": "6 個八分音符", "en": "6 quavers" },
+              { "zh": "8 個八分音符", "en": "8 quavers" },
+              { "zh": "14 個八分音符", "en": "14 quavers" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["二分音符等於4個八分音符；第一個附點加一半（2個八分音符），第二個附點再加一半（1個八分音符），總共是幾個？"],
+              "en": ["A minim = 4 quavers. The first dot adds half (2 quavers), and the second dot adds half of the first dot (1 quaver). What is 4 + 2 + 1?"]
+            },
+            "explanation": {
+              "zh": "複附點二分音符 ＝ 二分音符 (4個八分音符) ＋ 四分音符 (2個八分音符) ＋ 八分音符 (1個八分音符) ＝ 共 7 個八分音符。",
+              "en": "A double-dotted minim equals a minim (4 quavers) + a crotchet (2 quavers) + a quaver (1 quaver) = 7 quavers."
+            }
+          },
+          {
+            "qId": "q3_2_2",
+            "question": {
+              "zh": "關於連結線 (Ties) 與附點 (Dots) 的使用規則，下列哪一項敘述是正確的？",
+              "en": "Which of the following statements about ties and dots is CORRECT?"
+            },
+            "options": [
+              { "zh": "休止符可以加附點，但絕對不能加上連結線", "en": "Rests can be dotted, but they are never tied" },
+              { "zh": "休止符與音符一樣，都可以加上連結線跨過小節線", "en": "Rests can be tied across bar-lines just like notes" },
+              { "zh": "連結線應該連接在兩個音符的符幹頂端", "en": "Ties should start and finish at the tips of the stems" },
+              { "zh": "可以用一個附點音符直接跨越小節線來取代連結線", "en": "A dotted note can be used across a bar-line instead of a tie" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["兩個無聲的休止符如果用連結線連起來會有意義嗎？教材 3/2 對此有何規定？"],
+              "en": ["Would tying two silences together serve any purpose? Check section 3/2 on rests and ties."]
+            },
+            "explanation": {
+              "zh": "休止符可以加附點（如附點四分休止符），但絕不使用連結線；此外連結線必須連在符頭，且附點不可跨小節線使用。",
+              "en": "Rests can be dotted, but they are never tied. Also, ties always connect note-heads, and dots cannot be used across bar-lines."
+            }
+          }
+        ]
+      },
+      {
+        "id": "3/3",
+        "name": {
+          "zh": "3/3 三連音與複拍子 (Triplets and compound time)",
+          "en": "3/3 Triplets and compound time"
+        },
+        "definition": {
+          "zh": "一拍除了可以均分為兩等份外，也可以均分為三等份，稱為「三連音」（triplet）。三連音是在原本演奏兩個同類音符的時間內，平均演奏三個音符（或同等時值的音符與休止符組合），記譜時會在音群上方或下方標示數字「3」（有時會加上弧線或方括號）。當樂曲中的每一拍都固定劃分為三等份時，為免全曲不斷標寫「3」，會改用「複拍子」（compound time，如 6/8、9/8、12/8），以附點音符作為一拍的單位。相對地，每拍固定一分為二的拍子則稱為「單拍子」（simple time，如 2/4、3/4、4/4）。",
+          "en": "A beat can be divided into three equal parts called a 'triplet'—a group of three equal notes (or their equivalent in notes/rests) performed in the time normally taken by two notes of the same kind, indicated by a figure '3' centred over or under the group. When beats regularly divide into twos, music is in 'simple time' (e.g. 2/4, 3/4, 4/4). When beats regularly divide into threes, music is written in 'compound time' (e.g. 6/8, 9/8, 12/8), where each beat is a dotted note, avoiding the need to write '3's throughout."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：三連音 (Triplets) 的各種等值形態】",
+              "en": "[Visual Diagram 1: Triplets and Equivalent Triplet Groups]"
+            },
+            "explanation": {
+              "zh": "一個四分音符拍可分為三個三連音八分音符（標示 3）。三連音內部亦可包含休止符、附點或合併音符（例如在三連音內：1個四分音符 ＋ 1個八分音符），總時值依然等於原本的一拍。",
+              "en": "One crotchet beat divides into a triplet of three quavers marked with a '3'. A triplet group need not be three separate equal notes—it can include rests or combined notes totaling the equivalent of three triplet notes."
+            },
+            "imagePath": "./assets/triplets_guide.svg",
+            "altText": "Triplets Notation and Equivalents Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 2：單拍子與複拍子對照表（二拍、三拍、四拍）】",
+              "en": "[Visual Diagram 2: Simple vs. Compound Time Signatures Chart]"
+            },
+            "explanation": {
+              "zh": "二拍子（Duple）：單拍子 2/4（2個四分音符拍）對應複拍子 6/8（2個附點四分音符拍）；三拍子（Triple）：3/4 對應 9/8（3個附點四分音符拍）；四拍子（Quadruple）：4/4 對應 12/8（4個附點四分音符拍）。",
+              "en": "Duple (2 beats): Simple 2/4 corresponds to Compound 6/8 (2 dotted-crotchet beats); Triple (3 beats): 3/4 corresponds to 9/8 (3 dotted-crotchet beats); Quadruple (4 beats): 4/4 corresponds to 12/8 (4 dotted-crotchet beats)."
+            },
+            "imagePath": "./assets/simple_vs_compound.svg",
+            "altText": "Simple vs Compound Time Comparison Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 3/4 拍與 6/8 拍的本質區別：雖然兩者每小節都有 6 個八分音符，但絕對不同！3/4 拍是「單三拍子」（3 個四分音符拍，每拍分為 2 個八分音符，節奏如：Don't for-get to catch your train）；6/8 拍則是「複二拍子」（2 個附點四分音符拍，每拍分為 3 個八分音符，節奏如：Phone me as soon as you're there）。\n• 拍子分類名稱：2 拍稱為二拍子（duple）、3 拍稱為三拍子（triple）、4 拍稱為四拍子（quadruple）；此外還有五拍子（quintuple）與七拍子（septuple）。",
+          "en": "• 3/4 vs. 6/8: Both contain six quavers in a bar, but 3/4 is 'simple triple time' (3 crotchet beats divided into twos: 'Don't for-get to catch your train'), whereas 6/8 is 'compound duple time' (2 dotted-crotchet beats divided into threes: 'Phone me as soon as you're there').\n• Beat classifications: 2 beats = duple, 3 beats = triple, 4 beats = quadruple (and less commonly: 5 = quintuple, 7 = septuple)."
+        },
+        "tip": {
+          "zh": "應試錦囊：判斷單拍子與複拍子口訣：「分子 2、3、4 為單拍子（一拍分兩份）；分子 6、9、12 為複拍子（一拍分三份，把分子除以 3 就是每小節的拍數）！」例如 9/8 拍：9 ÷ 3 ＝ 3 個附點四分音符拍（複三拍子）！",
+          "en": "Exam Tip: Top numbers 2, 3, 4 = Simple time (beats divide into 2); Top numbers 6, 9, 12 = Compound time (beats divide into 3—divide the top number by 3 to find the number of dotted beats per bar)!"
+        },
+        "exercises": [
+          {
+            "qId": "q3_3_1",
+            "question": {
+              "zh": "3/4 拍與 6/8 拍每個小節都包含 6 個八分音符，兩者在節拍結構上有何分別？",
+              "en": "Both 3/4 and 6/8 have six quavers in a bar. How do they differ in beat structure?"
+            },
+            "options": [
+              { "zh": "3/4 是單三拍子（3個四分音符拍，每拍分2份）；6/8 是複二拍子（2個附點四分音符拍，每拍分3份）", "en": "3/4 is simple triple time (3 crotchet beats divided into twos); 6/8 is compound duple time (2 dotted-crotchet beats divided into threes)" },
+              { "zh": "兩者完全相同，只是寫法不同", "en": "They are identical in beat structure, just written differently" },
+              { "zh": "3/4 是複三拍子；6/8 是單六拍子", "en": "3/4 is compound triple time; 6/8 is simple sextuple time" },
+              { "zh": "3/4 每小節有 2 拍；6/8 每小節有 6 拍", "en": "3/4 has 2 beats per bar; 6/8 has 6 beats per bar" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["分子 3 代表單拍子的 3 拍；分子 6 屬於複拍子，除以 3 後代表幾拍？"],
+              "en": ["Top number 3 indicates 3 simple beats; top number 6 (compound) divided by 3 gives how many dotted beats?"]
+            },
+            "explanation": {
+              "zh": "3/4 拍代表每小節 3 個四分音符拍（單三拍子，二個八分音符一組）；6/8 拍代表每小節 2 個附點四分音符拍（複二拍子，三個八分音符一組）。",
+              "en": "3/4 means three crotchet beats divided into twos (simple triple); 6/8 means two dotted-crotchet beats divided into threes (compound duple)."
+            }
+          },
+          {
+            "qId": "q3_3_2",
+            "question": {
+              "zh": "在拍子分類中，9/8 拍屬於哪一種拍子？每小節有多少拍？",
+              "en": "How is the time signature 9/8 classified, and how many beats are in each bar?"
+            },
+            "options": [
+              { "zh": "複三拍子 (Compound triple time)，每小節有 3 個附點四分音符拍", "en": "Compound triple time, with 3 dotted-crotchet beats per bar" },
+              { "zh": "單九拍子 (Simple nonuple time)，每小節有 9 個八分音符拍", "en": "Simple time, with 9 quaver beats per bar" },
+              { "zh": "複四拍子 (Compound quadruple time)，每小節有 4 拍", "en": "Compound quadruple time, with 4 beats per bar" },
+              { "zh": "單三拍子 (Simple triple time)，每小節有 3 個四分音符拍", "en": "Simple triple time, with 3 crotchet beats per bar" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["將分子 9 除以 3，得出每小節有幾個附點四分音符拍？"],
+              "en": ["Divide the top number 9 by 3: how many dotted-crotchet beats are in a bar?"]
+            },
+            "explanation": {
+              "zh": "9/8 拍的分子 9 除以 3 等於 3，代表每小節有 3 個附點四分音符拍（每拍包含 3 個八分音符），故稱為複三拍子（compound triple time）。",
+              "en": "In 9/8 time, the 9 quavers group into 3 dotted-crotchet beats (9 ÷ 3 = 3), making it compound triple time."
+            }
+          }
+        ]
+      },
+      {
+        "id": "3/4",
+        "name": {
+          "zh": "3/4 單拍子與複拍子記譜法原則 (The basis of simple and compound time notation)",
+          "en": "3/4 The basis of simple and compound time notation"
+        },
+        "definition": {
+          "zh": "單拍子與複拍子的分別會直接反映在樂譜的「音符符槓連接（beaming）」與「音符／休止符組合（grouping）」上。三百多年來，節奏記譜法始終遵循兩大核心目標：(i) 清晰顯示潛在的強弱拍結構（如 3/4 拍顯示每小節三拍，6/8 拍顯示每小節兩拍）；(ii) 在清楚呈現拍子位置的前提下，盡量使用最精簡的符號，使樂譜易於閱讀。因此，即使兩段旋律發聲與休止的實際長度完全相同，在 3/4 拍與 6/8 拍中也必須採用不同的符槓分組、連結線或休止符寫法。",
+          "en": "The difference between simple and compound time is shown clearly in notation through beaming and the grouping of notes and rests. Rhythmic notation conventions have two primary aims: (i) to suggest the underlying pattern of strong and weak beats (such as three beats per bar in 3/4 vs. two beats per bar in 6/8); and (ii) to make the music easier to read by using no more signs than are necessary to make the beats clear. Consequently, passages with identical sound and silence durations are written differently depending on whether they are in simple or compound time."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：3/4 拍與 6/8 拍的符槓與休止符組合對比】",
+              "en": "[Visual Diagram 1: Beaming and Rest Grouping in 3/4 vs. 6/8]"
+            },
+            "explanation": {
+              "zh": "在 3/4 拍中，八分音符以「2個一組」連接以突顯三拍結構；在 6/8 拍中，八分音符以「3個一組」連接以突顯兩大拍（附點四分音符拍）結構。跨拍時值與休止符亦須配合拍點切分，不可混淆！",
+              "en": "In 3/4, quavers are beamed in twos to show three crotchet beats; in 6/8, quavers are beamed in threes to show two dotted-crotchet beats. Notes and rests are grouped so the main beat divisions remain visually unmistakable."
+            },
+            "imagePath": "./assets/beaming_simple_compound.svg",
+            "altText": "Beaming and Grouping Comparison in 3/4 and 6/8 Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 相同時值、不同記譜（3/4 對比 6/8）：\n  1) 在小節開首演奏 3 個八分音符長度的音：在 6/8 拍中剛好是一整拍，直接寫成一個「附點四分音符 (♩.)」；但在 3/4 拍中若處於特定跨拍位置（如最後一拍半），常需根據拍點拆開或使用連結線 (♩_♪) 以看清拍子。\n  2) 在 6/8 拍中，一拍（附點四分音符拍）的最後兩個八分音符若無聲，應寫成兩個八分休止符 (𝄾 𝄾) 或按複拍子細分規則處理，不能隨便跨拍合併而模糊了拍點。",
+          "en": "• Same duration, different notation (3/4 vs. 6/8):\n  1) A sound lasting three quavers at the end of a bar is written as a single dotted crotchet (♩.) in 6/8 (since it forms one complete compound beat), whereas in 3/4 it may be written as ♪_♩ (tied across the beat) so the third beat is clearly visible.\n  2) Two quaver rests (𝄾 𝄾) are kept separate when needed to show the beat boundary clearly rather than merging into a single crotchet rest across beat divisions."
+        },
+        "tip": {
+          "zh": "應試錦囊：檢查音符與休止符組合是否正確的黃金準則：「一眼看過去，能不能清楚指出每一拍（Beat 1, Beat 2...）從哪裡開始？」凡是把兩個不同大拍的開頭模糊掉的寫法，在考試中必定是錯的！",
+          "en": "Exam Tip: The golden test for note and rest grouping is: 'Can you immediately see where each beat begins?' Any notation that obscures the boundary between main beats is incorrect!"
+        },
+        "exercises": [
+          {
+            "qId": "q3_4_1",
+            "question": {
+              "zh": "在 6/8 拍中，6 個八分音符應該如何用符槓 (Beam) 連接，才能正確顯示拍子結構？",
+              "en": "In 6/8 time, how should six quavers be beamed together to show the correct beat structure?"
+            },
+            "options": [
+              { "zh": "每 3 個八分音符連成一組，共分成兩組（代表 2 個附點四分音符拍）", "en": "In two groups of three quavers (showing two dotted-crotchet beats)" },
+              { "zh": "每 2 個八分音符連成一組，共分成三組（代表 3 個四分音符拍）", "en": "In three groups of two quavers (showing three crotchet beats)" },
+              { "zh": "全部 6 個八分音符獨立畫符尾，完全不連接", "en": "All six written with separate tails and no beams" },
+              { "zh": "前 4 個連成一組，後 2 個連成一組", "en": "Grouped as four quavers followed by two quavers" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["6/8 拍是複二拍子，每拍包含幾個八分音符？符槓應該配合每一拍來分組。"],
+              "en": ["6/8 is compound duple time. How many quavers make up one dotted-crotchet beat?"]
+            },
+            "explanation": {
+              "zh": "6/8 拍每小節有 2 個附點四分音符拍，因此八分音符必須以「3 個一組」分成兩組連接；若以「2 個一組」分成三組則是 3/4 拍的寫法。",
+              "en": "In 6/8 time, quavers are beamed in threes (two groups of three) to show the two dotted-crotchet beats, whereas beaming in twos indicates 3/4 time."
+            }
+          },
+          {
+            "qId": "q3_4_2",
+            "question": {
+              "zh": "傳統節奏記譜法（Rhythmic notation conventions）的兩大核心目的是什麼？",
+              "en": "What are the two main aims of the conventions of rhythmic notation?"
+            },
+            "options": [
+              { "zh": "(i) 顯示潛在的強弱拍規律；(ii) 用最精簡清晰的符號使樂譜易於閱讀", "en": "(i) To suggest the underlying pattern of strong and weak beats; (ii) to make the music easier to read using no more signs than necessary" },
+              { "zh": "(i) 盡量使用最多的連結線；(ii) 隱藏小節內的拍子位置", "en": "(i) To use as many ties as possible; (ii) to hide the position of the beats" },
+              { "zh": "(i) 讓所有拍子看起來都像 4/4 拍；(ii) 避免使用任何附點音符", "en": "(i) To make all time signatures look like 4/4; (ii) to avoid using dotted notes" },
+              { "zh": "(i) 決定樂曲的絕對演奏速度；(ii) 標示樂器的音色變化", "en": "(i) To fix the exact tempo; (ii) to indicate changes in instrument timbre" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["回想教材 3/4 結尾提到的兩個目標：為什麼同樣長度的音在 3/4 和 6/8 寫法不同？"],
+              "en": ["Review the two aims stated at the end of section 3/4 regarding beat patterns and readability."]
+            },
+            "explanation": {
+              "zh": "節奏記譜法的兩大目的是：(i) 呈現潛在的強弱拍結構（underlying pattern of beats, strong and weak），以及 (ii) 在看清拍子的前提下使用最精簡的符號以方便讀譜。",
+              "en": "The two aims are: (i) to suggest the underlying pattern of beats, strong and weak; and (ii) to make the music easier to read by using no more signs than are necessary to make the beats clear."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
