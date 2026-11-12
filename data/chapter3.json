@@ -31,19 +31,31 @@
           },
           {
             "title": {
-              "zh": "【視覺圖解 2：全小節休止與雙聲部記譜規則】",
-              "en": "[Visual Diagram 2: Whole-Bar Rests and Two Melodies on One Stave]"
+              "zh": "【視覺圖解 2：全小節休止】",
+              "en": "[Visual Diagram 2: Whole-Bar Rests]"
             },
             "explanation": {
-              "zh": "除 4/2 拍的全小節休止必須使用二全休止符（breve rest）外，所有其他拍子（如 3/4、4/4、6/8 等）的全小節休止一律使用全休止符（semibreve rest）。雙聲部共用五線譜時，上聲部符幹朝上、下聲部符幹朝下。",
-              "en": "An entirely silent bar in 4/2 time is shown by a breve rest, but in 3/4, 4/4, and every other time signature, a completely silent bar is always shown by a semibreve rest. When two melodies share a stave, upper melody stems go up and lower melody stems go down."
+              "zh": "除 4/2 拍的全小節休止必須使用二全休止符（breve rest）外，所有其他拍子（如 3/4、4/4、6/8 等）的全小節休止一律使用全休止符（semibreve rest）。",
+              "en": "An entirely silent bar in 4/2 time is shown by a breve rest, but in 3/4, 4/4, and every other time signature, a completely silent bar is always shown by a semibreve rest."
             },
-            "imagePath": "./assets/whole_bar_rests.svg",
+            "imagePath": "./assets/breve_rest.svg",
+            "altText": "Whole Bar Rests and Two Voices Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 3：雙聲部記譜規則】",
+              "en": "[Visual Diagram 3: Two Melodies on One Stave]"
+            },
+            "explanation": {
+              "zh": "雙聲部共用五線譜時，上聲部符幹朝上、下聲部符幹朝下。休止符(Rest)可能因此需要放在比平常更高或更低的位置。",
+              "en": "When two melodies share a stave, upper melody stems go up and lower melody stems go down. The rests may then have to be placed higher or lower than usual."
+            },
+            "imagePath": "./assets/two_voices.svg",
             "altText": "Whole Bar Rests and Two Voices Diagram"
           }
         ],
         "examples": {
-          "zh": "• 全小節休止通則：在 4/2 拍中，全小節無聲使用「二全休止符」；但在 3/4、4/4、2/4、6/8 等所有其他拍子記號中，全小節無聲一律使用「全休止符」（semibreve rest）表示。\n• 雙聲部合寫規則：兩個旋律寫在同一五線譜時，高音聲部符幹一律朝上，低音聲部符幹一律朝下；若兩聲部共用同一個音，則同時畫上一上一下兩條符幹；若是兩個全音符同音，則將符頭交錯重疊或緊挨並排（𝅝𝅝）。",
+          "zh": "• 全小節休止通則：在 4/2 拍中，全小節無聲使用「二全休止符」；但在 3/4、4/4、2/4、6/8 等所有其他拍子記號中，全小節無聲一律使用「全休止符」（semibreve rest）表示。\n• 雙聲部合寫規則：兩個旋律寫在同一五線譜時，高音聲部符幹一律朝上，低音聲部符幹一律朝下；若兩聲部共用同一個音，則同時畫上一上一下兩條符幹；若是兩個全音符同音，則將符頭交錯重疊或緊挨並排。",
           "en": "• Silent bar rule: An entirely silent bar in 4/2 time uses a breve rest, whereas in 3/4, 4/4, and every other time signature, it is always shown by a semibreve rest.\n• Two melodies on one stave: Stems in the upper melody always go up, and those in the lower melody go down. If both share the same note, it is written with two stems (one up, one down); two semibreves on the same pitch overlap or touch side by side."
         },
         "tip": {

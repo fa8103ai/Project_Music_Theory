@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250">
+  <defs>
+    <!-- 定義單組五線譜 (寬度 840) -->
+    <g id="staff">
+      <line x1="0" y1="0" x2="840" y2="0" stroke="black" stroke-width="1.5"/>
+      <line x1="0" y1="12" x2="840" y2="12" stroke="black" stroke-width="1.5"/>
+      <line x1="0" y1="24" x2="840" y2="24" stroke="black" stroke-width="1.5"/>
+      <line x1="0" y1="36" x2="840" y2="36" stroke="black" stroke-width="1.5"/>
+      <line x1="0" y1="48" x2="840" y2="48" stroke="black" stroke-width="1.5"/>
+    </g>
+
+    <!-- 定義升記號 (Sharp) -->
+    <g id="sharp">
+      <line x1="-2.5" y1="-10" x2="-2.5" y2="10" stroke="black" stroke-width="1.2"/>
+      <line x1="2.5" y1="-12" x2="2.5" y2="8" stroke="black" stroke-width="1.2"/>
+      <polygon points="-5,-2, 5,-5, 5,-1, -5,2" fill="black"/>
+      <polygon points="-5,4, 5,1, 5,5, -5,8" fill="black"/>
+    </g>
+
+    <!-- 定義音符頭 (黑色實心音符，預設斜向) -->
+    <g id="notehead">
+      <ellipse cx="0" cy="0" rx="6.5" ry="4.5" fill="black" transform="rotate(-20)"/>
+    </g>
+    <g id="notehead_white">
+      <ellipse cx="0" cy="0" rx="6.5" ry="4.5" fill="white" stroke="black" stroke-width="1.1" transform="rotate(-20)"/>
+    </g>
+
+    <style>
+      .music {
+        font-family: "Bravura", "Maestro", "Times New Roman", serif;
+        font-size: 100px;
+        fill: black;
+      }
+      .stem {
+        stroke: black;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+      }
+      .beam {
+        fill: black;
+      }
+      .time-sig {
+        font-family: serif;
+        font-weight: bold;
+        font-size: 35px;
+        fill: black;
+      }
+    </style>
+  </defs>
+
+  <!-- 白色背景 -->
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- 樂譜主體群組 -->
+  <g id="music-notation" transform="translate(30, 80)">
+    <!-- 五線譜背景 -->
+    <use href="#staff" x="0" y="0"/>
+
+    <!-- 小節線 (Bar lines) -->
+    <!--line x1="200" y1="0" x2="200" y2="48" stroke="black" stroke-width="1.5"/ -->
+    <!--line x1="360" y1="0" x2="360" y2="48" stroke="black" stroke-width="1.5"/ -->
+    <line x1="480" y1="0" x2="480" y2="48" stroke="black" stroke-width="1.5"/>
+    <!--line x1="680" y1="0" x2="680" y2="48" stroke="black" stroke-width="1.5"/ -->
+    <line x1="835" y1="-1" x2="835" y2="49" stroke="black" stroke-width="1.5"/>
+    <line x1="840" y1="-1" x2="840" y2="49" stroke="black" stroke-width="1.5"/>
+
+    <!-- 高音譜號 (Treble Clef U+1D11E: 𝄞) -->
+    <text x="15" y="55" class="music">𝄞</text>
+    <!-- 4/4 拍號 -->
+    <text x="60" y="25" class="time-sig">4</text>
+    <text x="60" y="50" class="time-sig">4</text>
+
+
+    <!-- ================= 樂符與雙聲部 ================= -->
+
+
+    <!-- 第一拍（小節 1）：雙音符，向下長符幹 -->
+    <g id="beat-1">
+      <!-- 上音 (A4, y=24) 與 下音 (F#4, y=36) -->
+      <use href="#notehead_white" x="255" y="5"/>
+      <use href="#notehead" x="255" y="42"/>
+      <use href="#notehead" x="300" y="42"/>
+      <use href="#notehead" x="345" y="24"/>
+      <use href="#notehead" x="345" y="36"/>
+      <use href="#notehead" x="415" y="36"/>
+      <!--向上符幹 -->
+      <path class="stem" d="M260.5 5 V-25"/>
+      <path class="stem" d="M350 20 V-10"/>
+      <path class="stem" d="M420 37 V0"/>
+      <!-- 向下符幹自上音起至下方 -->
+      <path class="stem" d="M250 42 V75"/>
+      <path class="stem" d="M295 42 V75"/>
+      <path class="stem" d="M340 38 V70"/>
+      <path class="stem" d="M409 38 V70"/>       
+    </g>
+
+    <!-- 第二拍（小節 2）：雙音符，向下長符幹 -->
+    <g id="beat-2">
+    <use href="#notehead_white" x="555" y="30"/>
+    <use href="#notehead_white" x="555" y="42"/>
+    <!--向上符幹 -->
+    <path class="stem" d="M561 30 V-5"/>
+    <!-- 向下符幹自上音起至下方 -->
+    <path class="stem" d="M549 45 V75"/>
+    <!-- Half rest: block resting above a staff line -->
+    <g transform="translate(182 110)">
+      <path d="M0 0 H89 M0 7 H89 M0 14 H89 M0 21 H89 M0 28 H89" class="staff" fill="none"/>
+      <rect x="500" y="-92" width="12" height="6"/>
+            <path d="M0 0 H89 M0 7 H89 M0 14 H89 M0 21 H89 M0 28 H89" class="staff" fill="none"/>
+      <rect x="500" y="-68" width="12" height="6"/>
+    </g>
+
+</g>
+
+
+  </g>
+</svg>

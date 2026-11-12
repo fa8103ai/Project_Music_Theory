@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <defs>
+    <!-- 定義五線譜 (寬度 840) -->
+    <g id="staff">
+      <line x1="100" y1="0" x2="790" y2="0" stroke="black" stroke-width="2"/>
+      <line x1="100" y1="18" x2="790" y2="18" stroke="black" stroke-width="2"/>
+      <line x1="100" y1="36" x2="790" y2="36" stroke="black" stroke-width="2"/>
+      <line x1="100" y1="54" x2="790" y2="54" stroke="black" stroke-width="2"/>
+      <line x1="100" y1="72" x2="790" y2="72" stroke="black" stroke-width="2"/>
+      <line x1="100" y1="250" x2="333" y2="250" stroke="black" stroke-width="2"/>
+      <line x1="100" y1="268" x2="333" y2="268" stroke="black" stroke-width="2"/>
+      <line x1="100" y1="286" x2="333" y2="286" stroke="black" stroke-width="2"/>
+      <line x1="100" y1="304" x2="333" y2="304" stroke="black" stroke-width="2"/>
+      <line x1="100" y1="322" x2="333" y2="322" stroke="black" stroke-width="2"/>
+      <line x1="336" y1="250" x2="566" y2="250" stroke="black" stroke-width="2"/>
+      <line x1="336" y1="268" x2="566" y2="268" stroke="black" stroke-width="2"/>
+      <line x1="336" y1="286" x2="566" y2="286" stroke="black" stroke-width="2"/>
+      <line x1="336" y1="304" x2="566" y2="304" stroke="black" stroke-width="2"/>
+      <line x1="336" y1="322" x2="566" y2="322" stroke="black" stroke-width="2"/>
+      <line x1="569" y1="250" x2="790" y2="250" stroke="black" stroke-width="2"/>
+      <line x1="569" y1="268" x2="790" y2="268" stroke="black" stroke-width="2"/>
+      <line x1="569" y1="286" x2="790" y2="286" stroke="black" stroke-width="2"/>
+      <line x1="569" y1="304" x2="790" y2="304" stroke="black" stroke-width="2"/>
+      <line x1="569" y1="322" x2="790" y2="322" stroke="black" stroke-width="2"/>
+    </g>
+
+    <!-- 定義指示箭頭 -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="black"/>
+    </marker>
+
+    <style>
+      .music {
+        font-family: "Bravura", "Maestro", "Times New Roman", serif;
+        font-size: 90px;
+        fill: black;
+      }
+      .time-sig {
+        font-family: serif;
+        font-weight: bold;
+        font-size: 50px;
+        fill: black;
+      }
+      .notehead {
+        fill: none;
+        stroke: black;
+        stroke-width: 6;
+      }
+      .rest-box {
+        fill: black;
+      }
+      .label-text {
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: bold;
+        font-size: 28px;
+        text-anchor: middle;
+        fill: black;
+      }
+      .pointer {
+        fill: none;
+        stroke: black;
+        stroke-width: 3.5;
+        marker-end: url(#arrow);
+      }
+    </style>
+  </defs>
+
+  <!-- 白色背景 -->
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- 樂譜與符號主體群組 -->
+  <g id="music-notation" transform="translate(30, 60)">
+    <!-- 五線譜背景 -->
+    <use href="#staff" x="0" y="0"/>
+
+    <!-- 小節線 -->
+    <line x1="520" y1="0" x2="520" y2="72" stroke="black" stroke-width="2"/>
+    <line x1="786" y1="-1" x2="786" y2="73" stroke="black" stroke-width="2"/>
+    <line x1="790" y1="-1" x2="790" y2="73" stroke="black" stroke-width="2"/>
+
+   <line x1="100" y1="250" x2="100" y2="323" stroke="black" stroke-width="2"/>
+   <line x1="333" y1="250" x2="333" y2="323" stroke="black" stroke-width="2"/>
+
+   <line x1="336" y1="250" x2="336" y2="323" stroke="black" stroke-width="2"/>
+   <line x1="566" y1="250" x2="566" y2="323" stroke="black" stroke-width="2"/>
+
+   <line x1="569" y1="250" x2="569" y2="323" stroke="black" stroke-width="2"/>
+   <line x1="790" y1="250" x2="790" y2="323" stroke="black" stroke-width="2"/>
+
+    <!-- 低音譜號 (Bass Clef U+1D122: 𝄢) -->
+    <text x="100" y="60" class="music">𝄢</text>
+
+    <!-- 4/2 拍號 -->
+    <text x="160" y="37" class="time-sig">4</text>
+    <text x="160" y="73" class="time-sig">2</text>
+    <text x="120" y="285" class="time-sig">3</text>
+    <text x="120" y="321" class="time-sig">4</text>
+    <text x="350" y="285" class="time-sig">4</text>
+    <text x="350" y="321" class="time-sig">4</text>
+    <text x="580" y="285" class="time-sig">6</text>
+    <text x="580" y="321" class="time-sig">8</text>
+
+    <!-- 全音符 (Whole Note) 位於第四線 -->
+    <ellipse cx="330" cy="80" rx="12" ry="8" class="notehead" transform="rotate(-20 230 36)"/>
+
+    <!-- 全休止符 (Whole Rest) 懸掛於第四線下方 -->
+    <rect x="480" y="18" width="28" height="9" class="rest-box"/>
+    <rect x="450" y="268" width="28" height="9" class="rest-box"/>
+    <rect x="220" y="268" width="28" height="9" class="rest-box"/>
+    <rect x="670" y="268" width="28" height="9" class="rest-box"/>
+
+    <!-- 二全休止符 (Breve Rest) 填滿第三線至第四線 -->
+    <rect x="705" y="18" width="16" height="18" class="rest-box"/>
+  </g>
+
+  <!-- 文字標籤與引導箭頭 -->
+  <g id="typography">
+    <!-- Whole Rest 標籤與箭頭 -->
+    <text x="350" y="270" class="label-text">Whole Rest</text>
+    <path d="M 350 235 Q 380 180 490 100" class="pointer"/>
+
+    <!-- Breve Rest 標籤與箭頭 -->
+    <text x="610" y="270" class="label-text">Breve Rest</text>
+    <path d="M 610 235 Q 640 180 710 100" class="pointer"/>
+  </g>
+</svg>
