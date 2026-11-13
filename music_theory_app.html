@@ -10,25 +10,39 @@
 body{background:var(--bg);color:var(--txt);font-size:var(--fs);height:100vh;display:flex;flex-direction:column;overflow:hidden}
 header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;padding:10px 18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 5px rgba(0,0,0,.1);gap:12px;flex-wrap:wrap}
 .header-title h1{font-size:1.3em;margin-bottom:2px}.header-title p{font-size:.82em;opacity:.92}
-/*.header-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap} */
 .header-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;flex:1;justify-content:flex-end}
 
-/* Study Progress Bar in Header (pushed to the left) */
-.progress-grp{margin-right:auto;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:6px;font-weight:700;font-size:.88em;line-height:1.2;white-space:nowrap}
+/* Study Progress Bar in Header */
+.progress-grp{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:6px;font-weight:700;font-size:.88em;line-height:1.2;white-space:nowrap}
+.progress-bar-bg{width:85px;height:10px;background:rgba(255,255,255,.3);border-radius:5px;overflow:hidden}
+.progress-bar-fill{height:100%;background:#2ecc71;width:0%;transition:width .3s ease}
 
+/* Search Bar in Header */
+.search-grp{position:relative;display:flex;align-items:center;background:rgba(255,255,255,.22);border-radius:6px;padding:3px 10px;margin-right:auto}
+.search-input{background:transparent;border:none;color:#fff;font-size:.88em;font-weight:700;padding:4px 4px;outline:none;width:190px;transition:width .25s ease}
+.search-input::placeholder{color:rgba(255,255,255,.85);font-weight:400}
+.search-input:focus{width:240px}
+.search-clear{background:none;border:none;color:#fff;cursor:pointer;font-size:1.15em;line-height:1;padding:0 4px;display:none;opacity:.85}
+.search-clear:hover{opacity:1}
+.search-results-dropdown{position:absolute;top:calc(100% + 6px);left:0;width:370px;max-height:420px;overflow-y:auto;background:#fff;color:var(--txt);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.24);border:1px solid var(--bdr);z-index:1000;display:none}
+.search-results-count{padding:7px 12px;background:#f8f9fa;border-bottom:1px solid var(--bdr);font-size:.78em;font-weight:700;color:var(--pri);position:sticky;top:0;z-index:2}
+.search-result-item{padding:10px 12px;border-bottom:1px solid #f0f2f5;cursor:pointer;transition:background .15s}
+.search-result-item:last-child{border-bottom:none}
+.search-result-item:hover,.search-result-item.selected{background:#ebf5fb}
+.search-result-title{font-weight:700;color:var(--pri);font-size:.92em;margin-bottom:3px}
+.search-result-snippet{font-size:.8em;color:#555;line-height:1.4}
+.search-highlight{background:#fde047;color:#713f12;font-weight:700;padding:1px 3px;border-radius:3px}
+.content-search-highlight{background:#fef08a;color:#713f12;font-weight:700;padding:1px 3px;border-radius:3px;box-shadow:0 0 0 1px #eab308}
+.content-search-highlight.active-match{background:#fb923c;color:#fff;box-shadow:0 0 0 2px #ea580c}
+.search-no-result{padding:12px;text-align:center;color:#7f8c8d;font-size:.88em}
 
-/* Unified Control Group Styling (Buttons, Speed Label & Select Box) */
+/* Unified Control Group Styling */
 .ctrl-grp{display:flex;align-items:center;background:rgba(255,255,255,.2);border-radius:6px;overflow:hidden}
 .ctrl-grp button{background:transparent;border:none;color:#fff;padding:6px 11px;cursor:pointer;font-weight:700;font-size:.88em;line-height:1.2}
 .ctrl-grp button:hover,.ctrl-grp button.active{background:rgba(255,255,255,.4)}
 .ctrl-label{color:#fff;padding:6px 6px 6px 11px;font-weight:700;font-size:.88em;line-height:1.2;white-space:nowrap}
 .ctrl-select{background:transparent;color:#fff;border:none;padding:6px 11px 6px 4px;font-weight:700;font-size:.88em;line-height:1.2;cursor:pointer;outline:none}
 .ctrl-select option{color:var(--txt);background:#fff;font-weight:700}
-
-/* Study Progress Bar in Header */
-.progress-grp{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:6px;font-weight:700;font-size:.88em;line-height:1.2;white-space:nowrap}
-.progress-bar-bg{width:85px;height:10px;background:rgba(255,255,255,.3);border-radius:5px;overflow:hidden}
-.progress-bar-fill{height:100%;background:#2ecc71;width:0%;transition:width .3s ease}
 
 .main-container{display:flex;flex:1;overflow:hidden;position:relative}
 .col{background:var(--panel);border-right:1px solid var(--bdr);display:flex;flex-direction:column;transition:width .25s}
@@ -79,7 +93,6 @@ header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;paddi
 .card{background:#fdfefe;border:1px solid var(--bdr);border-radius:8px;padding:14px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .card-title{font-weight:700;color:var(--sec);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
 .svg-box{background:#fff;border:2px solid #bdc3c7;border-radius:8px;padding:12px;text-align:center;margin:14px 0;overflow-x:auto;}
-/* Rule to specifically resize the Clef_staff.svg image */
 img[src*="clef_staff.svg"] {
     max-width: 300px !important;
     height: auto;
@@ -131,11 +144,11 @@ img[src*="clef_staff.svg"] {
 <body>
 <header>
   <div class="header-title">
-    <h1 id="app-title">樂理輕鬆學 (語音自學版) Interactive Music Theory (Audio Self-Learning Edition)</h1>
-    <p id="app-subtitle">根據 ABRSM 五級樂理教材編製‧配備粵英雙語朗讀 Based on ABRSM Curriculum with Voice Read-Aloud</p>
+    <h1 id="app-title">樂理輕鬆學 (語音自學版)</h1>
+    <p id="app-subtitle">根據 ABRSM 五級樂理教材編製‧配備粵英雙語朗讀</p>
   </div>
   <div class="header-controls">
-    <!-- Study Progress Tracker on the left -->
+    <!-- Study Progress Tracker -->
     <div class="progress-grp" title="學習進度 / Study Progress">
       <span id="lbl-progress">學習進度: 0/0 (0%)</span>
       <div class="progress-bar-bg">
@@ -143,7 +156,14 @@ img[src*="clef_staff.svg"] {
       </div>
     </div>
 
-    <!-- All buttons moved to the right -->
+    <!-- Topic Search Box -->
+    <div class="search-grp">
+      <input type="text" id="topic-search" class="search-input" placeholder="🔍 搜尋課題關鍵字..." oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)" autocomplete="off">
+      <button type="button" id="search-clear" class="search-clear" onclick="clearSearch()" title="清除 / Clear">&times;</button>
+      <div id="search-results" class="search-results-dropdown"></div>
+    </div>
+
+    <!-- Control Buttons on the Right -->
     <div class="ctrl-grp">
       <label for="tts-speed" id="lbl-speed" class="ctrl-label">語速:</label>
       <select id="tts-speed" class="ctrl-select">
@@ -166,7 +186,6 @@ img[src*="clef_staff.svg"] {
       <button id="btn-en" onclick="setLang('en')">English</button>
     </div>
   </div>
-
 </header>
 
 <div class="main-container">
@@ -189,7 +208,7 @@ img[src*="clef_staff.svg"] {
     <div id="content-area"></div>
   </div>
 
-  <!-- UPDATED: Column 3 (right-col) defaults to collapsed -->
+  <!-- Column 3 (right-col) defaults to collapsed -->
   <div class="col collapsed" id="right-col">
     <div class="col-hdr" onclick="if(this.parentElement.classList.contains('collapsed')) togCol('right-col')">
       <span id="hdr-c3">互動練習與引導思考 Exercises & Hints</span>
@@ -209,6 +228,8 @@ img[src*="clef_staff.svg"] {
 let lang = 'zh', curId = null, fSize = 16;
 let musicTheoryDB = [];
 let visitedTopics = new Set();
+let searchQuery = '';
+let currentSearchResults = [];
 
 // Track which chapters are collapsed
 const collapsedChapters = new Set();
@@ -298,7 +319,6 @@ async function loadAppData() {
     // 5. Combine chapters into the main database
     musicTheoryDB = [...chapter1Data, ...chapter2Data, ...chapter3Data];
 
-    
     if (musicTheoryDB.length > 0 && musicTheoryDB[0].concepts.length > 0) {
       curId = musicTheoryDB[0].concepts[0].id;
     }
@@ -354,40 +374,385 @@ function updateStudyProgress() {
 
 function updateHeaderUI() {
   const isZh = lang === 'zh';
+  document.getElementById('app-title').textContent = isZh 
+    ? '樂理輕鬆學 (語音自學版)' 
+    : 'Interactive Music Theory (Audio Self-Learning Edition)';
+  document.getElementById('app-subtitle').textContent = isZh 
+    ? '根據 ABRSM 五級樂理教材編製‧配備粵英雙語朗讀' 
+    : 'Based on ABRSM Curriculum with Voice Read-Aloud';
   document.getElementById('lbl-speed').textContent = isZh ? '語速:' : 'Speed:';
   document.getElementById('btn-stop-tts').innerHTML = isZh ? '&#9209; 停止朗讀' : '&#9209; Stop';
   document.getElementById('hdr-c1').textContent = isZh ? '課程目錄 Chapters' : 'Chapters';
   document.getElementById('hdr-c2').textContent = isZh ? '詳細教材內容與圖解 Content & Diagrams' : 'Content & Diagrams';
   document.getElementById('hdr-c3').textContent = isZh ? '互動練習與引導思考 Exercises & Hints' : 'Exercises & Hints';
-  updateStudyProgress();
-}
-
-function toggleTopicStatus(id) {
-  if (visitedTopics.has(id)) {
-    visitedTopics.delete(id);
-  } else {
-    visitedTopics.add(id);
+  const searchInput = document.getElementById('topic-search');
+  if (searchInput) {
+    searchInput.placeholder = isZh ? '🔍 搜尋課題關鍵字...' : '🔍 Search topics...';
   }
-  try {
-    localStorage.setItem('musicTheory_visitedTopics', JSON.stringify([...visitedTopics]));
-  } catch(e) {}
   updateStudyProgress();
-  renderTOC();
 }
 
-function toggleTopicStatus(id) {
-  if (visitedTopics.has(id)) {
-    visitedTopics.delete(id);
-  } else {
-    visitedTopics.add(id);
+// --- TOPIC SEARCH FUNCTIONS ---
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function highlightMatch(text, query) {
+  if (!query) return text;
+  const regex = new RegExp('(' + escapeRegExp(query) + ')', 'gi');
+  return text.replace(regex, '<span class="search-highlight">$1</span>');
+}
+
+function getSearchableEntries(concept, chapter) {
+  const isZh = lang === 'zh';
+  const entries = [];
+
+  const addEntry = (labelZh, labelEn, primaryText, secondaryText, targetArea = 'middle', sectionId = 'mid-all', boxType = 'none', quizIndex = -1) => {
+    if (primaryText) {
+      entries.push({
+        label: isZh ? labelZh : labelEn,
+        text: String(primaryText),
+        targetArea,
+        sectionId,
+        boxType,
+        quizIndex
+      });
+    }
+    if (secondaryText) {
+      entries.push({
+        label: isZh ? labelZh : labelEn,
+        text: String(secondaryText),
+        targetArea,
+        sectionId,
+        boxType,
+        quizIndex
+      });
+    }
+  };
+
+  // 1. Title, ID & Chapter
+  addEntry('課題名稱', 'Topic', isZh ? concept.name?.zh : concept.name?.en, !isZh ? concept.name?.zh : concept.name?.en, 'middle', 'sec-title');
+  addEntry('章節', 'Chapter', isZh ? chapter?.title?.zh : chapter?.title?.en, !isZh ? chapter?.title?.zh : chapter?.title?.en, 'middle', 'sec-title');
+  if (concept.id) entries.push({ label: 'ID', text: String(concept.id), targetArea: 'middle', sectionId: 'sec-title', boxType: 'none', quizIndex: -1 });
+
+  // 2. Definition, Examples, Study Tip
+  addEntry('核心定義', 'Definition', isZh ? concept.definition?.zh : concept.definition?.en, !isZh ? concept.definition?.zh : concept.definition?.en, 'middle', 'sec-def');
+  addEntry('樂譜範例', 'Examples', isZh ? concept.examples?.zh : concept.examples?.en, !isZh ? concept.examples?.zh : concept.examples?.en, 'middle', 'sec-ex');
+  addEntry('應試錦囊', 'Study Tip', isZh ? concept.tip?.zh : concept.tip?.en, !isZh ? concept.tip?.zh : concept.tip?.en, 'middle', 'sec-tip');
+
+  // 3. Visual Diagrams (Titles & Explanations)
+  const diagrams = [];
+  if (Array.isArray(concept.visualDiagrams)) diagrams.push(...concept.visualDiagrams);
+  if (concept.visualDiagram) diagrams.push(concept.visualDiagram);
+
+  diagrams.forEach((d, i) => {
+    const num = diagrams.length > 1 ? ' ' + (i + 1) : '';
+    const secId = 'sec-diag-' + i;
+    addEntry('視覺圖解' + num, 'Diagram' + num, isZh ? d.title?.zh : d.title?.en, !isZh ? d.title?.zh : d.title?.en, 'middle', secId);
+    addEntry('圖解說明' + num, 'Diagram Explanation' + num, isZh ? d.explanation?.zh : d.explanation?.en, !isZh ? d.explanation?.zh : d.explanation?.en, 'middle', secId);
+  });
+
+  // 4. Exercises (Questions, Options, Guiding Hints & Answer Explanations)
+  if (Array.isArray(concept.exercises)) {
+    concept.exercises.forEach((ex, i) => {
+      const qNum = ' Q' + (i + 1);
+      const quizSecId = 'sec-quiz-' + i;
+      addEntry('練習題目' + qNum, 'Exercise' + qNum, isZh ? ex.question?.zh : ex.question?.en, !isZh ? ex.question?.zh : ex.question?.en, 'right', quizSecId, 'none', i);
+      if (Array.isArray(ex.options)) {
+        ex.options.forEach(opt => {
+          addEntry('練習選項' + qNum, 'Option' + qNum, isZh ? opt.zh : opt.en, !isZh ? opt.zh : opt.en, 'right', quizSecId, 'none', i);
+        });
+      }
+      const gZh = Array.isArray(ex.guidingQuestions?.zh) ? ex.guidingQuestions.zh.join(' ') : ex.guidingQuestions?.zh;
+      const gEn = Array.isArray(ex.guidingQuestions?.en) ? ex.guidingQuestions.en.join(' ') : ex.guidingQuestions?.en;
+      addEntry('引導提示' + qNum, 'Guiding Hint' + qNum, isZh ? gZh : gEn, !isZh ? gZh : gEn, 'right', quizSecId, 'hint', i);
+      addEntry('答案解析' + qNum, 'Answer Explanation' + qNum, isZh ? ex.explanation?.zh : ex.explanation?.en, !isZh ? ex.explanation?.zh : ex.explanation?.en, 'right', quizSecId, 'exp', i);
+    });
   }
-  try {
-    localStorage.setItem('musicTheory_visitedTopics', JSON.stringify([...visitedTopics]));
-  } catch(e) {}
-  updateStudyProgress();
-  renderTOC();
+
+  return entries;
 }
 
+function conceptMatchesQuery(concept, chapter, q) {
+  if (!q) return true;
+  const lowerQ = q.toLowerCase();
+  const entries = getSearchableEntries(concept, chapter);
+  return entries.some(e => e.text.toLowerCase().includes(lowerQ));
+}
+
+// Collect ALL matching occurrences across all fields of a concept
+function getAllMatchSnippets(concept, chapter, q) {
+  const lowerQ = q.toLowerCase();
+  const qLen = q.length;
+  const entries = getSearchableEntries(concept, chapter);
+  const matches = [];
+  const seenSnippets = new Set();
+
+  entries.forEach(entry => {
+    const clean = entry.text.replace(/\n+/g, ' ');
+    const lowerClean = clean.toLowerCase();
+    let searchFrom = 0;
+
+    while (searchFrom < lowerClean.length) {
+      const idx = lowerClean.indexOf(lowerQ, searchFrom);
+      if (idx === -1) break;
+
+      const start = Math.max(0, idx - 18);
+      const end = Math.min(clean.length, idx + qLen + 38);
+      const rawSnippet = (start > 0 ? '...' : '') + clean.slice(start, end) + (end < clean.length ? '...' : '');
+      const dedupeKey = entry.label + '|' + entry.sectionId + '|' + rawSnippet;
+
+      if (!seenSnippets.has(dedupeKey)) {
+        seenSnippets.add(dedupeKey);
+        matches.push({
+          label: entry.label,
+          targetArea: entry.targetArea,
+          sectionId: entry.sectionId,
+          boxType: entry.boxType,
+          quizIndex: entry.quizIndex,
+          snippetHTML: '<span style="color:#2980b9;font-weight:700;">[' + entry.label + ']</span> ' + highlightMatch(rawSnippet, q)
+        });
+      }
+
+      searchFrom = idx + Math.max(1, qLen);
+    }
+  });
+
+  return matches;
+}
+
+function handleSearch(val) {
+  searchQuery = (val || '').trim();
+  const clearBtn = document.getElementById('search-clear');
+  const dropdown = document.getElementById('search-results');
+
+  if (clearBtn) {
+    clearBtn.style.display = searchQuery.length > 0 ? 'inline-block' : 'none';
+  }
+
+  // Update Left TOC to filter matching topics live
+  renderTOC();
+
+  // Highlight matching text live in the currently open topic
+  applyContentHighlights();
+
+  if (!dropdown) return;
+  if (!searchQuery) {
+    dropdown.style.display = 'none';
+    dropdown.innerHTML = '';
+    currentSearchResults = [];
+    return;
+  }
+
+  const allResults = [];
+  musicTheoryDB.forEach(chapter => {
+    chapter.concepts.forEach(concept => {
+      const matches = getAllMatchSnippets(concept, chapter, searchQuery);
+      matches.forEach(m => {
+        allResults.push({
+          chapter,
+          concept,
+          targetArea: m.targetArea,
+          sectionId: m.sectionId,
+          boxType: m.boxType,
+          quizIndex: m.quizIndex,
+          snippetHTML: m.snippetHTML
+        });
+      });
+    });
+  });
+
+  currentSearchResults = allResults;
+
+  if (allResults.length === 0) {
+    dropdown.innerHTML = '<div class="search-no-result">' + (
+      lang === 'zh' ? '找不到與「' + searchQuery + '」相關的課題' : 'No results found for "' + searchQuery + '"'
+    ) + '</div>';
+  } else {
+    const countHeader = '<div class="search-results-count">' + (
+      lang === 'zh' ? '共找到 ' + allResults.length + ' 個相符結果：' : 'Found ' + allResults.length + ' matching results:'
+    ) + '</div>';
+
+    const itemsHTML = allResults.map((item, idx) => {
+      const titleText = lang === 'zh' ? item.concept.name.zh : item.concept.name.en;
+      const chTitle = lang === 'zh' ? item.chapter.title.zh : item.chapter.title.en;
+      return (
+        '<div class="search-result-item" onclick="selectSearchResult(' + idx + ')">' +
+          '<div class="search-result-title">' + highlightMatch(titleText, searchQuery) + '</div>' +
+          '<div style="font-size:0.74em;color:#7f8c8d;margin-bottom:2px;">' + chTitle + '</div>' +
+          '<div class="search-result-snippet">' + item.snippetHTML + '</div>' +
+        '</div>'
+      );
+    }).join('');
+
+    dropdown.innerHTML = countHeader + itemsHTML;
+  }
+  dropdown.style.display = 'block';
+}
+
+// Safely highlight searchQuery inside rendered content & quiz DOM nodes
+function applyContentHighlights(targetSectionId = null) {
+  const containers = [
+    document.getElementById('content-area'),
+    document.getElementById('quiz-area')
+  ];
+
+  // 1. Remove previous highlights cleanly
+  containers.forEach(container => {
+    if (!container) return;
+    const oldMarks = container.querySelectorAll('mark.content-search-highlight');
+    oldMarks.forEach(mark => {
+      const parent = mark.parentNode;
+      if (parent) {
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+      }
+    });
+  });
+
+  if (!searchQuery) return;
+
+  const regex = new RegExp('(' + escapeRegExp(searchQuery) + ')', 'gi');
+
+  // 2. Wrap matching text nodes in <mark class="content-search-highlight">
+  containers.forEach(container => {
+    if (!container) return;
+    const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+    const textNodes = [];
+    let node;
+    while ((node = walker.nextNode())) {
+      const tag = node.parentElement ? node.parentElement.tagName : '';
+      if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'BUTTON' || tag === 'SELECT' || tag === 'OPTION') {
+        continue;
+      }
+      if (node.nodeValue && node.nodeValue.toLowerCase().includes(searchQuery.toLowerCase())) {
+        textNodes.push(node);
+      }
+    }
+
+    textNodes.forEach(textNode => {
+      const text = textNode.nodeValue;
+      const parts = text.split(regex);
+      if (parts.length <= 1) return;
+
+      const frag = document.createDocumentFragment();
+      parts.forEach(part => {
+        if (!part) return;
+        if (part.toLowerCase() === searchQuery.toLowerCase()) {
+          const mark = document.createElement('mark');
+          mark.className = 'content-search-highlight';
+          mark.textContent = part;
+          frag.appendChild(mark);
+        } else {
+          frag.appendChild(document.createTextNode(part));
+        }
+      });
+      if (textNode.parentNode) {
+        textNode.parentNode.replaceChild(frag, textNode);
+      }
+    });
+  });
+
+  // 3. Emphasize the active match inside the target section
+  if (targetSectionId) {
+    const targetSec = document.getElementById(targetSectionId);
+    if (targetSec) {
+      const secMarks = targetSec.querySelectorAll('mark.content-search-highlight');
+      if (secMarks.length > 0) {
+        secMarks[0].classList.add('active-match');
+      }
+    }
+  }
+}
+
+function selectSearchResult(resultIndex) {
+  const res = currentSearchResults[resultIndex];
+  if (!res) return;
+
+  const topicId = res.concept.id;
+  const chapterId = res.chapter.chapterId;
+
+  // Ensure chapter is expanded in TOC
+  if (chapterId && collapsedChapters.has(chapterId)) {
+    collapsedChapters.delete(chapterId);
+  }
+
+  // Hide dropdown
+  const dropdown = document.getElementById('search-results');
+  if (dropdown) dropdown.style.display = 'none';
+
+  // Ensure Left Column is expanded
+  const leftCol = document.getElementById('left-col');
+  if (leftCol && leftCol.classList.contains('collapsed')) {
+    togCol('left-col');
+  }
+
+  // Ensure target column (Middle or Right) is expanded
+  if (res.targetArea === 'right') {
+    const rightCol = document.getElementById('right-col');
+    if (rightCol && rightCol.classList.contains('collapsed')) {
+      togCol('right-col');
+    }
+  } else {
+    const midCol = document.getElementById('middle-col');
+    if (midCol && midCol.classList.contains('collapsed')) {
+      togCol('middle-col');
+    }
+  }
+
+  // Load topic if different from current
+  if (curId !== topicId) {
+    loadTopic(topicId, false);
+  } else {
+    renderTOC();
+  }
+
+  // If match is inside a collapsed Hint or Explanation box in Right Column, open it
+  if (res.sectionId) {
+    const targetSec = document.getElementById(res.sectionId);
+    if (targetSec) {
+      if (res.boxType === 'hint') {
+        const hintBox = targetSec.querySelector('.hint-box');
+        if (hintBox) hintBox.style.display = 'block';
+      } else if (res.boxType === 'exp') {
+        const expBox = targetSec.querySelector('.exp-box');
+        if (expBox) expBox.style.display = 'block';
+      }
+    }
+  }
+
+  // Highlight matches in content and scroll smoothly to the target match
+  applyContentHighlights(res.sectionId);
+
+  setTimeout(() => {
+    const targetSec = res.sectionId ? document.getElementById(res.sectionId) : null;
+    const activeMark = targetSec
+      ? targetSec.querySelector('mark.content-search-highlight')
+      : document.querySelector('mark.content-search-highlight');
+
+    if (activeMark) {
+      activeMark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else if (targetSec) {
+      targetSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 60);
+}
+
+function clearSearch() {
+  const input = document.getElementById('topic-search');
+  if (input) input.value = '';
+  handleSearch('');
+}
+
+// Hide search dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  const searchGrp = document.querySelector('.search-grp');
+  const dropdown = document.getElementById('search-results');
+  if (searchGrp && dropdown && !searchGrp.contains(e.target)) {
+    dropdown.style.display = 'none';
+  }
+});
+// ------------------------------
 
 function toggleTopicStatus(id) {
   if (visitedTopics.has(id)) {
@@ -406,11 +771,18 @@ function renderTOC() {
   const toc = document.getElementById('toc-list');
   if (!toc) return;
   toc.innerHTML = '';
+  const isSearching = searchQuery.length > 0;
   
   // 1. Render loaded chapters (musicTheoryDB)
   musicTheoryDB.forEach(chapter => {
     const chId = chapter.chapterId;
-    const isCollapsed = collapsedChapters.has(chId);
+    const matchingConcepts = isSearching
+      ? chapter.concepts.filter(c => conceptMatchesQuery(c, chapter, searchQuery))
+      : chapter.concepts;
+
+    if (isSearching && matchingConcepts.length === 0) return;
+
+    const isCollapsed = isSearching ? false : collapsedChapters.has(chId);
 
     // Clickable Chapter Title with Arrow (▼ / ▶)
     const chDiv = document.createElement('div');
@@ -427,13 +799,18 @@ function renderTOC() {
     const topicsGroup = document.createElement('div');
     topicsGroup.className = 'ch-topics-group' + (isCollapsed ? ' collapsed' : '');
 
-    chapter.concepts.forEach(concept => {
+    matchingConcepts.forEach(concept => {
       const item = document.createElement('div');
       item.className = 'topic-item' + (concept.id === curId ? ' active' : '');
       item.title = lang === 'zh' ? '再次點擊可切換完成狀態 (✓)' : 'Click again to toggle completion (✓)';
       
       const nameSpan = document.createElement('span');
-      nameSpan.textContent = lang === 'zh' ? concept.name.zh : concept.name.en;
+      const rawName = lang === 'zh' ? concept.name.zh : concept.name.en;
+      if (isSearching) {
+        nameSpan.innerHTML = highlightMatch(rawName, searchQuery);
+      } else {
+        nameSpan.textContent = rawName;
+      }
       item.appendChild(nameSpan);
 
       if (visitedTopics && visitedTopics.has(concept.id)) {
@@ -460,7 +837,11 @@ function renderTOC() {
   if (typeof CH_META !== 'undefined') {
     CH_META.forEach(([cid, en, zh, cnt, pfx]) => {
       if (!loadedChapters.includes(cid)) {
-        const isCollapsed = collapsedChapters.has(cid);
+        if (isSearching) {
+          const q = searchQuery.toLowerCase();
+          if (!en.toLowerCase().includes(q) && !zh.toLowerCase().includes(q)) return;
+        }
+        const isCollapsed = isSearching ? false : collapsedChapters.has(cid);
 
         const chDiv = document.createElement('div');
         chDiv.className = 'ch-title';
@@ -489,7 +870,6 @@ function renderTOC() {
     });
   }
 }
-
 
 function findConceptById(id) {
   for (let chapter of musicTheoryDB) {
@@ -537,7 +917,7 @@ function loadTopic(id, isUserClick = false) {
           }
 
           diagramHTML +=
-              '<div class="svg-box">' +
+              '<div class="svg-box" id="sec-diag-' + index + '">' +
                 '<div class="card-title" style="margin-bottom:6px"><span>' + diagram.title[lang] + '</span><button class="tts-btn" onclick="speakSpecificDiagram(' + index + ', this)">🔊</button></div>' +
                 explanationHTML + 
                 '<img src="' + diagram.imagePath + '" alt="' + diagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
@@ -551,7 +931,7 @@ function loadTopic(id, isUserClick = false) {
             }
 
       diagramHTML =
-          '<div class="svg-box">' +
+          '<div class="svg-box" id="sec-diag-0">' +
             '<div class="card-title" style="margin-bottom:6px"><span>' + concept.visualDiagram.title[lang] + '</span><button class="tts-btn" onclick="speakCurrentDiagram(this)">🔊</button></div>' +
             explanationHTML +
             '<img src="' + concept.visualDiagram.imagePath + '" alt="' + concept.visualDiagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
@@ -586,22 +966,22 @@ function loadTopic(id, isUserClick = false) {
   // ----------------------------------------
 
   document.getElementById('content-area').innerHTML = `
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+    <div id="sec-title" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
       <h2 style="color:var(--pri);font-size:1.25em">${title}</h2>
       <button class="tts-btn" onclick="speak(document.getElementById('mid-all').innerText)">🔊 ${isZh?'朗讀全課':'Read All'}</button>
     </div>
     ${resourceLinksHTML}
     <div id="mid-all">
-      <div class="card">
+      <div class="card" id="sec-def">
         <div class="card-title"><span>📖 ${isZh?'核心定義與詳細說明':'Definition & Comprehensive Explanation'}</span><button class="tts-btn" onclick="speak(this.parentElement.nextElementSibling.innerText)">🔊</button></div>
         <p style="line-height:1.65">${def}</p>
       </div>
       ${diagramHTML}
-      <div class="card">
+      <div class="card" id="sec-ex">
         <div class="card-title"><span>🎼 ${isZh?'樂譜範例與重點拆解':'Notation Examples & Key Breakdown'}</span><button class="tts-btn" onclick="speak(this.parentElement.nextElementSibling.innerText)">🔊</button></div>
         <p style="line-height:1.65">${ex}</p>
       </div>
-      <div class="card" style="background:#fcf3cf;border-color:#f39c12">
+      <div class="card" id="sec-tip" style="background:#fcf3cf;border-color:#f39c12">
         <div class="card-title" style="color:#d68910"><span>💡 ${isZh?'應試錦囊 (Study Tip)':'Study Tip'}</span><button class="tts-btn" onclick="speak(this.parentElement.nextElementSibling.innerText)">🔊</button></div>
         <p style="line-height:1.6">${tip}</p>
       </div>
@@ -620,7 +1000,7 @@ function loadTopic(id, isUserClick = false) {
             optsHTML += `<li class="opt-item" onclick="chkAns(this, ${oIdx === ex.correctIndex})">${isZh ? opt.zh : opt.en}</li>`;
         });
 
-        qHtml += `<div class="quiz-card">
+        qHtml += `<div class="quiz-card" id="sec-quiz-${idx}">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
             <div style="font-weight:700">Q${idx+1}: ${qTxt}</div>
             <button class="tts-btn" onclick="speak('${qTxt.replace(/'/g,"\\'")}')">🔊</button>
@@ -635,6 +1015,11 @@ function loadTopic(id, isUserClick = false) {
       });
   }
   document.getElementById('quiz-area').innerHTML = qHtml;
+
+  // Apply search keyword highlights if a search query is active
+  if (searchQuery) {
+    applyContentHighlights();
+  }
 }
 
 function chkAns(el, ok) {
@@ -701,9 +1086,9 @@ function setLang(l) {
   document.getElementById('btn-zh').classList.toggle('active', l === 'zh');
   document.getElementById('btn-en').classList.toggle('active', l === 'en');
   updateHeaderUI();
-  if(curId) loadTopic(curId, false);
+  if (curId) loadTopic(curId, false);
+  if (searchQuery) handleSearch(searchQuery);
 }
-
 
 function adjFont(d) {
   fSize = Math.max(13, Math.min(22, fSize + d));
@@ -715,7 +1100,6 @@ function togCol(id) {
   const isCollapsed = panel.classList.toggle('collapsed');
   const btn = panel.querySelector('.collapse-btn');
   
-  // Update arrow icon direction dynamically
   if (btn) {
       if (id === 'right-col') {
           btn.textContent = isCollapsed ? '◀' : '▶';
