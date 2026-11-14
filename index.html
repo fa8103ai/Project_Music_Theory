@@ -2,12 +2,13 @@
 <html lang="zh-HK">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>樂理輕鬆學 (語音自學版) | Interactive Music Theory</title>
 <style>
 :root{--bg:#f4f6f9;--panel:#fff;--pri:#1a5276;--sec:#2980b9;--acc:#e67e22;--txt:#2c3e50;--bdr:#dcdde1;--fs:16px}
 *{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-body{background:var(--bg);color:var(--txt);font-size:var(--fs);height:100vh;display:flex;flex-direction:column;overflow:hidden}
+/* FIX 1: Changed 100vh to 100dvh for iOS Safari bottom cutoff issue */
+body{background:var(--bg);color:var(--txt);font-size:var(--fs);height:100dvh;display:flex;flex-direction:column;overflow:hidden; -webkit-overflow-scrolling: touch;}
 header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;padding:10px 18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 5px rgba(0,0,0,.1);gap:12px;flex-wrap:wrap}
 .header-title h1{font-size:1.3em;margin-bottom:2px}.header-title p{font-size:.82em;opacity:.92}
 .header-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;flex:1;justify-content:flex-end}
@@ -24,7 +25,7 @@ header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;paddi
 .search-input:focus{width:240px}
 .search-clear{background:none;border:none;color:#fff;cursor:pointer;font-size:1.15em;line-height:1;padding:0 4px;display:none;opacity:.85}
 .search-clear:hover{opacity:1}
-.search-results-dropdown{position:absolute;top:calc(100% + 6px);left:0;width:370px;max-height:420px;overflow-y:auto;background:#fff;color:var(--txt);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.24);border:1px solid var(--bdr);z-index:1000;display:none}
+.search-results-dropdown{position:absolute;top:calc(100% + 6px);left:0;width:370px;max-height:420px;overflow-y:auto;background:#fff;color:var(--txt);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.24);border:1px solid var(--bdr);z-index:1000;display:none; -webkit-overflow-scrolling: touch;}
 .search-results-count{padding:7px 12px;background:#f8f9fa;border-bottom:1px solid var(--bdr);font-size:.78em;font-weight:700;color:var(--pri);position:sticky;top:0;z-index:2}
 .search-result-item{padding:10px 12px;border-bottom:1px solid #f0f2f5;cursor:pointer;transition:background .15s}
 .search-result-item:last-child{border-bottom:none}
@@ -45,12 +46,13 @@ header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;paddi
 .ctrl-select option{color:var(--txt);background:#fff;font-weight:700}
 
 .main-container{display:flex;flex:1;overflow:hidden;position:relative}
-.col{background:var(--panel);border-right:1px solid var(--bdr);display:flex;flex-direction:column;transition:width .25s}
+.col{background:var(--panel);border-right:1px solid var(--bdr);display:flex;flex-direction:column;transition:width .25s; -webkit-overflow-scrolling: touch;}
 .col-hdr{background:#f8f9fa;padding:9px 14px;font-weight:700;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;font-size:.92em}
 .collapse-btn{background:none;border:none;cursor:pointer;font-size:1.1em;color:var(--pri)}
 #left-col{
-    flex-basis: 290px; 
-    min-width: 200px;
+    /* FIX 3: Narrowed default flex-basis to 220px (was 290px) */
+    flex-basis: 220px; 
+    min-width: 180px;
     max-width: 50%;
     font-size:.82em;
     flex-shrink:0;
@@ -93,7 +95,8 @@ header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;paddi
 .card{background:#fdfefe;border:1px solid var(--bdr);border-radius:8px;padding:14px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .card-title{font-weight:700;color:var(--sec);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
 .svg-box{background:#fff;border:2px solid #bdc3c7;border-radius:8px;padding:12px;text-align:center;margin:14px 0;overflow-x:auto;}
-img[src*="clef_staff.svg"] {
+/* Case insensitive attribute selector for iOS Safari */
+img[src*="clef_staff" i] {
     max-width: 300px !important;
     height: auto;
 }
@@ -116,7 +119,7 @@ img[src*="clef_staff.svg"] {
 .btn-stop-tts:hover { background-color: #9f1239 !important; }
 
 /* Image Modal Styles */
-.img-modal { display: none; position: fixed; z-index: 1000; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); }
+.img-modal { display: none; position: fixed; z-index: 1000; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); -webkit-overflow-scrolling: touch;}
 .img-modal-content { margin: auto; display: block; width: 80%; max-width: 900px; background-color: white; border-radius: 8px; padding: 20px; }
 .img-modal-close { position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; }
 .img-modal-close:hover, .img-modal-close:focus { color: #bbb; text-decoration: none; cursor: pointer; }
@@ -129,7 +132,7 @@ img[src*="clef_staff.svg"] {
 
 /* Resizer Bar Style */
 .resizer {
-  width: 6px;
+  width: 10px; /* Made slightly wider for easier touch on iPad */
   background: var(--bdr);
   cursor: col-resize;
   flex-shrink: 0;
@@ -138,6 +141,11 @@ img[src*="clef_staff.svg"] {
 }
 .resizer:hover, .resizer:active {
   background: var(--sec);
+}
+
+@media (max-width: 768px) {
+    /* Optional enhancements for very narrow iPhone screens if needed later */
+    .header-controls { justify-content: flex-start; }
 }
 </style>
 </head>
@@ -916,11 +924,16 @@ function loadTopic(id, isUserClick = false) {
              explanationHTML = '<p style="margin-bottom: 10px; font-style: italic; text-align: left; line-height: 1.6; color: var(--acc);">' + explanationText + '</p>';
           }
 
+          // FIX 4: Safely force correct capitalization of image names for iOS if they are slightly off in the JSON
+          let safeImgPath = diagram.imagePath;
+          if (safeImgPath.includes('clef_staff.svg')) safeImgPath = safeImgPath.replace('clef_staff.svg', 'Clef_staff.svg');
+          if (safeImgPath.includes('Key_signatures.svg')) safeImgPath = safeImgPath.replace('Key_signatures.svg', 'Key_Signatures.svg');
+
           diagramHTML +=
               '<div class="svg-box" id="sec-diag-' + index + '">' +
                 '<div class="card-title" style="margin-bottom:6px"><span>' + diagram.title[lang] + '</span><button class="tts-btn" onclick="speakSpecificDiagram(' + index + ', this)">🔊</button></div>' +
                 explanationHTML + 
-                '<img src="' + diagram.imagePath + '" alt="' + diagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
+                '<img src="' + safeImgPath + '" alt="' + diagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
               '</div>';
       });
   } else if (concept.visualDiagram) {
@@ -930,11 +943,16 @@ function loadTopic(id, isUserClick = false) {
              explanationHTML = '<p style="margin-bottom: 10px; font-style: italic; text-align: left; line-height: 1.6; color: var(--acc);">' + explanationText + '</p>';
             }
 
+      // FIX 4: Safely force correct capitalization of image names for iOS
+      let safeImgPath = concept.visualDiagram.imagePath;
+      if (safeImgPath.includes('clef_staff.svg')) safeImgPath = safeImgPath.replace('clef_staff.svg', 'Clef_staff.svg');
+      if (safeImgPath.includes('Key_signatures.svg')) safeImgPath = safeImgPath.replace('Key_signatures.svg', 'Key_Signatures.svg');
+
       diagramHTML =
           '<div class="svg-box" id="sec-diag-0">' +
             '<div class="card-title" style="margin-bottom:6px"><span>' + concept.visualDiagram.title[lang] + '</span><button class="tts-btn" onclick="speakCurrentDiagram(this)">🔊</button></div>' +
             explanationHTML +
-            '<img src="' + concept.visualDiagram.imagePath + '" alt="' + concept.visualDiagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
+            '<img src="' + safeImgPath + '" alt="' + concept.visualDiagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
           '</div>';
   }
 
@@ -1145,12 +1163,11 @@ const leftSide = document.getElementById('left-col');
 let x = 0;
 let leftWidth = 0;
 
+// Mouse events (Desktop)
 const mouseDownHandler = function(e) {
     if(leftSide.classList.contains('collapsed')) return;
-    
     x = e.clientX;
     leftWidth = leftSide.getBoundingClientRect().width;
-
     document.addEventListener('mousemove', mouseMoveHandler);
     document.addEventListener('mouseup', mouseUpHandler);
     document.body.style.userSelect = 'none';
@@ -1159,8 +1176,7 @@ const mouseDownHandler = function(e) {
 const mouseMoveHandler = function(e) {
     const dx = e.clientX - x;
     const newWidth = leftWidth + dx;
-    
-    if(newWidth > 200 && newWidth < window.innerWidth * 0.5) {
+    if(newWidth > 160 && newWidth < window.innerWidth * 0.8) {
          leftSide.style.flexBasis = `${newWidth}px`;
     }
 };
@@ -1172,6 +1188,30 @@ const mouseUpHandler = function() {
 };
 
 resizer.addEventListener('mousedown', mouseDownHandler);
+
+// FIX 2: Touch events (iPad/iPhone)
+resizer.addEventListener('touchstart', function(e) {
+    if(leftSide.classList.contains('collapsed')) return;
+    x = e.touches[0].clientX;
+    leftWidth = leftSide.getBoundingClientRect().width;
+    document.addEventListener('touchmove', touchMoveHandler, {passive: false});
+    document.addEventListener('touchend', touchUpHandler);
+    document.body.style.userSelect = 'none';
+}, {passive: false});
+
+const touchMoveHandler = function(e) {
+    const dx = e.touches[0].clientX - x;
+    const newWidth = leftWidth + dx;
+    if(newWidth > 160 && newWidth < window.innerWidth * 0.8) {
+         leftSide.style.flexBasis = `${newWidth}px`;
+    }
+};
+
+const touchUpHandler = function() {
+    document.body.style.userSelect = '';
+    document.removeEventListener('touchmove', touchMoveHandler);
+    document.removeEventListener('touchend', touchUpHandler);
+};
 // ------------------------------
 
 if (document.readyState === "loading") {
