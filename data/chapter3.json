@@ -52,6 +52,18 @@
             },
             "imagePath": "./assets/two_voices.svg",
             "altText": "Whole Bar Rests and Two Voices Diagram"
+          },
+          {
+            "title": {
+              "zh": "【視覺圖解 4：弱起音、弱起小節或稱前導拍】",
+              "en": "[Visual Diagram 4: Anacrusis/Pickup Note/Upbeat]"
+            },
+            "explanation": {
+              "zh": "在一首 4/4 拍的樂曲中，若第一個音符出現在第 4 拍，開頭可以加上或不加上前置休止符；這個僅佔一拍的開頭稱為弱起(Anacrusis)，其後的小節通常算作第 1 小節。",
+              "en": "In a piece in 4/4, if the first notes occur on beat 4, the opening can be shown with or without preliminary rests, that single-beat opening is an anacrusis; the following bar is normally counted as bar 1."
+            },
+            "imagePath": "./assets/anacrusis.svg",
+            "altText": "Anacrusis Diagram"
           }
         ],
         "examples": {
