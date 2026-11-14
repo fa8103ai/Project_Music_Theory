@@ -7,7 +7,7 @@
 <style>
 :root{--bg:#f4f6f9;--panel:#fff;--pri:#1a5276;--sec:#2980b9;--acc:#e67e22;--txt:#2c3e50;--bdr:#dcdde1;--fs:16px}
 *{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-/* FIX 1: Changed 100vh to 100dvh for iOS Safari bottom cutoff issue */
+/* Changed 100vh to 100dvh for iOS Safari bottom cutoff issue */
 body{background:var(--bg);color:var(--txt);font-size:var(--fs);height:100dvh;display:flex;flex-direction:column;overflow:hidden; -webkit-overflow-scrolling: touch;}
 header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;padding:10px 18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 5px rgba(0,0,0,.1);gap:12px;flex-wrap:wrap}
 .header-title h1{font-size:1.3em;margin-bottom:2px}.header-title p{font-size:.82em;opacity:.92}
@@ -50,7 +50,6 @@ header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;paddi
 .col-hdr{background:#f8f9fa;padding:9px 14px;font-weight:700;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;font-size:.92em}
 .collapse-btn{background:none;border:none;cursor:pointer;font-size:1.1em;color:var(--pri)}
 #left-col{
-    /* FIX 3: Narrowed default flex-basis to 220px (was 290px) */
     flex-basis: 220px; 
     min-width: 180px;
     max-width: 50%;
@@ -95,7 +94,7 @@ header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;paddi
 .card{background:#fdfefe;border:1px solid var(--bdr);border-radius:8px;padding:14px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .card-title{font-weight:700;color:var(--sec);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
 .svg-box{background:#fff;border:2px solid #bdc3c7;border-radius:8px;padding:12px;text-align:center;margin:14px 0;overflow-x:auto;}
-/* Case insensitive attribute selector for iOS Safari */
+/* Case insensitive attribute selector for styling specific images */
 img[src*="clef_staff" i] {
     max-width: 300px !important;
     height: auto;
@@ -132,7 +131,7 @@ img[src*="clef_staff" i] {
 
 /* Resizer Bar Style */
 .resizer {
-  width: 10px; /* Made slightly wider for easier touch on iPad */
+  width: 10px;
   background: var(--bdr);
   cursor: col-resize;
   flex-shrink: 0;
@@ -144,7 +143,6 @@ img[src*="clef_staff" i] {
 }
 
 @media (max-width: 768px) {
-    /* Optional enhancements for very narrow iPhone screens if needed later */
     .header-controls { justify-content: flex-start; }
 }
 </style>
@@ -887,6 +885,15 @@ function findConceptById(id) {
   return null;
 }
 
+// Helper function to safely fetch fallback image paths dynamically
+function getFallbackImgPath(originalPath) {
+  if (originalPath.includes('clef_staff.svg')) return originalPath.replace('clef_staff.svg', 'Clef_staff.svg');
+  if (originalPath.includes('Key_signatures.svg')) return originalPath.replace('Key_signatures.svg', 'Key_Signatures.svg');
+  if (originalPath.includes('Clef_staff.svg')) return originalPath.replace('Clef_staff.svg', 'clef_staff.svg');
+  if (originalPath.includes('Key_Signatures.svg')) return originalPath.replace('Key_Signatures.svg', 'Key_signatures.svg');
+  return originalPath;
+}
+
 function loadTopic(id, isUserClick = false) {
   stopSpeech();
   
@@ -924,16 +931,14 @@ function loadTopic(id, isUserClick = false) {
              explanationHTML = '<p style="margin-bottom: 10px; font-style: italic; text-align: left; line-height: 1.6; color: var(--acc);">' + explanationText + '</p>';
           }
 
-          // FIX 4: Safely force correct capitalization of image names for iOS if they are slightly off in the JSON
-          let safeImgPath = diagram.imagePath;
-          if (safeImgPath.includes('clef_staff.svg')) safeImgPath = safeImgPath.replace('clef_staff.svg', 'Clef_staff.svg');
-          if (safeImgPath.includes('Key_signatures.svg')) safeImgPath = safeImgPath.replace('Key_signatures.svg', 'Key_Signatures.svg');
+          let origPath = diagram.imagePath;
+          let altPath = getFallbackImgPath(origPath);
 
           diagramHTML +=
               '<div class="svg-box" id="sec-diag-' + index + '">' +
                 '<div class="card-title" style="margin-bottom:6px"><span>' + diagram.title[lang] + '</span><button class="tts-btn" onclick="speakSpecificDiagram(' + index + ', this)">🔊</button></div>' +
                 explanationHTML + 
-                '<img src="' + safeImgPath + '" alt="' + diagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
+                '<img src="' + origPath + '" onerror="this.onerror=null; this.src=\'' + altPath + '\';" alt="' + diagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
               '</div>';
       });
   } else if (concept.visualDiagram) {
@@ -941,18 +946,16 @@ function loadTopic(id, isUserClick = false) {
       if (concept.visualDiagram.explanation) {
              let explanationText = (isZh ? concept.visualDiagram.explanation.zh : concept.visualDiagram.explanation.en).replace(/\n/g, '<br>');
              explanationHTML = '<p style="margin-bottom: 10px; font-style: italic; text-align: left; line-height: 1.6; color: var(--acc);">' + explanationText + '</p>';
-            }
+      }
 
-      // FIX 4: Safely force correct capitalization of image names for iOS
-      let safeImgPath = concept.visualDiagram.imagePath;
-      if (safeImgPath.includes('clef_staff.svg')) safeImgPath = safeImgPath.replace('clef_staff.svg', 'Clef_staff.svg');
-      if (safeImgPath.includes('Key_signatures.svg')) safeImgPath = safeImgPath.replace('Key_signatures.svg', 'Key_Signatures.svg');
+      let origPath = concept.visualDiagram.imagePath;
+      let altPath = getFallbackImgPath(origPath);
 
       diagramHTML =
           '<div class="svg-box" id="sec-diag-0">' +
             '<div class="card-title" style="margin-bottom:6px"><span>' + concept.visualDiagram.title[lang] + '</span><button class="tts-btn" onclick="speakCurrentDiagram(this)">🔊</button></div>' +
             explanationHTML +
-            '<img src="' + safeImgPath + '" alt="' + concept.visualDiagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
+            '<img src="' + origPath + '" onerror="this.onerror=null; this.src=\'' + altPath + '\';" alt="' + concept.visualDiagram.altText + '" style="width: 100%; max-width: 500px; display: block; margin: 15px auto; cursor: pointer;" onclick="openModal(this.src)">' +
           '</div>';
   }
 
@@ -1189,7 +1192,7 @@ const mouseUpHandler = function() {
 
 resizer.addEventListener('mousedown', mouseDownHandler);
 
-// FIX 2: Touch events (iPad/iPhone)
+// Touch events (iPad/iPhone)
 resizer.addEventListener('touchstart', function(e) {
     if(leftSide.classList.contains('collapsed')) return;
     x = e.touches[0].clientX;
