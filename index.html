@@ -414,9 +414,14 @@ async function loadAppData() {
     const response3 = await fetch('./data/chapter3.json');
     if (!response3.ok) throw new Error("Network response 3 was not ok");
     const chapter3Data = await response3.json();
-    
-    // 5. Combine chapters into the main database
-    musicTheoryDB = [...chapter1Data, ...chapter2Data, ...chapter3Data];
+
+    // 5. Fetch Chapter 4 data
+    const response4 = await fetch('./data/chapter4.json');
+    if (!response4.ok) throw new Error("Network response 4 was not ok");
+    const chapter4Data = await response4.json();
+
+    // 6. Combine chapters into the main database
+    musicTheoryDB = [...chapter1Data, ...chapter2Data, ...chapter3Data, ...chapter4Data];
 
     if (musicTheoryDB.length > 0 && musicTheoryDB[0].concepts.length > 0) {
       curId = musicTheoryDB[0].concepts[0].id;

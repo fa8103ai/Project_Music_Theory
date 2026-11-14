@@ -1,0 +1,550 @@
+[
+  {
+    "chapterId": "ch4",
+    "title": {
+      "zh": "第四章：更多音階、調性與譜號",
+      "en": "Chapter 4: More Scales, Keys and Clefs"
+    },
+    "concepts": [
+      {
+        "id": "4/1",
+        "name": {
+          "zh": "4/1 大調音階與五度圈 (Major scales and the circle of fifths)",
+          "en": "4/1 Major scales and the circle of fifths"
+        },
+        "definition": {
+          "zh": "「五度圈」(Circle of Fifths) 展示了所有大調調號之間的規律關係。從沒有升降號的 C 大調開始，每往上一個「完全五度」(Perfect 5th)，調號就會增加一個升號 (#)；每往下一個完全五度，調號就會增加一個降號 (b)。升號的出現次序永遠是 F-C-G-D-A-E-B，而降號的次序則是完全相反的 B-E-A-D-G-C-F。",
+          "en": "The 'Circle of Fifths' shows the relationship between all major key signatures. Starting from C major (no sharps or flats), moving UP a Perfect 5th adds one sharp (#) to the key signature; moving DOWN a Perfect 5th adds one flat (b). The order of sharps is always F-C-G-D-A-E-B, and the order of flats is exactly the reverse: B-E-A-D-G-C-F."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：五度圈與升降號次序】",
+              "en": "[Visual Diagram 1: Circle of Fifths & Order of Accidentals]"
+            },
+            "explanation": {
+              "zh": "順時針方向（升號調）：C(0) -> G(1#) -> D(2#) -> A(3#) -> E(4#) -> B(5#) -> F#(6#)。\n逆時針方向（降號調）：C(0) -> F(1b) -> Bb(2b) -> Eb(3b) -> Ab(4b) -> Db(5b) -> Gb(6b)。",
+              "en": "Clockwise (Sharps): C(0) -> G(1#) -> D(2#) -> A(3#) -> E(4#) -> B(5#) -> F#(6#).\nAnti-clockwise (Flats): C(0) -> F(1b) -> Bb(2b) -> Eb(3b) -> Ab(4b) -> Db(5b) -> Gb(6b)."
+            },
+            "imagePath": "./assets/circle_of_fifths.svg",
+            "altText": "Circle of Fifths Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 升號調號：G大調(1個#：F#)、D大調(2個#：F#, C#)、A大調(3個#：F#, C#, G#)。\n• 降號調號：F大調(1個b：Bb)、Bb大調(2個b：Bb, Eb)、Eb大調(3個b：Bb, Eb, Ab)。",
+          "en": "• Sharp keys: G major (1#: F#), D major (2#: F#, C#), A major (3#: F#, C#, G#).\n• Flat keys: F major (1b: Bb), Bb major (2b: Bb, Eb), Eb major (3b: Bb, Eb, Ab)."
+        },
+        "tip": {
+          "zh": "應試錦囊：必背口訣！升號次序 (Sharps)：Father Charles Goes Down And Ends Battle；降號次序 (Flats)：Battle Ends And Down Goes Charles's Father。",
+          "en": "Exam Tip: Memorize the mnemonic! Order of Sharps: Father Charles Goes Down And Ends Battle. Order of Flats: Battle Ends And Down Goes Charles's Father."
+        },
+        "exercises": [
+          {
+            "question": {
+              "zh": "根據五度圈的規律，擁有 3 個升號 (3 sharps) 的大調是什麼？",
+              "en": "According to the circle of fifths, which major key has 3 sharps?"
+            },
+            "options": [
+              { "zh": "A 大調 (A major)", "en": "A major" },
+              { "zh": "D 大調 (D major)", "en": "D major" },
+              { "zh": "E 大調 (E major)", "en": "E major" },
+              { "zh": "G 大調 (G major)", "en": "G major" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["從 C 大調開始往上數完全五度：C(0) -> G(1) -> D(2) -> ?(3)"],
+              "en": ["Count up by perfect 5ths starting from C(0): C -> G(1) -> D(2) -> ?(3)"]
+            },
+            "explanation": {
+              "zh": "根據五度圈，C(0) 往上五度是 G(1#)，再上是 D(2#)，再上是 A(3#)。三個升號分別為 F#, C#, G#。",
+              "en": "Following the circle of fifths: C(0), G(1#), D(2#), A(3#). The 3 sharps are F#, C#, G#."
+            }
+          },
+          {
+            "question": {
+              "zh": "調號中降號 (Flats) 出現的正確順序是什麼？",
+              "en": "What is the correct order of flats as they appear in a key signature?"
+            },
+            "options": [
+              { "zh": "B - E - A - D - G - C - F", "en": "B - E - A - D - G - C - F" },
+              { "zh": "F - C - G - D - A - E - B", "en": "F - C - G - D - A - E - B" },
+              { "zh": "E - A - D - G - C - F - B", "en": "E - A - D - G - C - F - B" },
+              { "zh": "C - F - Bb - Eb - Ab - Db - Gb", "en": "C - F - Bb - Eb - Ab - Db - Gb" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["回想口訣：「Battle Ends And Down Goes Charles's Father」。"],
+              "en": ["Remember the mnemonic: 'Battle Ends And Down Goes Charles's Father'."]
+            },
+            "explanation": {
+              "zh": "降號的次序永遠是 B-E-A-D-G-C-F，正好與升號的次序完全相反。",
+              "en": "The order of flats is always B-E-A-D-G-C-F, which is the exact reverse of the order of sharps."
+            }
+          }
+        ]
+      },
+      {
+        "id": "4/2",
+        "name": {
+          "zh": "4/2 小調音階與調性 (Minor scales and keys)",
+          "en": "4/2 Minor scales and keys"
+        },
+        "definition": {
+          "zh": "小調音階的半音排列與大調不同，聽起來通常帶有較嚴肅或憂鬱的色彩。小調主要分為兩種：「和聲小調」(Harmonic minor) 及「旋律小調」(Melodic minor)。\n和聲小調：無論上行或下行，皆將第 7 音升高半音。\n旋律小調：在上行時將第 6 及第 7 音升高半音，但在下行時將這兩個音還原（回復到自然小調的狀態）。",
+          "en": "Minor scales have a different pattern of semitones compared to major scales, giving them a generally sadder or more serious character. There are two main types: Harmonic minor and Melodic minor.\nHarmonic minor: Raises the 7th degree by a semitone both ascending and descending.\nMelodic minor: Raises the 6th and 7th degrees ascending, but lowers them back to their natural state descending."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：和聲小調與旋律小調結構對比】",
+              "en": "[Visual Diagram 1: Harmonic vs. Melodic Minor Structures]"
+            },
+            "explanation": {
+              "zh": "A 和聲小調上行與下行皆使用 G#。A 旋律小調上行使用 F# 與 G#，下行則還原為 G♮ 與 F♮。",
+              "en": "A harmonic minor uses G# both ascending and descending. A melodic minor uses F# and G# ascending, but reverts to G♮ and F♮ descending."
+            },
+            "imagePath": "./assets/minor_scales.svg",
+            "altText": "Harmonic and Melodic Minor Scales Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• A 和聲小調 (Harmonic)：A - B - C - D - E - F - G# - A（上下行相同）。\n• A 旋律小調 (Melodic)：上行為 A - B - C - D - E - F# - G# - A；下行為 A - G♮ - F♮ - E - D - C - B - A。",
+          "en": "• A Harmonic Minor: A - B - C - D - E - F - G# - A (same descending).\n• A Melodic Minor: Ascending is A - B - C - D - E - F# - G# - A; Descending is A - G♮ - F♮ - E - D - C - B - A."
+        },
+        "tip": {
+          "zh": "應試錦囊：區分和聲與旋律小調的關鍵在於「第 6 音」與「上下行」。只有第 7 音變化的是和聲小調；第 6 及第 7 音皆有變化且上下行不同的是旋律小調！",
+          "en": "Exam Tip: To distinguish them, look at the 6th degree and direction. If only the 7th is raised, it's harmonic. If the 6th AND 7th are raised going up but natural going down, it's melodic!"
+        },
+        "exercises": [
+          {
+            "question": {
+              "zh": "哪一種小調音階在「上行」與「下行」時，皆會將第 7 級音升高半音？",
+              "en": "Which minor scale raises the 7th degree by a semitone both ascending and descending?"
+            },
+            "options": [
+              { "zh": "和聲小調 (Harmonic minor)", "en": "Harmonic minor" },
+              { "zh": "旋律小調 (Melodic minor)", "en": "Melodic minor" },
+              { "zh": "自然小調 (Natural minor)", "en": "Natural minor" },
+              { "zh": "半音階 (Chromatic scale)", "en": "Chromatic scale" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["哪一種小調的上下行音符是完全相同的，並且會產生一個增二度（第 6 到第 7 音之間）？"],
+              "en": ["Which minor scale keeps the same notes going up and down, creating an augmented 2nd between the 6th and 7th degrees?"]
+            },
+            "explanation": {
+              "zh": "和聲小調 (Harmonic minor) 的特徵是無論上行或下行，皆固定升高第 7 音。",
+              "en": "The harmonic minor scale is characterized by a raised 7th degree in both ascending and descending forms."
+            }
+          },
+          {
+            "question": {
+              "zh": "在 A 旋律小調 (A melodic minor) 的上行音階中，哪兩個音符需要加上升號 (#)？",
+              "en": "In the ascending scale of A melodic minor, which two notes require a sharp (#)?"
+            },
+            "options": [
+              { "zh": "F 和 G", "en": "F and G" },
+              { "zh": "C 和 F", "en": "C and F" },
+              { "zh": "G 和 C", "en": "G and C" },
+              { "zh": "D 和 E", "en": "D and E" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["旋律小調上行時會升高第 6 及第 7 音。從 A 開始數第 6 及第 7 個音是什麼？"],
+              "en": ["The melodic minor raises the 6th and 7th degrees ascending. What are the 6th and 7th notes counting up from A?"]
+            },
+            "explanation": {
+              "zh": "A 小調的第 6 及第 7 音分別是 F 和 G。旋律小調上行時需將它們升高為 F# 及 G#。",
+              "en": "The 6th and 7th degrees of A minor are F and G. In the ascending melodic minor, they are raised to F# and G#."
+            }
+          }
+        ]
+      },
+      {
+        "id": "4/3",
+        "name": {
+          "zh": "4/3 關係大調/小調 (Relative major/minor keys)",
+          "en": "4/3 Relative major/minor keys"
+        },
+        "definition": {
+          "zh": "每個大調都有一個與其共用完全相同「調號」(Key signature) 的小調，兩者互稱為「關係調」(Relative keys)。當我們書寫小調樂曲時，會直接在譜號旁寫上其關係大調的調號。關係小調的主音 (Tonic)，永遠位於其關係大調主音的下方「小三度」(Minor 3rd) —— 即下行三個半音的位置。",
+          "en": "Every major key has a minor key that shares the exact same key signature; these are called 'relative' keys. When writing music in a minor key, we use the key signature of its relative major. The key-note (tonic) of the relative minor is always found a minor 3rd (three semitones) below the key-note of its relative major."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：尋找關係小調 (3個半音法則) 與小調臨時記號】",
+              "en": "[Visual Diagram 1: Finding the Relative Minor (3 Semitones) & Accidentals]"
+            },
+            "explanation": {
+              "zh": "大調主音往下數 3 個半音即可找到共用調號的關係小調。另外，小調中必須被升高的第 7 音（導音），絕對不能寫入調號之中，必須在樂譜中以臨時記號標示。",
+              "en": "Count down 3 semitones from the major key-note to find the relative minor. Additionally, the raised 7th degree (leading note) required in minor scales must NEVER be written in the key signature; it appears as an accidental in the music."
+            },
+            "imagePath": "./assets/relative_keys_accidentals.svg",
+            "altText": "Relative Keys and Minor Accidentals Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• C 大調沒有升降號；向下三個半音是 A，所以 A 小調也沒有升降號。\n• E 小調 (E minor) 的調號是一個升號 (F#，跟隨 G 大調)。但在和聲小調中，第 7 音 D 需要升高為 D#，這個 D# 會在樂曲中以臨時記號標示。\n• 分析樂曲調性時，如果看到調號沒有升降號，但樂曲中一直出現 G# 臨時記號，這通常表示樂曲是 A 小調而非 C 大調！",
+          "en": "• C major has no sharps/flats; 3 semitones down is A, so A minor has no sharps/flats.\n• E minor has a 1-sharp key signature (F#, like G major). Its raised 7th degree, D#, will appear as an accidental throughout the piece.\n• When identifying a key: if the key signature is empty but you keep seeing G# accidentals, the piece is likely in A minor, not C major!"
+        },
+        "tip": {
+          "zh": "應試錦囊：大調找小調：往下數 3 個半音。小調找大調：往上數 3 個半音。判斷大調還是小調的必殺技：先看調號找出兩個可能（一大一小），然後檢查樂譜中有沒有出現「小調主音對下半音的臨時記號（即升高的第7音）」。",
+          "en": "Exam Tip: Major to Minor: count DOWN 3 semitones. To identify a key: Look at the key sig to find the two possibilities (one major, one minor). Then scan the music for an accidental raising the 7th degree of the minor key. If it's there, it's almost certainly minor!"
+        },
+        "exercises": [
+          {
+            "question": {
+              "zh": "F 大調 (F major) 的關係小調 (Relative minor) 是什麼？",
+              "en": "What is the relative minor key of F major?"
+            },
+            "options": [
+              { "zh": "D 小調 (D minor)", "en": "D minor" },
+              { "zh": "E 小調 (E minor)", "en": "E minor" },
+              { "zh": "C 小調 (C minor)", "en": "C minor" },
+              { "zh": "A 小調 (A minor)", "en": "A minor" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["從 F 音往下數三個半音（小三度）會到達什麼音？"],
+              "en": ["What note is exactly 3 semitones below F?"]
+            },
+            "explanation": {
+              "zh": "從 F 往下三個半音（F -> E -> Eb -> D）是 D，因此 F 大調的關係小調是 D 小調，兩者皆有一個降號 (Bb)。",
+              "en": "Three semitones below F (F -> E -> Eb -> D) is D. Therefore, D minor is the relative minor of F major, and both have one flat (Bb)."
+            }
+          },
+          {
+            "question": {
+              "zh": "如果你看到一段樂譜的調號是一個降號 (Bb)，且樂譜中頻繁出現 C# 的臨時記號，這首樂曲最可能屬於什麼調？",
+              "en": "If you see a piece with one flat (Bb) in the key signature and frequent C# accidentals, what key is it most likely in?"
+            },
+            "options": [
+              { "zh": "D 小調 (D minor)", "en": "D minor" },
+              { "zh": "F 大調 (F major)", "en": "F major" },
+              { "zh": "C 大調 (C major)", "en": "C major" },
+              { "zh": "G 小調 (G minor)", "en": "G minor" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["一個降號可能是 F大調 或 D小調。C# 剛好是哪一個調的第 7 音被升高了？"],
+              "en": ["1 flat means either F major or D minor. C# is the raised 7th degree (leading note) of which of those keys?"]
+            },
+            "explanation": {
+              "zh": "一個降號代表 F 大調或 D 小調。C# 是 D 小調升高的第 7 音，因此這標示著樂曲是 D 小調。",
+              "en": "One flat indicates F major or D minor. C# is the raised 7th (leading note) of D minor, confirming the key."
+            }
+          }
+        ]
+      },
+      {
+        "id": "4/4",
+        "name": {
+          "zh": "4/4 音階各音級的名稱 (Names of scale degrees)",
+          "en": "4/4 Names of scale degrees"
+        },
+        "definition": {
+          "zh": "音階中的每一個音級（Degree）除了用數字（第1音至第8音）表示外，都有其專屬的技術名稱（Technical names）：\n第 1 音：主音 (Tonic)\n第 2 音：上主音 (Supertonic)\n第 3 音：中音 (Mediant)\n第 4 音：下屬音 (Subdominant)\n第 5 音：屬音 (Dominant)\n第 6 音：下中音 (Submediant)\n第 7 音：導音 (Leading note)\n第 8 音：主音/八度 (Octave)",
+          "en": "Each degree of the scale has a technical name as well as a number (1st to 8th):\n1st: Tonic\n2nd: Supertonic\n3rd: Mediant\n4th: Subdominant\n5th: Dominant\n6th: Submediant\n7th: Leading note\n8th: Tonic / Octave"
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：音級技術名稱對照】",
+              "en": "[Visual Diagram 1: Technical Names of Scale Degrees]"
+            },
+            "explanation": {
+              "zh": "Tonic (主音) 和 Dominant (屬音) 最為重要。Super 指在上方（上主音），Sub 指在下方（下屬音）。",
+              "en": "Tonic and Dominant are the most important pillars. 'Super' means above (Supertonic), and 'Sub' means below (Subdominant)."
+            },
+            "imagePath": "./assets/scale_degrees.svg",
+            "altText": "Scale Degrees Names Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 在 C 大調中：C 是 Tonic (主音)，F 是 Subdominant (下屬音)，G 是 Dominant (屬音)，B 是 Leading note (導音)。\n• 在 G 小調中：G 是 Tonic (主音)，D 是 Dominant (屬音)，F# 是 Leading note (導音，留意必須是被升高的那個音才是導音)。",
+          "en": "• In C major: C is the Tonic, F is the Subdominant, G is the Dominant, and B is the Leading note.\n• In G minor: G is the Tonic, D is the Dominant, and F# is the Leading note (note that the 7th must be raised to act as a proper leading note)."
+        },
+        "tip": {
+          "zh": "應試錦囊：緊記五大關鍵：第1音 Tonic，第4音 Subdominant，第5音 Dominant，第6音 Submediant，第7音 Leading note。考題經常直接問「請寫出該調的 Dominant」。",
+          "en": "Exam Tip: Memorize the 'Big 5': 1st=Tonic, 4th=Subdominant, 5th=Dominant, 6th=Submediant, 7th=Leading note. Exams often ask 'Write the Subdominant of this key'."
+        },
+        "exercises": [
+          {
+            "question": {
+              "zh": "在音階中，第 5 級音 (5th degree) 的技術名稱是什麼？",
+              "en": "What is the technical name for the 5th degree of a scale?"
+            },
+            "options": [
+              { "zh": "屬音 (Dominant)", "en": "Dominant" },
+              { "zh": "下屬音 (Subdominant)", "en": "Subdominant" },
+              { "zh": "中音 (Mediant)", "en": "Mediant" },
+              { "zh": "主音 (Tonic)", "en": "Tonic" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["主音是 Tonic，與主音同樣重要的第 5 音是什麼？"],
+              "en": ["Tonic is the 1st. What is the very important 5th degree called?"]
+            },
+            "explanation": {
+              "zh": "第 5 級音稱為屬音 (Dominant)，是音階中僅次於主音最重要的音。",
+              "en": "The 5th degree is the Dominant, the second most important note in a key."
+            }
+          },
+          {
+            "question": {
+              "zh": "「導音」(Leading note) 位於音階的第幾級？",
+              "en": "Which degree of the scale is the 'Leading note'?"
+            },
+            "options": [
+              { "zh": "第 7 級 (7th degree)", "en": "7th degree" },
+              { "zh": "第 2 級 (2nd degree)", "en": "2nd degree" },
+              { "zh": "第 6 級 (6th degree)", "en": "6th degree" },
+              { "zh": "第 4 級 (4th degree)", "en": "4th degree" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["導音有強烈傾向要「引導」回到第 8 音（主音），所以它緊貼在主音下方。"],
+              "en": ["The leading note 'leads' strongly up to the Tonic (8th degree). So which number is it?"]
+            },
+            "explanation": {
+              "zh": "導音 (Leading note) 是音階的第 7 級音，距離上方的八度主音只有一個半音。",
+              "en": "The Leading note is the 7th degree, which sits just a semitone below the Tonic octave."
+            }
+          }
+        ]
+      },
+      {
+        "id": "4/5",
+        "name": {
+          "zh": "4/5 重升號與重降號 (Double sharps and double flats)",
+          "en": "4/5 Double sharps and double flats"
+        },
+        "definition": {
+          "zh": "在音樂中，有時我們需要將一個已經升高的音符再次升高，或將一個已降低的音符再次降低。這時就需要用到「重升號」(Double sharp, 記號類似一個小交叉 'x') 和「重降號」(Double flat, 記號為 'bb')。\n重升號 (x) 會將音符的音高提高兩個半音（即一個全音）。\n重降號 (bb) 會將音符的音高降低兩個半音（即一個全音）。",
+          "en": "In music, sometimes we need to raise a note that is already sharp, or lower a note that is already flat. This is when we use a 'Double sharp' (a symbol resembling a small cross 'x') or a 'Double flat' ('bb').\nA double sharp (x) raises the pitch of a note by two semitones (a whole tone).\nA double flat (bb) lowers the pitch of a note by two semitones (a whole tone)."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：重升號與重降號的符號及鍵盤位置】",
+              "en": "[Visual Diagram 1: Double Sharps/Flats Symbols and Keyboard]"
+            },
+            "explanation": {
+              "zh": "Fx (重升F) 在鋼琴鍵盤上彈奏的位置，與 G♮ 完全相同，這稱為「同音異名」(Enharmonic equivalent)。",
+              "en": "Fx (F double sharp) is played on the exact same piano key as G♮. This is known as an 'Enharmonic equivalent'."
+            },
+            "imagePath": "./assets/double_accidentals.svg",
+            "altText": "Double Sharps and Double Flats Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• G# 小調的導音（第7音）是 F#。為了在和聲小調中將其升高半音，F# 必須變成 Fx (重升F)。\n• Ebb (重降E) 在聽覺上和鍵盤位置上與 D♮ 完全一樣。",
+          "en": "• The leading note (7th degree) of G# minor is F#. To raise it by a semitone for the harmonic minor scale, F# becomes Fx (F double sharp).\n• Ebb (E double flat) sounds exactly the same as D♮ on the keyboard."
+        },
+        "tip": {
+          "zh": "應試錦囊：重升號像一個小 'x'，重降號是兩個相連的 'b'。考試時若遇到需要升高已經有升號的導音（例如 D# 小調的第7音 C#），必須寫成 Cx，絕不能寫成 D！",
+          "en": "Exam Tip: A double sharp looks like an 'x', a double flat is 'bb'. In exams, if you must raise a leading note that is already sharp (e.g., C# in D# minor), you MUST write Cx, never D!"
+        },
+        "exercises": [
+          {
+            "question": {
+              "zh": "一個「重升號」(Double sharp, x) 會將音符的音高改變多少？",
+              "en": "How much does a 'Double sharp' (x) alter the pitch of a note?"
+            },
+            "options": [
+              { "zh": "升高兩個半音（一個全音）", "en": "Raises it by two semitones (a whole tone)" },
+              { "zh": "升高一個半音", "en": "Raises it by one semitone" },
+              { "zh": "降低兩個半音", "en": "Lowers it by two semitones" },
+              { "zh": "升高三個半音", "en": "Raises it by three semitones" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["一般的升號 (#) 升高一個半音，那「重」升號 (Double) 呢？"],
+              "en": ["A regular sharp (#) raises by one semitone. What does a 'Double' sharp do?"]
+            },
+            "explanation": {
+              "zh": "重升號會將原本的音符向上提升兩個半音，即等於一個全音的距離。",
+              "en": "A double sharp raises the original note by two semitones, which equals one whole tone."
+            }
+          },
+          {
+            "question": {
+              "zh": "在鋼琴鍵盤上，Fx (重升F) 與以下哪一個音符是彈奏同一個琴鍵（同音異名）？",
+              "en": "On the piano keyboard, Fx (F double sharp) is played on the exact same key (enharmonically equivalent) as which note?"
+            },
+            "options": [
+              { "zh": "G 本位音 (G natural)", "en": "G natural" },
+              { "zh": "E 本位音 (E natural)", "en": "E natural" },
+              { "zh": "F 升音 (F sharp)", "en": "F sharp" },
+              { "zh": "G 降音 (G flat)", "en": "G flat" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["F 升高一個半音是 F#，再升高一個半音會到達哪一個白鍵？"],
+              "en": ["F raised one semitone is F#. Raised one more semitone, which white key do you land on?"]
+            },
+            "explanation": {
+              "zh": "從 F 往上走兩個半音，會剛好落在 G 音的位置。因此 Fx 與 G 是同音異名。",
+              "en": "Moving two semitones up from F lands exactly on G. Therefore, Fx is the enharmonic equivalent of G."
+            }
+          }
+        ]
+      },
+      {
+        "id": "4/6",
+        "name": {
+          "zh": "4/6 半音階 (The chromatic scale)",
+          "en": "4/6 The chromatic scale"
+        },
+        "definition": {
+          "zh": "「半音階」(Chromatic scale) 是一個完全由半音（Semitones）組成的音階。它沒有全音，包含了一個八度內所有的 12 個音符（即依序彈奏鍵盤上相鄰的所有黑鍵與白鍵）。書寫半音階時，上行通常使用升號 (#)，下行通常使用降號 (b)，以減少使用還原記號。為了方便閱讀，切記每一條線和間上最多只能寫兩個音符（例如 C 和 C#）。",
+          "en": "A chromatic scale is a scale consisting entirely of semitones. It uses every single note in an octave (all 12 white and black keys in order). When writing it, a general rule of thumb is to use sharps when ascending and flats when descending to minimize the need for natural signs. To ensure readability, never write more than two notes on the same line or in the same space (e.g., C and C#)."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：半音階的記譜】",
+              "en": "[Visual Diagram 1: Writing the Chromatic Scale]"
+            },
+            "explanation": {
+              "zh": "上行半音階：C - C# - D - D# - E - F - F# - G... \n下行半音階：C - B - Bb - A - Ab - G - Gb - F...",
+              "en": "Ascending chromatic: C - C# - D - D# - E - F - F# - G... \nDescending chromatic: C - B - Bb - A - Ab - G - Gb - F..."
+            },
+            "imagePath": "./assets/chromatic_scale.svg",
+            "altText": "Chromatic Scale Notation Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 寫半音階時，如果寫了 C, C#, Cx(重升C)，這就是錯誤的，因為同一條線/間上出現了 3 個音符。\n• 半音階沒有特定的大調或小調調性，因為所有音距都是平等的半音。",
+          "en": "• It is incorrect to write C, C#, and Cx (C double sharp) sequentially, as you should never have 3 notes on the same staff position.\n• The chromatic scale has no sense of major or minor key because all intervals are equal semitones."
+        },
+        "tip": {
+          "zh": "應試錦囊：考試若要求補充半音階缺失的音符，請先觀察前後音符。如果是上行，優先填補升號 (#) 音；如果是下行，優先填補降號 (b) 音，並確保前後符合半音距離！",
+          "en": "Exam Tip: When asked to fill in missing notes in a chromatic scale, check the direction. Ascending missing notes usually take a sharp (#); descending take a flat (b). Always ensure the gap is exactly a semitone!"
+        },
+        "exercises": [
+          {
+            "question": {
+              "zh": "半音階 (Chromatic scale) 是一個八度內由多少個音符組成的？",
+              "en": "How many notes make up one octave of a chromatic scale?"
+            },
+            "options": [
+              { "zh": "12 個", "en": "12 notes" },
+              { "zh": "8 個", "en": "8 notes" },
+              { "zh": "7 個", "en": "7 notes" },
+              { "zh": "10 個", "en": "10 notes" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["把鋼琴鍵盤上一個八度內所有的白鍵和黑鍵加起來總共有幾個？"],
+              "en": ["Count all the white and black keys in one octave on a piano keyboard."]
+            },
+            "explanation": {
+              "zh": "半音階包含八度內所有的 12 個半音。",
+              "en": "A chromatic scale consists of all 12 semitones within an octave."
+            }
+          },
+          {
+            "question": {
+              "zh": "在記寫半音階時，為了方便閱讀，五線譜上的一條線或一個間最多能容納幾個音符？",
+              "en": "When writing a chromatic scale, what is the maximum number of notes allowed on any single line or space?"
+            },
+            "options": [
+              { "zh": "最多 2 個", "en": "Maximum 2 notes" },
+              { "zh": "最多 3 個", "en": "Maximum 3 notes" },
+              { "zh": "只能 1 個", "en": "Only 1 note" },
+              { "zh": "沒有限制", "en": "No limit" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["為了清晰，同一位置寫 C, C# 是可以的，但再寫一個 Cx 就太多了。"],
+              "en": ["Writing C and C# is fine, but adding Cx on the same line makes it confusing."]
+            },
+            "explanation": {
+              "zh": "書寫半音階的規則是每一條線或間上最多只能寫兩個音符（例如 F 和 F#）。",
+              "en": "The rule for writing chromatic scales is to never write more than two notes on the same line or in the same space."
+            }
+          }
+        ]
+      },
+      {
+        "id": "4/7",
+        "name": {
+          "zh": "4/7 C 譜號 (C clefs)",
+          "en": "4/7 C clefs"
+        },
+        "definition": {
+          "zh": "除了高音及低音譜號，五線譜還有可移動的「C 譜號」。C 譜號的中心凹陷缺口所指著的那一條線，永遠代表中央 C (Middle C)。\n中音譜號 (Alto clef)：當 C 譜號中心對準「第三線」時。它主要專門給中提琴 (Viola) 使用。\n次中音譜號 (Tenor clef)：當中心對準由下往上數的「第四線」時。大提琴 (Cello)、低音管 (Bassoon) 及長號 (Trombone) 在演奏高音域時會切換到此譜號，以避免過多的加線。",
+          "en": "Besides treble and bass clefs, there are movable 'C' clefs. The line passing through the center indentation of a C clef ALWAYS represents Middle C.\nAlto clef: When the center points to the 3rd (middle) line. It is used almost exclusively by the Viola.\nTenor clef: When the center points to the 4th line. Instruments like the Cello, Bassoon, and Trombone switch to Tenor clef for high passages to avoid excessive ledger lines."
+        },
+        "visualDiagrams": [
+          {
+            "title": {
+              "zh": "【視覺圖解 1：C譜號中的中央C位置】",
+              "en": "[Visual Diagram 1: Middle C on the C Clefs]"
+            },
+            "explanation": {
+              "zh": "記住，譜號中心缺口所指的那條線永遠是 C！在 Alto 譜號是第三線；在 Tenor 譜號是第四線。",
+              "en": "Remember, the line passing through the middle indentation of the C clef is always C! 3rd line for Alto, 4th line for Tenor."
+            },
+            "imagePath": "./assets/c_clefs.svg",
+            "altText": "Alto and Tenor Clefs Diagram"
+          }
+        ],
+        "examples": {
+          "zh": "• 在中音譜號 (Alto) 中：第三線是 C；最頂的第五線是 G。\n• 在次中音譜號 (Tenor) 中：第四線是 C；最頂的第五線是 E。\n• 五級樂理考試經常要求將旋律在高音、低音、中音及次中音譜號之間轉換同一音高 (transcription)。",
+          "en": "• In Alto Clef: 3rd line is C; top line is G.\n• In Tenor Clef: 4th line is C; top line is E.\n• Grade 5 theory often asks to transcribe a melody across Treble, Bass, Alto, and Tenor clefs at the exact same pitch."
+        },
+        "tip": {
+          "zh": "應試錦囊：區分 C 譜號看缺口！缺口夾中間（第3線）是 Alto (中音)；缺口夾高一線（第4線）是 Tenor (次中音)！閱讀中音譜號的絕招：將音符當作高音譜號來讀，然後將音名「向上移一步」（例如看似 B，其實是 C）。",
+          "en": "Exam Tip: Look at the indentation! Middle (3rd line) = Alto; Higher (4th line) = Tenor! Trick for Alto clef: Read as Treble, then shift the letter name UP one step (e.g., looks like B, is actually C)."
+        },
+        "exercises": [
+          {
+            "question": {
+              "zh": "中音譜號 (Alto clef) 將五線譜上的哪一條線定為中央 C (Middle C)？",
+              "en": "Which line does the Alto clef designate as Middle C?"
+            },
+            "options": [
+              { "zh": "第三線 (3rd line)", "en": "3rd line" },
+              { "zh": "第四線 (4th line)", "en": "4th line" },
+              { "zh": "第二線 (2nd line)", "en": "2nd line" },
+              { "zh": "第一線 (1st line)", "en": "1st line" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["中音譜號是完全對稱的，它的中心缺口夾著正中間那條線。"],
+              "en": ["The Alto clef is perfectly symmetrical. Which line goes right through its center?"]
+            },
+            "explanation": {
+              "zh": "中音譜號的中心對準第三線，因此第三線代表中央 C。",
+              "en": "The center of the Alto clef points to the 3rd line, making it Middle C."
+            }
+          },
+          {
+            "question": {
+              "zh": "下列哪一種樂器在演奏高音域時，最常切換使用次中音譜號 (Tenor clef)？",
+              "en": "Which instrument commonly switches to the Tenor clef when playing in its high register?"
+            },
+            "options": [
+              { "zh": "大提琴 (Cello)", "en": "Cello" },
+              { "zh": "中提琴 (Viola)", "en": "Viola" },
+              { "zh": "小提琴 (Violin)", "en": "Violin" },
+              { "zh": "長笛 (Flute)", "en": "Flute" }
+            ],
+            "correctIndex": 0,
+            "guidingQuestions": {
+              "zh": ["中提琴平時就看中音譜號。哪種低音樂器為了避免看太多加線而切換到次中音譜號？"],
+              "en": ["Viola uses Alto clef by default. Which low string instrument switches to Tenor clef to avoid ledger lines?"]
+            },
+            "explanation": {
+              "zh": "大提琴 (Cello)、低音管 (Bassoon) 及長號 (Trombone) 常用次中音譜號記錄高音；而中提琴主要使用中音譜號 (Alto clef)。",
+              "en": "The Cello (along with Bassoon and Trombone) frequently uses the Tenor clef for high passages. The Viola mainly uses Alto."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
