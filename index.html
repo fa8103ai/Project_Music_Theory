@@ -38,6 +38,17 @@ img {
     user-drag: none;
 }
 
+/* ANTI-PRINT & ANTI-PDF EXPORT PROTECTION */
+@media print {
+    html, body {
+        display: none !important;
+        background-color: white !important;
+    }
+    * {
+        display: none !important;
+    }
+}
+
 header{background:linear-gradient(135deg,var(--pri),var(--sec));color:#fff;padding:10px 18px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 5px rgba(0,0,0,.1);gap:12px;flex-wrap:wrap}
 .header-title h1{font-size:1.3em;margin-bottom:2px}.header-title p{font-size:.82em;opacity:.92}
 .header-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;flex:1;justify-content:flex-end}
@@ -302,6 +313,22 @@ document.addEventListener('cut', function(e) {
 document.addEventListener('dragstart', function(e) {
     if (e.target.tagName !== 'INPUT') {
         e.preventDefault();
+    }
+});
+
+// Attempt to block PrintScreen key (Windows) and clear clipboard
+document.addEventListener('keyup', function(e) {
+    if (e.key === 'PrintScreen') {
+        navigator.clipboard.writeText(''); // Attempt to clear clipboard
+        alert(lang === 'zh' ? '系統已停用截圖功能，以保護版權內容。' : 'Screenshots are disabled to protect copyrighted material.');
+    }
+});
+
+// Discourage standard Print command (Ctrl+P / Cmd+P)
+document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 'P')) {
+        e.preventDefault();
+        alert(lang === 'zh' ? '列印功能已被停用。' : 'Printing is disabled.');
     }
 });
 // ----------------------------------------------
